@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   applyFontSize();
   initNav();
+  initMobileNav();
   initAccordion();
   initInteractive();
   initProgress();
@@ -88,6 +89,14 @@ function initNav() {
 
 function toggleMobile() {
   document.getElementById('mobileOverlay')?.classList.toggle('open');
+}
+
+function initMobileNav() {
+  const overlay = document.getElementById('mobileOverlay');
+  if (!overlay) return;
+  overlay.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => overlay.classList.remove('open'));
+  });
 }
 
 // ---- Accordion ----
