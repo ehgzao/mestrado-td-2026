@@ -20,6 +20,18 @@
   --ihmr-light: #FAB1A0;
   --ihmr-dark: #C0392B;
   --ihmr-bg: #FDF0EC;
+  --tmv: #E84393;
+  --tmv-light: #FD79A8;
+  --tmv-dark: #C2185B;
+  --tmv-bg: #FDE8F0;
+  --lsrtd: #F39C12;
+  --lsrtd-light: #FFEAA7;
+  --lsrtd-dark: #E67E22;
+  --lsrtd-bg: #FEF5E7;
+  --tese: #00CEC9;
+  --tese-light: #81ECEC;
+  --tese-dark: #00A8A5;
+  --tese-bg: #E6FAF9;
   --success: #00B894;
   --success-bg: #E8F8F5;
   --error: #D63031;
@@ -71,6 +83,9 @@
   --ba-bg: #0D1F33;
   --ggdsi-bg: #0D2B24;
   --ihmr-bg: #2B1A15;
+  --tmv-bg: #2B152B;
+  --lsrtd-bg: #2B2215;
+  --tese-bg: #152B2B;
   --success-bg: #0D2B24;
   --error-bg: #2B1515;
   --warning-bg: #2B2615;
@@ -159,6 +174,9 @@ code { background: var(--bg); padding: 2px 6px; border-radius: var(--radius-xs);
 .nav-link.discipline-ba.active, .nav-link.discipline-ba:hover { color: var(--ba); background: var(--ba-bg); }
 .nav-link.discipline-ggdsi.active, .nav-link.discipline-ggdsi:hover { color: var(--ggdsi); background: var(--ggdsi-bg); }
 .nav-link.discipline-ihmr.active, .nav-link.discipline-ihmr:hover { color: var(--ihmr); background: var(--ihmr-bg); }
+.nav-link.discipline-tmv.active, .nav-link.discipline-tmv:hover { color: var(--tmv); background: var(--tmv-bg); }
+.nav-link.discipline-lsrtd.active, .nav-link.discipline-lsrtd:hover { color: var(--lsrtd); background: var(--lsrtd-bg); }
+.nav-link.discipline-tese.active, .nav-link.discipline-tese:hover { color: var(--tese); background: var(--tese-bg); }
 .nav-controls { display: flex; align-items: center; gap: 0.25rem; }
 .btn-icon {
   display: flex; align-items: center; justify-content: center;
@@ -205,6 +223,9 @@ code { background: var(--bg); padding: 2px 6px; border-radius: var(--radius-xs);
 .hero-ba { background: linear-gradient(135deg, #0652DD, #0984E3, #74B9FF); }
 .hero-ggdsi { background: linear-gradient(135deg, #009975, #00B894, #55EFC4); }
 .hero-ihmr { background: linear-gradient(135deg, #C0392B, #E17055, #FAB1A0); }
+.hero-tmv { background: linear-gradient(135deg, #C2185B, #E84393, #FD79A8); }
+.hero-lsrtd { background: linear-gradient(135deg, #E67E22, #F39C12, #FFEAA7); }
+.hero-tese { background: linear-gradient(135deg, #00A8A5, #00CEC9, #81ECEC); }
 .hero::after {
   content: ''; position: absolute; top: -50%; right: -20%;
   width: 60%; height: 200%; border-radius: 50%;
@@ -246,6 +267,12 @@ code { background: var(--bg); padding: 2px 6px; border-radius: var(--radius-xs);
 .discipline-card.ba .card-icon { background: var(--ba-bg); }
 .discipline-card.ggdsi .card-icon { background: var(--ggdsi-bg); }
 .discipline-card.ihmr .card-icon { background: var(--ihmr-bg); }
+.discipline-card.tmv::before { background: var(--tmv); }
+.discipline-card.tmv .card-icon { background: var(--tmv-bg); }
+.discipline-card.lsrtd::before { background: var(--lsrtd); }
+.discipline-card.lsrtd .card-icon { background: var(--lsrtd-bg); }
+.discipline-card.tese::before { background: var(--tese); }
+.discipline-card.tese .card-icon { background: var(--tese-bg); }
 
 /* ---------- 8. Event List / Calendar ---------- */
 .event-list { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -277,6 +304,9 @@ code { background: var(--bg); padding: 2px 6px; border-radius: var(--radius-xs);
 .event-tag.ba { background: var(--ba-bg); color: var(--ba); }
 .event-tag.ggdsi { background: var(--ggdsi-bg); color: var(--ggdsi); }
 .event-tag.ihmr { background: var(--ihmr-bg); color: var(--ihmr); }
+.event-tag.tmv { background: var(--tmv-bg); color: var(--tmv); }
+.event-tag.lsrtd { background: var(--lsrtd-bg); color: var(--lsrtd); }
+.event-tag.tese { background: var(--tese-bg); color: var(--tese); }
 
 /* ---------- 9. Accordion / Topics ---------- */
 .accordion { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -399,6 +429,15 @@ code { background: var(--bg); padding: 2px 6px; border-radius: var(--radius-xs);
 .ba-accent .flashcard-back { background: var(--ba); }
 .ggdsi-accent .flashcard-back { background: var(--ggdsi); }
 .ihmr-accent .flashcard-back { background: var(--ihmr); }
+.tmv-accent .concept-card { border-left-color: var(--tmv); }
+.tmv-accent .concept-card h4 { color: var(--tmv); }
+.tmv-accent .flashcard-back { background: var(--tmv); }
+.lsrtd-accent .concept-card { border-left-color: var(--lsrtd); }
+.lsrtd-accent .concept-card h4 { color: var(--lsrtd); }
+.lsrtd-accent .flashcard-back { background: var(--lsrtd); }
+.tese-accent .concept-card { border-left-color: var(--tese); }
+.tese-accent .concept-card h4 { color: var(--tese); }
+.tese-accent .flashcard-back { background: var(--tese); }
 
 /* ---------- 12. Quiz ---------- */
 .quiz-block { margin-bottom: 1.5rem; }
@@ -534,6 +573,9 @@ code { background: var(--bg); padding: 2px 6px; border-radius: var(--radius-xs);
 .progress-fill.ba { background: linear-gradient(90deg, var(--ba), var(--ba-light)); }
 .progress-fill.ggdsi { background: linear-gradient(90deg, var(--ggdsi), var(--ggdsi-light)); }
 .progress-fill.ihmr { background: linear-gradient(90deg, var(--ihmr), var(--ihmr-light)); }
+.progress-fill.tmv { background: linear-gradient(90deg, var(--tmv), var(--tmv-light)); }
+.progress-fill.lsrtd { background: linear-gradient(90deg, var(--lsrtd), var(--lsrtd-light)); }
+.progress-fill.tese { background: linear-gradient(90deg, var(--tese), var(--tese-light)); }
 
 /* ---------- 15. Countdown ---------- */
 .countdown-grid { display: flex; gap: 0.75rem; flex-wrap: wrap; }
@@ -563,6 +605,9 @@ code { background: var(--bg); padding: 2px 6px; border-radius: var(--radius-xs);
 .countdown-card.ba .countdown-value { color: var(--ba); }
 .countdown-card.ggdsi .countdown-value { color: var(--ggdsi); }
 .countdown-card.ihmr .countdown-value { color: var(--ihmr); }
+.countdown-card.tmv .countdown-value { color: var(--tmv); }
+.countdown-card.lsrtd .countdown-value { color: var(--lsrtd); }
+.countdown-card.tese .countdown-value { color: var(--tese); }
 
 /* ---------- 16. Buttons ---------- */
 .btn {
@@ -590,6 +635,12 @@ code { background: var(--bg); padding: 2px 6px; border-radius: var(--radius-xs);
 .btn-ggdsi:hover { background: var(--ggdsi-dark); color: #fff; }
 .btn-ihmr { background: var(--ihmr); color: #fff; }
 .btn-ihmr:hover { background: var(--ihmr-dark); color: #fff; }
+.btn-tmv { background: var(--tmv); color: #fff; }
+.btn-tmv:hover { background: var(--tmv-dark); color: #fff; }
+.btn-lsrtd { background: var(--lsrtd); color: #fff; }
+.btn-lsrtd:hover { background: var(--lsrtd-dark); color: #fff; }
+.btn-tese { background: var(--tese); color: #fff; }
+.btn-tese:hover { background: var(--tese-dark); color: #fff; }
 
 /* ---------- 17. Tags & Badges ---------- */
 .tag {
@@ -601,6 +652,9 @@ code { background: var(--bg); padding: 2px 6px; border-radius: var(--radius-xs);
 .tag-ba { background: var(--ba-bg); color: var(--ba); }
 .tag-ggdsi { background: var(--ggdsi-bg); color: var(--ggdsi); }
 .tag-ihmr { background: var(--ihmr-bg); color: var(--ihmr); }
+.tag-tmv { background: var(--tmv-bg); color: var(--tmv); }
+.tag-lsrtd { background: var(--lsrtd-bg); color: var(--lsrtd); }
+.tag-tese { background: var(--tese-bg); color: var(--tese); }
 .badge {
   display: inline-flex; align-items: center; justify-content: center;
   min-width: 22px; height: 22px; padding: 0 6px;

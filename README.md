@@ -10,7 +10,7 @@ Hub de estudo interativo para o **Mestrado em Transformacao Digital** da [Univer
 
 ## Sobre
 
-Material de apoio colaborativo para 3 disciplinas do mestrado, com conteudo teorico, flashcards interativos, quizzes de autoavaliacao e acompanhamento de progresso. Site 100% estatico, sem dependencias externas.
+Material de apoio colaborativo para 5 disciplinas + orientacoes para tese do mestrado, com conteudo teorico, flashcards interativos, quizzes de autoavaliacao e acompanhamento de progresso. Site 100% estatico, sem dependencias externas.
 
 ## Disciplinas
 
@@ -19,6 +19,9 @@ Material de apoio colaborativo para 3 disciplinas do mestrado, com conteudo teor
 | **Business Analytics, Metrics e Big Data** | Prof. Rui Humberto Pereira | 4 | 32 | 24 |
 | **Gestao e Governanca de Dados e de SI** | Prof. Pedro Pimenta | 7 | 46 | 32 |
 | **Interface Homem-Maquina e Robotica** | Prof.a Ana Melro | 6 | 44 | 29 |
+| **Transformacao no Marketing e nas Vendas** | Prof.a Cristina Fernandes | 4 | 32 | 24 |
+| **Labs de Scrum e Roadmap para a TD** | Prof. Joao Almeida | 3 | 20 | 16 |
+| **Orientacoes para Tese** | Regulamento UMAIA | 3 | 20 | 13 |
 
 ## Funcionalidades
 
@@ -42,6 +45,9 @@ mestrado-td-2026/
 ├── ba.html             # Business Analytics — 4 topicos de estudo
 ├── ggdsi.html          # Governanca de Dados — 7 topicos de estudo
 ├── ihmr.html           # Interface H-M e Robotica — 6 topicos de estudo
+├── tmv.html            # Marketing e Vendas — 4 topicos de estudo
+├── lsrtd.html          # Scrum e Roadmap — 3 topicos de estudo
+├── tese.html           # Orientacoes para Tese — 3 topicos de referencia
 ├── styles.css          # Design system completo (temas, componentes)
 ├── app.js              # Logica: tema, progresso, flashcards, quizzes, countdowns
 ├── README.md
@@ -84,9 +90,15 @@ Alternativamente, arrastar a pasta do projeto diretamente para o painel do Netli
 | Data | Evento | Disciplina | Peso |
 |---|---|---|---|
 | 22 abr 2026 | Teste TP1 | GGDSI | 20% |
+| 28 abr 2026 | Sprint Review S2 | LSRTD | Sprint |
 | 13 mai 2026 | Teste TP2 | GGDSI | 40% |
+| 15 mai 2026 | Entrega Proposta Individual | TMV | 50% |
+| 21 mai 2026 | Apresentacao Individual | TMV | 50% |
+| 22 mai 2026 | Entrega Plano de Marketing | TMV | 40% |
 | 25 mai 2026 | Teste M1 + Projeto Grupo | BA | 60% + 25% |
+| 28 mai 2026 | Apresentacao Plano Marketing | TMV | 40% |
 | 29 mai 2026 | Pitch + Projeto Final | IHMR | 60% |
+| 02 jun 2026 | Apresentacao Final Projeto | LSRTD | 10% |
 | 02 jun 2026 | Apresentacao Individual | BA | 15% |
 | 15 jun 2026 | Entrega Projeto | GGDSI | 40% |
 | 29 jun 2026 | Exame Normal | IHMR | 100% |

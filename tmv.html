@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TMV — Transformacao no Marketing e nas Vendas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128200;</text></svg>">
+</head>
+<body data-page="tmv">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-logo">TD</span>
+      <span class="nav-title">Mestrado 2026</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+      <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+      <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+      <a href="tmv.html" class="nav-link discipline-tmv active">TMV</a>
+      <a href="lsrtd.html" class="nav-link discipline-lsrtd">Scrum</a>
+      <a href="tese.html" class="nav-link discipline-tese">Tese</a>
+    </div>
+    <div class="nav-controls">
+      <button class="btn-icon" onclick="changeFontSize(-2)" title="Diminuir fonte">A-</button>
+      <button class="btn-icon" onclick="changeFontSize(2)" title="Aumentar fonte">A+</button>
+      <button class="btn-icon" onclick="toggleTheme()" title="Alternar tema">
+        <span class="theme-icon-light">&#9790;</span>
+        <span class="theme-icon-dark">&#9788;</span>
+      </button>
+      <button class="btn-icon mobile-menu-btn" onclick="toggleMobile()" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</nav>
+<div class="nav-links-mobile-overlay" id="mobileOverlay">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+  <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+  <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+  <a href="tmv.html" class="nav-link discipline-tmv active">TMV</a>
+  <a href="lsrtd.html" class="nav-link discipline-lsrtd">Scrum</a>
+  <a href="tese.html" class="nav-link discipline-tese">Tese</a>
+</div>
+
+<main class="container main-content">
+
+  <!-- Hero -->
+  <section class="hero hero-tmv">
+    <h1>Transformacao no Marketing e nas Vendas</h1>
+    <p>Estrategias digitais, planeamento de marketing e metricas de performance comercial</p>
+    <div class="hero-meta">
+      <span>Prof.a Cristina Fernandes (cifernandes@fep.up.pt)</span>
+      <span>6 ECTS</span>
+      <span>24h TP + 24h OT</span>
+    </div>
+  </section>
+
+  <!-- Countdowns -->
+  <section class="section">
+    <h2>Proximos Prazos</h2>
+    <div class="countdown-grid" id="countdownGrid">
+      <div class="countdown-card tmv" data-date="2026-05-15">
+        <div class="countdown-label">Entrega</div>
+        <div class="countdown-event">Trabalho Individual</div>
+        <div class="countdown-values">
+          <div class="countdown-unit"><span class="countdown-value">--</span><span class="countdown-unit-label">dias</span></div>
+          <div class="countdown-unit"><span class="countdown-value">--</span><span class="countdown-unit-label">horas</span></div>
+          <div class="countdown-unit"><span class="countdown-value">--</span><span class="countdown-unit-label">min</span></div>
+        </div>
+      </div>
+      <div class="countdown-card tmv" data-date="2026-05-22">
+        <div class="countdown-label">Entrega</div>
+        <div class="countdown-event">Trabalho de Grupo</div>
+        <div class="countdown-values">
+          <div class="countdown-unit"><span class="countdown-value">--</span><span class="countdown-unit-label">dias</span></div>
+          <div class="countdown-unit"><span class="countdown-value">--</span><span class="countdown-unit-label">horas</span></div>
+          <div class="countdown-unit"><span class="countdown-value">--</span><span class="countdown-unit-label">min</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress -->
+  <section class="section">
+    <div class="card">
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Progresso de Estudo</span>
+          <span id="progressLabel">0/4 (0%)</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill tmv" id="progressBar" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section class="section">
+    <div class="search-container">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar nos topicos...">
+    </div>
+  </section>
+
+  <!-- Accordion Topics -->
+  <section class="section">
+    <h2>Conteudos Programaticos</h2>
+    <div class="accordion">
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 1: Introducao ao Marketing e Comportamento do Consumidor -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="tmv-t1">
+        <button class="accordion-header">
+          <span class="topic-number">01</span>
+          <span class="topic-title">Introducao ao Marketing e Comportamento do Consumidor</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>Definicao de Marketing:</strong> Marketing e o processo social e de gestao pelo qual individuos e organizacoes criam, oferecem e negoceiam valor entre si. Vai muito alem da simples publicidade ou venda — abrange a identificacao de necessidades, o desenvolvimento de solucoes, a comunicacao de propostas de valor e a construcao de relacoes duradouras com os clientes. Segundo a American Marketing Association (AMA), marketing e a atividade, conjunto de instituicoes e processos para criar, comunicar, entregar e trocar ofertas que tenham valor para consumidores, clientes, parceiros e sociedade em geral.</p>
+
+                <p><strong>Tipos de Marketing:</strong> O marketing nao se aplica apenas a produtos fisicos. Existem diversas tipologias conforme o objeto de aplicacao:</p>
+                <ul>
+                  <li><strong>Marketing de Produto:</strong> focado em bens tangiveis — estrategia de lancamento, ciclo de vida, posicionamento</li>
+                  <li><strong>Marketing de Servico:</strong> dirigido a ofertas intangiveis — enfase na experiencia, na qualidade percebida e na co-criacao de valor</li>
+                  <li><strong>Marketing de Pessoa:</strong> construcao da marca pessoal — politicos, celebridades, influenciadores, profissionais</li>
+                  <li><strong>Marketing de Lugar:</strong> promocao de cidades, regioes, paises como destinos turisticos ou polos de investimento</li>
+                  <li><strong>Marketing de Causa:</strong> alinhamento de marcas com causas sociais, ambientais ou humanitarias para gerar impacto e reputacao</li>
+                  <li><strong>Marketing Organizacional:</strong> construcao da imagem e reputacao de uma organizacao (nao de um produto especifico)</li>
+                </ul>
+
+                <p><strong>Marketing Mix — Os 4Ps:</strong> O modelo classico do Marketing Mix, proposto por E. Jerome McCarthy (1960), organiza as decisoes de marketing em quatro dimensoes fundamentais:</p>
+                <ul>
+                  <li><strong>Produto (Product):</strong> o que a empresa oferece — caracteristicas, design, qualidade, marca, embalagem, servicos associados, garantias</li>
+                  <li><strong>Preco (Price):</strong> quanto custa — estrategia de pricing, descontos, condicoes de pagamento, percepcao de valor</li>
+                  <li><strong>Distribuicao (Place):</strong> como e onde o produto chega ao cliente — canais de distribuicao, logistica, cobertura geografica, pontos de venda</li>
+                  <li><strong>Promocao (Promotion):</strong> como se comunica a oferta — publicidade, relacoes publicas, forca de vendas, marketing direto, promocoes de venda</li>
+                </ul>
+
+                <div class="highlight-box">
+                  <p><strong>Nota importante:</strong> A forca de vendas e uma componente do Marketing Mix (dentro da Promocao). Assim, marketing e vendas nao sao funcoes separadas — as vendas sao um instrumento operacional da estrategia de marketing.</p>
+                </div>
+
+                <p><strong>Orientacoes da empresa ao mercado:</strong> Ao longo da historia, as empresas adotaram diferentes filosofias de gestao em relacao ao mercado:</p>
+                <ul>
+                  <li><strong>Orientacao para a producao:</strong> foco na eficiencia produtiva e na distribuicao massiva — pressupoe que os consumidores preferem produtos disponiveis e acessiveis (era industrial)</li>
+                  <li><strong>Orientacao para as vendas:</strong> foco no esforco comercial agressivo — pressupoe que os consumidores so compram se forem ativamente persuadidos</li>
+                  <li><strong>Orientacao para o marketing:</strong> foco no conhecimento do mercado-alvo e na satisfacao das necessidades melhor do que a concorrencia</li>
+                  <li><strong>Orientacao para o valor:</strong> foco na entrega de valor superior ao cliente, combinando qualidade, servico e preco justo</li>
+                  <li><strong>Orientacao para a sociedade:</strong> foco no equilibrio entre lucro, satisfacao do cliente e bem-estar social e ambiental (marketing sustentavel)</li>
+                </ul>
+
+                <p><strong>Desafios do marketing no seculo XXI:</strong> O ambiente de marketing contemporaneo e marcado por forcas transformadoras que exigem adaptacao constante:</p>
+                <ul>
+                  <li><strong>Tecnologia:</strong> inteligencia artificial, big data, automacao, realidade aumentada, IoT — transformam a forma como as empresas conhecem e servem os clientes</li>
+                  <li><strong>Globalizacao:</strong> mercados interconectados, concorrencia global, cadeias de valor internacionais, diversidade cultural</li>
+                  <li><strong>Etica e responsabilidade:</strong> privacidade de dados (RGPD), transparencia, sustentabilidade, diversidade e inclusao</li>
+                  <li><strong>Economia:</strong> volatilidade, inflacao, desigualdade, novos modelos de negocio (subscricao, sharing economy, freemium)</li>
+                </ul>
+
+                <p><strong>Tendencias contemporaneas:</strong></p>
+                <ul>
+                  <li><strong>Long Tail (Chris Anderson, 2004):</strong> a internet permite que nichos de mercado se tornem viáveis — a soma de muitos produtos de nicho pode superar os poucos bestsellers. Exemplos: Netflix, Amazon, Spotify</li>
+                  <li><strong>Hiperconectividade:</strong> os consumidores estao permanentemente conectados, em multiplos dispositivos e plataformas, o que exige estrategias omnicanal</li>
+                  <li><strong>Personalizacao:</strong> de mass marketing para marketing one-to-one — algoritmos permitem ofertas, conteudos e experiencias adaptadas a cada individuo</li>
+                </ul>
+
+                <p><strong>Quantum Marketing (Raja Rajamannar, 2021) — 5 Paradigmas:</strong> O conceito de Quantum Marketing propoe que o marketing evoluiu em cinco grandes paradigmas historicos:</p>
+                <ul>
+                  <li><strong>1.o Paradigma:</strong> Marketing baseado em produto (foco nas caracteristicas funcionais)</li>
+                  <li><strong>2.o Paradigma:</strong> Marketing emocional (branding, conexao emocional com o consumidor)</li>
+                  <li><strong>3.o Paradigma:</strong> Marketing orientado por dados (CRM, segmentacao avancada, analytics)</li>
+                  <li><strong>4.o Paradigma:</strong> Marketing digital e social (redes sociais, mobile, e-commerce)</li>
+                  <li><strong>5.o Paradigma:</strong> Quantum Marketing — convergencia de IA, blockchain, AR/VR, IoT, 5G num ecossistema radicalmente novo</li>
+                </ul>
+
+                <p><strong>Personalidade de Marca (Jennifer Aaker, 1997):</strong> Aaker propoe que as marcas, tal como as pessoas, possuem tracos de personalidade que determinam a forma como os consumidores se relacionam com elas. O modelo identifica cinco dimensoes fundamentais:</p>
+                <ul>
+                  <li><strong>Sinceridade:</strong> honesta, genuina, alegre, saudavel (ex.: Dove, IKEA)</li>
+                  <li><strong>Excitacao:</strong> ousada, criativa, moderna, na moda (ex.: Apple, Nike, Red Bull)</li>
+                  <li><strong>Competencia:</strong> fiavel, inteligente, bem-sucedida, lider (ex.: Microsoft, Mercedes-Benz)</li>
+                  <li><strong>Sofisticacao:</strong> elegante, prestigiosa, charme (ex.: Chanel, Rolex)</li>
+                  <li><strong>Robustez:</strong> ao ar livre, resistente, forte, aventureira (ex.: Jeep, Timberland)</li>
+                </ul>
+
+                <p><strong>Marketing 5.0 (Kotler, Kartajaya & Setiawan, 2021):</strong> Evolucao do marketing que integra tecnologias avancadas ao servico da humanidade:</p>
+                <ul>
+                  <li><strong>Marketing Data-Driven:</strong> decisoes baseadas em big data, analytics avancados e machine learning</li>
+                  <li><strong>Marketing Preditivo:</strong> utilizacao de modelos preditivos para antecipar comportamentos e resultados</li>
+                  <li><strong>Marketing Contextual:</strong> entrega de experiencias personalizadas em tempo real com base no contexto (localizacao, momento, dispositivo)</li>
+                  <li><strong>Marketing Aumentado:</strong> uso de IA e chatbots para aumentar a capacidade humana de interacao com o cliente</li>
+                  <li><strong>Marketing Agil:</strong> organizacoes descentralizadas, equipas multifuncionais, iteracao rapida, teste contínuo</li>
+                </ul>
+
+                <p><strong>8 Ps do Marketing Digital (Conrado Adolpho):</strong> Modelo que estende os 4Ps tradicionais para o contexto digital:</p>
+                <ul>
+                  <li><strong>Pesquisa:</strong> compreender o mercado digital, comportamento online, palavras-chave, tendencias</li>
+                  <li><strong>Planeamento:</strong> definir a estrategia digital — objetivos, KPIs, orcamento, cronograma</li>
+                  <li><strong>Producao:</strong> criar os ativos digitais — website, landing pages, conteudos, aplicacoes</li>
+                  <li><strong>Publicacao:</strong> colocar os conteudos online de forma otimizada (SEO, UX, responsividade)</li>
+                  <li><strong>Promocao:</strong> amplificar o alcance — publicidade paga, social ads, email marketing, parcerias</li>
+                  <li><strong>Propagacao:</strong> incentivar a partilha organica — viral, word-of-mouth, conteudo partilhavel</li>
+                  <li><strong>Personalizacao:</strong> adaptar a experiencia ao perfil e comportamento de cada utilizador</li>
+                  <li><strong>Precisao:</strong> medir, analisar e otimizar — metricas, testes A/B, ROI, dashboards</li>
+                </ul>
+
+                <p><strong>Comportamento do Consumidor:</strong> O estudo do comportamento do consumidor analisa como individuos, grupos e organizacoes selecionam, compram, usam e descartam bens, servicos, ideias ou experiencias para satisfazer as suas necessidades e desejos.</p>
+
+                <p><strong>Modelo Estimulo-Resposta:</strong> O modelo classico do comportamento do consumidor descreve o processo como: estimulos de marketing (4Ps) e estimulos ambientais (economicos, tecnologicos, politicos, culturais) entram na "caixa negra" do consumidor (caracteristicas pessoais + processo de decisao) e produzem respostas (escolha do produto, da marca, do ponto de venda, do momento e da quantidade).</p>
+
+                <p><strong>Fatores que influenciam o comportamento do consumidor:</strong></p>
+                <ul>
+                  <li><strong>Fatores culturais:</strong> cultura, subcultura, classe social — sao a influencia mais ampla e profunda</li>
+                  <li><strong>Fatores sociais:</strong> grupos de referencia, familia, papeis e status social</li>
+                  <li><strong>Fatores pessoais:</strong> idade, fase do ciclo de vida, ocupacao, situacao economica, estilo de vida, personalidade</li>
+                  <li><strong>Fatores psicologicos:</strong> motivacao, percepcao, aprendizagem, crencas e atitudes</li>
+                </ul>
+
+                <p><strong>Piramide de Maslow (1943):</strong> Abraham Maslow propos uma hierarquia de necessidades humanas que influencia diretamente a motivacao de compra: (1) Necessidades fisiologicas (alimentacao, abrigo) → (2) Seguranca (protecao, estabilidade) → (3) Sociais (pertenca, amor, amizade) → (4) Estima (reconhecimento, status, autoconfianca) → (5) Autorrealizacao (crescimento pessoal, realizacao do potencial).</p>
+
+                <p><strong>Processo de decisao de compra — 5 etapas:</strong></p>
+                <ul>
+                  <li><strong>1. Reconhecimento da necessidade:</strong> o consumidor percebe uma discrepancia entre o estado atual e o desejado</li>
+                  <li><strong>2. Procura de informacao:</strong> pesquisa interna (memoria) e externa (amigos, internet, publicidade, lojas)</li>
+                  <li><strong>3. Avaliacao de alternativas:</strong> comparacao de opcoes com base em criterios (preco, qualidade, marca, reviews)</li>
+                  <li><strong>4. Decisao de compra:</strong> escolha final, influenciada por atitudes de outros e fatores situacionais</li>
+                  <li><strong>5. Comportamento pos-compra:</strong> satisfacao ou insatisfacao, lealdade, recomendacao ou reclamacao</li>
+                </ul>
+
+                <p><strong>Tipos de comportamento de compra:</strong></p>
+                <ul>
+                  <li><strong>Comportamento complexo:</strong> alto envolvimento + diferencas significativas entre marcas (ex.: carro, casa) — o consumidor pesquisa, compara e avalia cuidadosamente</li>
+                  <li><strong>Dissonancia cognitiva:</strong> alto envolvimento + poucas diferencas entre marcas (ex.: carpete, tinta) — o consumidor compra e depois procura confirmacao de que fez a escolha certa</li>
+                  <li><strong>Comportamento habitual:</strong> baixo envolvimento + poucas diferencas (ex.: sal, acucar) — compra por habito, sem grande reflexao</li>
+                  <li><strong>Comportamento de variedade:</strong> baixo envolvimento + diferencas significativas (ex.: bolachas, snacks) — o consumidor muda de marca por curiosidade, nao por insatisfacao</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block tmv-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Marketing Mix (4Ps)</h4>
+                  <p>Produto, Preco, Distribuicao e Promocao — as quatro variaveis controladas pela empresa para influenciar o mercado.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Quantum Marketing</h4>
+                  <p>5.o paradigma (Rajamannar): convergencia de IA, blockchain, AR/VR, IoT e 5G que redefine radicalmente o marketing.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Personalidade de Marca</h4>
+                  <p>Modelo de Aaker (1997): Sinceridade, Excitacao, Competencia, Sofisticacao e Robustez como tracos das marcas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Piramide de Maslow</h4>
+                  <p>Hierarquia de necessidades: fisiologicas, seguranca, sociais, estima e autorrealizacao — base da motivacao de compra.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Modelo Estimulo-Resposta</h4>
+                  <p>Estimulos de marketing e ambientais entram na "caixa negra" do consumidor e produzem respostas de compra.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Long Tail</h4>
+                  <p>Chris Anderson (2004): a soma de nichos online supera os bestsellers — a internet viabiliza mercados de cauda longa.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block tmv-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que sao os 4Ps do Marketing Mix?</div>
+                    <div class="flashcard-back">Produto, Preco, Distribuicao (Place) e Promocao — modelo de McCarthy (1960) que organiza as decisoes de marketing em quatro variaveis controladas pela empresa.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 5 dimensoes da Personalidade de Marca (Aaker)?</div>
+                    <div class="flashcard-back">Sinceridade, Excitacao, Competencia, Sofisticacao e Robustez — cada marca possui um perfil que determina a forma como os consumidores se relacionam com ela.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o conceito de Long Tail?</div>
+                    <div class="flashcard-back">Teoria de Chris Anderson (2004): a internet permite que muitos produtos de nicho, somados, superem os bestsellers. A cauda longa torna os nichos economicamente viaveis.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 5 paradigmas do Quantum Marketing?</div>
+                    <div class="flashcard-back">1.o Produto, 2.o Emocional, 3.o Dados, 4.o Digital/Social, 5.o Quantum — convergencia de IA, blockchain, AR/VR, IoT e 5G num ecossistema radicalmente novo.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 5 orientacoes da empresa ao mercado?</div>
+                    <div class="flashcard-back">Producao (eficiencia), Vendas (persuasao), Marketing (necessidades), Valor (entrega de valor superior) e Sociedade (equilibrio lucro-cliente-bem-estar social).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que sao os 8Ps do Marketing Digital?</div>
+                    <div class="flashcard-back">Pesquisa, Planeamento, Producao, Publicacao, Promocao, Propagacao, Personalizacao e Precisao — modelo de Conrado Adolpho para o contexto digital.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 tipos de comportamento de compra?</div>
+                    <div class="flashcard-back">Complexo (alto envolvimento, muitas diferencas), Dissonancia cognitiva (alto envolvimento, poucas diferencas), Habitual (baixo, poucas) e Variedade (baixo, muitas diferencas).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 5 etapas do processo de decisao de compra?</div>
+                    <div class="flashcard-back">1. Reconhecimento da necessidade, 2. Procura de informacao, 3. Avaliacao de alternativas, 4. Decisao de compra, 5. Comportamento pos-compra.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual dos seguintes NAO e um dos 4Ps do Marketing Mix classico?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Produto</button>
+                  <button class="quiz-option">Preco</button>
+                  <button class="quiz-option" data-correct="true">Pessoas</button>
+                  <button class="quiz-option">Promocao</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Segundo a Piramide de Maslow, qual e o nivel mais elevado de necessidade?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Seguranca</button>
+                  <button class="quiz-option">Estima</button>
+                  <button class="quiz-option">Sociais</button>
+                  <button class="quiz-option" data-correct="true">Autorrealizacao</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. O modelo de Personalidade de Marca de Aaker (1997) inclui cinco dimensoes. Qual das seguintes e uma delas?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Inovacao</button>
+                  <button class="quiz-option" data-correct="true">Robustez</button>
+                  <button class="quiz-option">Transparencia</button>
+                  <button class="quiz-option">Economia</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. No conceito de Long Tail (Chris Anderson), qual e a premissa central?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Apenas os produtos populares sao rentaveis</button>
+                  <button class="quiz-option" data-correct="true">A soma de muitos nichos pode superar os bestsellers gracas a internet</button>
+                  <button class="quiz-option">O mercado digital elimina todos os produtos de nicho</button>
+                  <button class="quiz-option">A cauda longa refere-se ao ciclo de vida longo dos produtos</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. Qual tipo de comportamento de compra ocorre quando ha alto envolvimento e poucas diferencas entre marcas?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Comportamento complexo</button>
+                  <button class="quiz-option" data-correct="true">Dissonancia cognitiva redutora</button>
+                  <button class="quiz-option">Comportamento habitual</button>
+                  <button class="quiz-option">Comportamento de variedade</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">6. O Marketing 5.0 de Kotler propoe cinco aplicacoes tecnologicas. Qual das seguintes NAO e uma delas?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Marketing Preditivo</button>
+                  <button class="quiz-option">Marketing Contextual</button>
+                  <button class="quiz-option" data-correct="true">Marketing Transacional</button>
+                  <button class="quiz-option">Marketing Agil</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('tmv-t1')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 2: O Plano de Marketing                                -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="tmv-t2">
+        <button class="accordion-header">
+          <span class="topic-number">02</span>
+          <span class="topic-title">O Plano de Marketing</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>Definicao e importancia do Plano de Marketing:</strong> O plano de marketing e um documento estrategico que formaliza a analise do ambiente, a definicao de objetivos e a articulacao de estrategias e acoes para alcanca-los. E o "mapa" que guia a organizacao na conquista e retencao de clientes, assegurando que os recursos sao utilizados de forma eficiente e que as decisoes sao coerentes com a visao da empresa. Sem plano, o marketing e reativo e fragmentado; com plano, e proativo e integrado.</p>
+
+                <p><strong>Tipos de planos de marketing:</strong></p>
+                <ul>
+                  <li><strong>Plano organizacional:</strong> visao estrategica global da empresa — missao, valores, posicionamento institucional</li>
+                  <li><strong>Plano de produto/marca:</strong> estrategia especifica para um produto, servico ou marca individual</li>
+                  <li><strong>Plano de marketing-mix:</strong> detalhamento das decisoes sobre os 4Ps/7Ps para cada oferta</li>
+                  <li><strong>Plano de operacoes:</strong> plano tatico e operacional — cronogramas, responsaveis, orcamentos detalhados</li>
+                </ul>
+
+                <p><strong>As 7 Fases do Plano de Marketing:</strong> O plano de marketing pode ser estruturado em sete questoes fundamentais que guiam todo o processo:</p>
+                <ul>
+                  <li><strong>Fase 1 — Onde estamos?</strong> Diagnostico da situacao atual (analise interna e externa, SWOT)</li>
+                  <li><strong>Fase 2 — Onde queremos ir?</strong> Definicao de objetivos estrategicos e operacionais</li>
+                  <li><strong>Fase 3 — Como?</strong> Formulacao da estrategia (segmentacao, targeting, posicionamento)</li>
+                  <li><strong>Fase 4 — Para quem?</strong> Identificacao e caracterizacao do publico-alvo</li>
+                  <li><strong>Fase 5 — Quando, que, onde, como, quem?</strong> Programas de marketing-mix (7Ps), planos de acao</li>
+                  <li><strong>Fase 6 — Sucesso?</strong> Definicao de metricas e indicadores de performance (KPIs)</li>
+                  <li><strong>Fase 7 — Avaliar?</strong> Controlo, monitorizacao, ajustes e melhorias continuas</li>
+                </ul>
+
+                <p><strong>Diagnostico — Analise Externa:</strong> A analise do ambiente externo identifica as oportunidades e ameacas que a empresa enfrenta. Inclui:</p>
+                <ul>
+                  <li><strong>Analise do ambiente macro (PESTEL):</strong> fatores Politicos, Economicos, Sociais, Tecnologicos, Ecologicos e Legais</li>
+                  <li><strong>Analise do setor:</strong> dimensao, taxa de crescimento, volume de vendas, rentabilidade, sazonalidade</li>
+                  <li><strong>Analise do mercado:</strong> segmentos, dimensao, tendencias, clientes atuais e potenciais</li>
+                  <li><strong>Analise da concorrencia:</strong> concorrentes diretos e indiretos, posicionamento, pontos fortes e fracos, estrategias</li>
+                </ul>
+
+                <p><strong>Diagnostico — Analise Interna:</strong> A analise interna avalia os recursos e capacidades da propria organizacao:</p>
+                <ul>
+                  <li><strong>Tipo e dimensao:</strong> PME, grande empresa, startup, organizacao sem fins lucrativos</li>
+                  <li><strong>Localizacao e estrutura:</strong> presenca geografica, estrutura organizacional, recursos humanos</li>
+                  <li><strong>Missao, visao e valores:</strong> o proposito, a ambicao e os principios que guiam a organizacao</li>
+                  <li><strong>Recursos:</strong> financeiros, tecnologicos, humanos, competencias nucleares, marca, patentes</li>
+                  <li><strong>Performance atual:</strong> vendas, quota de mercado, satisfacao do cliente, notoriedade da marca</li>
+                </ul>
+
+                <p><strong>Analise SWOT:</strong> A matriz SWOT e uma ferramenta sintetica que cruza a analise interna (Strengths e Weaknesses) com a externa (Opportunities e Threats):</p>
+                <ul>
+                  <li><strong>Strengths (Forcas):</strong> ex.: marca forte, equipa qualificada, tecnologia proprietaria, localizacao privilegiada</li>
+                  <li><strong>Weaknesses (Fraquezas):</strong> ex.: orcamento limitado, baixa notoriedade, falta de presenca digital, alta rotacao de pessoal</li>
+                  <li><strong>Opportunities (Oportunidades):</strong> ex.: crescimento do e-commerce, novo segmento de mercado, regulacao favoravel, parceria estrategica</li>
+                  <li><strong>Threats (Ameacas):</strong> ex.: entrada de novo concorrente, mudanca regulatoria, crise economica, mudanca de habitos do consumidor</li>
+                </ul>
+
+                <div class="highlight-box">
+                  <p><strong>Da SWOT a estrategia:</strong> A SWOT nao e apenas um diagnostico — deve ser transformada em orientacoes estrategicas: usar Forcas para explorar Oportunidades (SO), minimizar Fraquezas aproveitando Oportunidades (WO), usar Forcas para neutralizar Ameacas (ST), e defender-se de Ameacas apesar das Fraquezas (WT).</p>
+                </div>
+
+                <p><strong>Objetivos DREAM:</strong> Os objetivos de marketing devem seguir o acronimo DREAM para serem eficazes:</p>
+                <ul>
+                  <li><strong>D — Datado:</strong> com prazo definido (ex.: "ate dezembro de 2026")</li>
+                  <li><strong>R — Realizavel:</strong> ambicioso mas alcancavel com os recursos disponiveis</li>
+                  <li><strong>E — Especifico:</strong> claro, concreto, sem ambiguidade (ex.: "aumentar a quota de mercado no segmento X")</li>
+                  <li><strong>A — Ambicioso:</strong> desafiante, que motive a equipa e impulsione o crescimento</li>
+                  <li><strong>M — Mensuravel:</strong> quantificavel, com indicadores claros de sucesso (ex.: "+15% de vendas")</li>
+                </ul>
+
+                <p><strong>Orientacoes Estrategicas — STP:</strong></p>
+                <ul>
+                  <li><strong>Segmentacao:</strong> dividir o mercado em grupos homogeneos de consumidores com base em criterios demograficos, geograficos, psicograficos e comportamentais</li>
+                  <li><strong>Targeting (Escolha do alvo):</strong> selecionar o(s) segmento(s) mais atrativo(s) e onde a empresa tem vantagem competitiva — estrategias de cobertura: indiferenciada, diferenciada, concentrada, micromarketing</li>
+                  <li><strong>Posicionamento:</strong> definir a posicao unica e distintiva que a marca ocupa na mente do consumidor em relacao a concorrencia — a proposta de valor que a diferencia</li>
+                </ul>
+
+                <p><strong>Vantagem Competitiva e Matriz Ansoff:</strong> A vantagem competitiva e o que permite a empresa superar a concorrencia de forma sustentada (custo, diferenciacao, foco). A Matriz Ansoff (1957) identifica quatro estrategias de crescimento:</p>
+                <ul>
+                  <li><strong>Penetracao de mercado:</strong> produtos atuais em mercados atuais — aumentar quota, intensificar uso</li>
+                  <li><strong>Desenvolvimento de produto:</strong> novos produtos em mercados atuais — inovacao, extensao de linha</li>
+                  <li><strong>Desenvolvimento de mercado:</strong> produtos atuais em novos mercados — novos segmentos, novas geografias</li>
+                  <li><strong>Diversificacao:</strong> novos produtos em novos mercados — maior risco, maior potencial</li>
+                </ul>
+
+                <p><strong>Tipologias Estrategicas Competitivas:</strong></p>
+                <ul>
+                  <li><strong>Lider:</strong> maior quota de mercado — define o ritmo, investe em inovacao, defende a posicao</li>
+                  <li><strong>Challenger (Desafiador):</strong> ataca o lider e outros concorrentes para ganhar quota — estrategias agressivas de preco, produto ou comunicacao</li>
+                  <li><strong>Co-lider:</strong> partilha a lideranca com outro player — coopetition, acordos tacitos</li>
+                  <li><strong>Seguidor:</strong> imita o lider sem o confrontar diretamente — foco na eficiencia, nos custos baixos</li>
+                  <li><strong>Especialista/Nicho:</strong> domina um segmento especifico — conhecimento profundo, fidelidade, margens elevadas</li>
+                </ul>
+
+                <p><strong>Marketing Mix Alargado — 7Ps:</strong> Alem dos 4Ps tradicionais, o marketing de servicos acrescenta tres dimensoes criticas:</p>
+                <ul>
+                  <li><strong>People (Pessoas):</strong> colaboradores, cultura de servico, formacao, motivacao</li>
+                  <li><strong>Process (Processo):</strong> fluxo de entrega do servico, eficiencia, standardizacao vs. personalizacao</li>
+                  <li><strong>Physical Evidence (Evidencia Fisica):</strong> ambiente fisico, design, ambiance, materiais tangiveis que suportam o servico</li>
+                </ul>
+
+                <p><strong>Estrategias de Preco:</strong></p>
+                <ul>
+                  <li><strong>Penetracao:</strong> preco inicial baixo para ganhar rapidamente quota de mercado — volumes elevados, margens baixas</li>
+                  <li><strong>Skimming (Desnatacao):</strong> preco inicial elevado para capturar o excedente dos early adopters — margens altas, depois reducao gradual</li>
+                  <li><strong>Preco/Qualidade:</strong> posicionar a oferta na matriz preco-qualidade (premium, bom valor, economia, sobrepreco)</li>
+                </ul>
+
+                <p><strong>Orcamento, Implementacao e Controlo:</strong> O plano de marketing deve incluir: (1) orcamento detalhado por acao e canal; (2) cronograma de implementacao (diagrama de Gantt com responsaveis, datas e milestones); (3) mecanismos de controlo — KPIs, dashboards, reunioes periodicas de revisao, acoes corretivas.</p>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block tmv-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Analise SWOT</h4>
+                  <p>Matriz que cruza Forcas e Fraquezas (internas) com Oportunidades e Ameacas (externas) para orientar a estrategia.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Objetivos DREAM</h4>
+                  <p>Datado, Realizavel, Especifico, Ambicioso e Mensuravel — criterios para definir objetivos de marketing eficazes.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>STP</h4>
+                  <p>Segmentacao, Targeting e Posicionamento — o trinomio estrategico central do plano de marketing.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Matriz Ansoff</h4>
+                  <p>Quatro estrategias de crescimento: Penetracao, Desenv. Produto, Desenv. Mercado e Diversificacao.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>7Ps</h4>
+                  <p>Marketing-mix alargado para servicos: Produto, Preco, Distribuicao, Promocao + Pessoas, Processo, Evidencia Fisica.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Diagrama de Gantt</h4>
+                  <p>Ferramenta de planeamento que visualiza cronologicamente as atividades, responsaveis e dependencias do plano.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block tmv-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 7 fases do plano de marketing?</div>
+                    <div class="flashcard-back">1. Onde estamos? 2. Onde queremos ir? 3. Como? 4. Para quem? 5. Quando/que/onde/como/quem? 6. Sucesso? 7. Avaliar? — do diagnostico ao controlo.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que significa DREAM nos objetivos de marketing?</div>
+                    <div class="flashcard-back">Datado (com prazo), Realizavel (alcancavel), Especifico (concreto), Ambicioso (desafiante) e Mensuravel (quantificavel com KPIs).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e a Matriz Ansoff?</div>
+                    <div class="flashcard-back">Modelo de 4 estrategias de crescimento: Penetracao (produto atual/mercado atual), Desenv. Produto (novo produto/mercado atual), Desenv. Mercado (produto atual/novo mercado), Diversificacao (novo/novo).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 4 componentes da analise SWOT?</div>
+                    <div class="flashcard-back">Strengths (Forcas) e Weaknesses (Fraquezas) sao internas; Opportunities (Oportunidades) e Threats (Ameacas) sao externas.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o trinomio STP?</div>
+                    <div class="flashcard-back">Segmentacao (dividir o mercado), Targeting (escolher o alvo) e Posicionamento (definir a posicao unica na mente do consumidor vs. concorrencia).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre estrategia de penetracao e skimming de preco?</div>
+                    <div class="flashcard-back">Penetracao: preco inicial baixo para ganhar quota rapido (volume alto, margem baixa). Skimming: preco inicial alto para capturar early adopters (margem alta, depois reducao gradual).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 5 tipologias estrategicas competitivas?</div>
+                    <div class="flashcard-back">Lider (maior quota), Challenger (ataca o lider), Co-lider (partilha lideranca), Seguidor (imita sem confrontar) e Especialista/Nicho (domina um segmento).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que acrescentam os 7Ps em relacao aos 4Ps?</div>
+                    <div class="flashcard-back">Pessoas (colaboradores, cultura de servico), Processo (fluxo de entrega) e Evidencia Fisica (ambiente, materiais tangiveis) — essenciais no marketing de servicos.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Na analise SWOT, as Fraquezas e Forcas pertencem a que tipo de analise?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Analise externa</button>
+                  <button class="quiz-option" data-correct="true">Analise interna</button>
+                  <button class="quiz-option">Analise de mercado</button>
+                  <button class="quiz-option">Analise PESTEL</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. O acronimo DREAM para objetivos de marketing inclui qual destas caracteristicas?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Dinamico</button>
+                  <button class="quiz-option">Relevante</button>
+                  <button class="quiz-option" data-correct="true">Ambicioso</button>
+                  <button class="quiz-option">Moderno</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Na Matriz Ansoff, a estrategia de "Diversificacao" implica:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Produtos atuais em mercados atuais</button>
+                  <button class="quiz-option">Novos produtos em mercados atuais</button>
+                  <button class="quiz-option">Produtos atuais em novos mercados</button>
+                  <button class="quiz-option" data-correct="true">Novos produtos em novos mercados</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. O Posicionamento, no trinomio STP, refere-se a:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Dividir o mercado em segmentos</button>
+                  <button class="quiz-option">Escolher o segmento mais atrativo</button>
+                  <button class="quiz-option" data-correct="true">Definir a posicao unica da marca na mente do consumidor face a concorrencia</button>
+                  <button class="quiz-option">Calcular o preco ideal do produto</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. A estrategia de preco "Skimming" consiste em:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Praticar o preco mais baixo do mercado</button>
+                  <button class="quiz-option">Igualar o preco da concorrencia</button>
+                  <button class="quiz-option" data-correct="true">Lancar com preco elevado e reduzi-lo gradualmente</button>
+                  <button class="quiz-option">Aplicar descontos progressivos por volume</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">6. Qual dos seguintes NAO e um dos 7Ps do marketing de servicos?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Pessoas</button>
+                  <button class="quiz-option">Processo</button>
+                  <button class="quiz-option">Evidencia Fisica</button>
+                  <button class="quiz-option" data-correct="true">Persuasao</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('tmv-t2')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 3: Publicidade e Comunicacao Digital                    -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="tmv-t3">
+        <button class="accordion-header">
+          <span class="topic-number">03</span>
+          <span class="topic-title">Publicidade e Comunicacao Digital</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>Publicidade Online — Definicao:</strong> A publicidade online e qualquer forma de comunicacao paga transmitida atraves de canais digitais com o objetivo de influenciar atitudes, comportamentos ou decisoes de compra. Distingue-se da publicidade tradicional pela sua capacidade de segmentacao precisa, interatividade, mensurabilidade em tempo real e personalizacao a escala.</p>
+
+                <p><strong>Onde anunciar online:</strong></p>
+                <ul>
+                  <li><strong>Site proprio:</strong> banners internos, pop-ups, notificacoes — controlo total, mas alcance limitado ao trafego existente</li>
+                  <li><strong>Redes sociais:</strong> Facebook/Instagram Ads, LinkedIn Ads, TikTok Ads, Pinterest Ads — segmentacao rica por interesses, demografia e comportamento</li>
+                  <li><strong>Motores de busca:</strong> Google Ads (Search, Display, Shopping, YouTube) — captura de intencao de compra atraves de palavras-chave</li>
+                  <li><strong>Ad servers e redes de display:</strong> Google Display Network, programmatic advertising — anuncios em milhares de sites terceiros</li>
+                  <li><strong>Mobile:</strong> in-app advertising, notificacoes push, SMS marketing — alcance no dispositivo mais pessoal do consumidor</li>
+                </ul>
+
+                <p><strong>Vantagens da publicidade digital:</strong></p>
+                <ul>
+                  <li><strong>Interacao direta:</strong> o consumidor pode clicar, comentar, partilhar, comprar imediatamente — o anuncio e acao</li>
+                  <li><strong>Personalizacao:</strong> adaptar a mensagem ao perfil, comportamento e contexto de cada utilizador</li>
+                  <li><strong>Eficiencia de custo:</strong> investimento escalavel, sem minimos proibitivos — acessivel a PMEs e startups</li>
+                  <li><strong>Segmentacao avancada:</strong> contextual (conteudo da pagina), sociodemografica (idade, genero, rendimento), geografica (localizacao), comportamental (historico de navegacao, compras anteriores)</li>
+                  <li><strong>Mensurabilidade:</strong> cada impressao, clique, conversao e mensuravel em tempo real — ROI rastreavel</li>
+                </ul>
+
+                <p><strong>Categorias de anuncios digitais:</strong></p>
+                <ul>
+                  <li><strong>Texto:</strong> anuncios de pesquisa no Google, anuncios em classificados — simples, focados na intencao</li>
+                  <li><strong>Display/Banners:</strong> imagens estaticas ou animadas em sites parceiros — notoriedade e retargeting</li>
+                  <li><strong>Classificados:</strong> OLX, Idealista — compra e venda direta entre particulares ou empresas</li>
+                  <li><strong>Multimedia/Rich Media:</strong> anuncios interativos com video, audio, animacao, expansao — experiencia imersiva</li>
+                  <li><strong>Lead Generation:</strong> formularios integrados no anuncio para captacao de contactos (Facebook Lead Ads, LinkedIn Lead Gen)</li>
+                  <li><strong>Sponsored Content:</strong> conteudo pago que se integra no fluxo editorial — native advertising, publi-reportagens digitais</li>
+                  <li><strong>Email Marketing:</strong> newsletters, campanhas automatizadas, sequencias de nurturing — relacao direta com o contacto</li>
+                  <li><strong>Anuncios em mapas:</strong> Google Maps Ads, Waze Ads — publicidade geolocalizadao, ideal para negocios locais</li>
+                </ul>
+
+                <p><strong>Preferencias comunicacionais por geracao:</strong></p>
+                <ul>
+                  <li><strong>Tradicionalistas (antes de 1946):</strong> preferem comunicacao formal, correio fisico, telefone, imprensa escrita</li>
+                  <li><strong>Baby Boomers (1946-1964):</strong> televisao, email, telefone, jornais — valorizam credibilidade e profundidade</li>
+                  <li><strong>Geracao X (1965-1980):</strong> email, websites, Facebook — pragmaticos, valorizam eficiencia e conveniencia</li>
+                  <li><strong>Millennials (1981-1996):</strong> redes sociais, mobile, messaging apps, video — procuram autenticidade e experiencias</li>
+                  <li><strong>Geracao Z (1997-2012):</strong> TikTok, Instagram, Snapchat, video curto, memes — comunicacao visual, rapida, participativa</li>
+                </ul>
+
+                <p><strong>Modelos de pricing publicitario:</strong></p>
+                <ul>
+                  <li><strong>CPM (Custo por Mil impressoes):</strong> paga-se por cada 1000 vezes que o anuncio e exibido — ideal para branding e notoriedade</li>
+                  <li><strong>CPC (Custo por Clique):</strong> paga-se apenas quando o utilizador clica no anuncio — ideal para trafego e consideracao</li>
+                  <li><strong>CPA (Custo por Aquisicao/Acao):</strong> paga-se apenas quando ocorre uma conversao (compra, registo, download) — ideal para performance</li>
+                  <li><strong>Custo fixo:</strong> valor fixo por periodo (ex.: banner no site X durante 30 dias) — previsibilidade de custo</li>
+                  <li><strong>Custo por visitante:</strong> pagamento baseado no numero de visitantes unicos gerados</li>
+                  <li><strong>CPE (Custo por Engagement):</strong> pagamento por interacao (like, comentario, partilha, visualizacao de video) — ideal para social media</li>
+                </ul>
+
+                <p><strong>Campanha de comunicacao — 6 etapas:</strong></p>
+                <ul>
+                  <li><strong>1. Identificar a audiencia-alvo:</strong> quem queremos atingir — perfil demografico, psicografico e comportamental</li>
+                  <li><strong>2. Definir objetivos de comunicacao:</strong> notoriedade, preferencia, convicao, compra (modelo AIDA: Atencao, Interesse, Desejo, Acao)</li>
+                  <li><strong>3. Definir orcamento:</strong> quanto investir na campanha</li>
+                  <li><strong>4. Desenvolver a mensagem:</strong> estrategia criativa — o que dizer e como dizer</li>
+                  <li><strong>5. Selecionar os meios de comunicacao:</strong> quais canais utilizar e como combina-los</li>
+                  <li><strong>6. Avaliar resultados:</strong> medir o impacto e o ROI da campanha</li>
+                </ul>
+
+                <p><strong>Metodos de definicao de orcamento publicitario:</strong></p>
+                <ul>
+                  <li><strong>Percentagem das vendas:</strong> orcamento definido como % das vendas passadas ou projetadas (ex.: 5% das receitas)</li>
+                  <li><strong>Paridade competitiva:</strong> igualar ou proporcionar o investimento em funcao dos concorrentes</li>
+                  <li><strong>Metodo do disponivel:</strong> investir o que sobra depois de cobrir os custos operacionais — simples mas arriscado</li>
+                  <li><strong>Baseado em objetivos e tarefas:</strong> definir os objetivos, identificar as tarefas necessarias e orcar cada uma — metodo mais racional</li>
+                </ul>
+
+                <p><strong>Estrategia criativa — tipos de apelo:</strong></p>
+                <ul>
+                  <li><strong>Apelo racional:</strong> foca nos beneficios funcionais, nas caracteristicas do produto, na relacao qualidade-preco — argumenta com factos e dados</li>
+                  <li><strong>Apelo emocional:</strong> evoca sentimentos — humor, medo, amor, nostalgia, orgulho — conecta-se com o consumidor a nivel afetivo</li>
+                  <li><strong>Apelo moralista:</strong> apela ao sentido de justica, responsabilidade e dever — campanhas sociais, ambientais, humanitarias</li>
+                </ul>
+
+                <p><strong>Canais de comunicacao:</strong></p>
+                <ul>
+                  <li><strong>Pessoais:</strong> forca de vendas, marketing direto, passa-palavra — interacao direta, alta credibilidade</li>
+                  <li><strong>Nao-pessoais:</strong> media (TV, radio, imprensa, digital), atmosfera (design de loja, ambiente), eventos (feiras, conferencias, experiencias)</li>
+                </ul>
+
+                <p><strong>Push vs. Pull:</strong></p>
+                <ul>
+                  <li><strong>Push (empurrar):</strong> estrategia dirigida ao canal de distribuicao — trade deals, personal selling, incentivos ao revendedor para "empurrar" o produto ate ao consumidor final</li>
+                  <li><strong>Pull (puxar):</strong> estrategia dirigida ao consumidor final — publicidade, cupoes, sampling, promocoes que criam procura e "puxam" o produto atraves do canal</li>
+                </ul>
+
+                <p><strong>Publicidade em video:</strong> O video e o formato com maior crescimento no marketing digital. Vantagens: capacidade narrativa, emocao e storytelling; elevada partilha (92% dos utilizadores mobile partilham videos); compatibilidade com todas as plataformas. Desvantagens: custo de producao mais elevado; curta duracao de atencao (primeiros 3-5 segundos sao decisivos); necessidade de adaptacao por plataforma (vertical para Stories, quadrado para feed).</p>
+
+                <p><strong>Publicidade em redes sociais:</strong> As motivacoes dos utilizadores nas redes sociais determinam a eficacia da publicidade: busca de conhecimento e informacao, relaxamento e escape, interacao social e pertenca, entretenimento e divertimento. Vantagens: segmentacao granular, formatos variados, interacao direta, viralidade potencial, custo acessivel. Desvantagens: fadiga publicitaria (ad fatigue), algoritmos que limitam o alcance organico, necessidade de conteudo constante, risco reputacional (comentarios negativos, crises).</p>
+
+                <p><strong>Futuro da publicidade digital:</strong></p>
+                <ul>
+                  <li><strong>Mobile-first:</strong> o telemovel e o primeiro e principal dispositivo — toda a estrategia deve ser concebida para mobile</li>
+                  <li><strong>Mais video:</strong> video curto (Reels, TikTok, Shorts), live streaming, video shoppable — o video domina o consumo de conteudo</li>
+                  <li><strong>AR/VR:</strong> realidade aumentada (experimentar produtos virtualmente) e virtual (experiencias imersivas de marca)</li>
+                  <li><strong>Influencer marketing:</strong> parcerias com criadores de conteudo — micro e nano-influenciadores para autenticidade</li>
+                  <li><strong>IA e chatbots:</strong> conversational marketing, geracao automatica de conteudo, otimizacao criativa em tempo real</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block tmv-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>CPM / CPC / CPA</h4>
+                  <p>Modelos de pricing: Custo por Mil impressoes (branding), por Clique (trafego) e por Aquisicao (conversao/performance).</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Push vs. Pull</h4>
+                  <p>Push empurra pelo canal (trade deals, personal selling). Pull puxa pelo consumidor (publicidade, cupoes, sampling).</p>
+                </div>
+                <div class="concept-card">
+                  <h4>AIDA</h4>
+                  <p>Modelo de comunicacao: Atencao, Interesse, Desejo e Acao — etapas do percurso do consumidor ate a compra.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Native Advertising</h4>
+                  <p>Conteudo pago que se integra no fluxo editorial da plataforma, parecendo conteudo organico — menos intrusivo.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Segmentacao Comportamental</h4>
+                  <p>Direcionar anuncios com base no historico de navegacao, compras e interacoes anteriores do utilizador.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Mobile-First</h4>
+                  <p>Abordagem que concebe toda a estrategia, design e conteudo prioritariamente para dispositivos moveis.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block tmv-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre CPM, CPC e CPA?</div>
+                    <div class="flashcard-back">CPM paga por 1000 impressoes (branding), CPC paga por clique (trafego), CPA paga por conversao (performance). O risco para o anunciante diminui de CPM para CPA.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 6 etapas de uma campanha de comunicacao?</div>
+                    <div class="flashcard-back">1. Identificar audiencia, 2. Definir objetivos, 3. Definir orcamento, 4. Desenvolver mensagem, 5. Selecionar meios, 6. Avaliar resultados.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que distingue a estrategia Push da Pull?</div>
+                    <div class="flashcard-back">Push dirige-se ao canal (trade deals, personal selling — "empurra" o produto). Pull dirige-se ao consumidor final (publicidade, cupoes — cria procura que "puxa" o produto pelo canal).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 3 tipos de apelo na estrategia criativa?</div>
+                    <div class="flashcard-back">Racional (factos, beneficios funcionais), Emocional (sentimentos, humor, medo, nostalgia) e Moralista (justica, responsabilidade, causas sociais).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 metodos de definicao de orcamento publicitario?</div>
+                    <div class="flashcard-back">% das vendas, Paridade competitiva, Metodo do disponivel, e Baseado em objetivos e tarefas (o mais racional e recomendado).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Como diferem as preferencias comunicacionais dos Millennials vs. Gen Z?</div>
+                    <div class="flashcard-back">Millennials: redes sociais, mobile, messaging, video — autenticidade e experiencias. Gen Z: TikTok, Instagram, video curto, memes — comunicacao visual, rapida, participativa.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 tipos de segmentacao publicitaria digital?</div>
+                    <div class="flashcard-back">Contextual (conteudo da pagina), Sociodemografica (idade, genero, rendimento), Geografica (localizacao) e Comportamental (historico de navegacao e compras).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Porque e que 92% dos utilizadores mobile partilham videos?</div>
+                    <div class="flashcard-back">O video tem elevada capacidade narrativa e emocional, e facilmente consumido em mobile, e gera engagement social — as pessoas partilham conteudo que as emociona, informa ou diverte.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. No modelo CPA, o anunciante paga quando:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">O anuncio e exibido 1000 vezes</button>
+                  <button class="quiz-option">O utilizador clica no anuncio</button>
+                  <button class="quiz-option" data-correct="true">Ocorre uma conversao (compra, registo, download)</button>
+                  <button class="quiz-option">O utilizador ve o anuncio por mais de 5 segundos</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. A estrategia Push dirige-se primariamente a:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Consumidor final atraves de publicidade</button>
+                  <button class="quiz-option" data-correct="true">Canal de distribuicao atraves de trade deals e personal selling</button>
+                  <button class="quiz-option">Media atraves de relacoes publicas</button>
+                  <button class="quiz-option">Concorrencia atraves de benchmarking</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Qual geracao prefere predominantemente TikTok, video curto e comunicacao visual rapida?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Baby Boomers</button>
+                  <button class="quiz-option">Geracao X</button>
+                  <button class="quiz-option">Millennials</button>
+                  <button class="quiz-option" data-correct="true">Geracao Z</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. O metodo de orcamento publicitario mais racional e recomendado e:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Percentagem das vendas</button>
+                  <button class="quiz-option">Paridade competitiva</button>
+                  <button class="quiz-option">Metodo do disponivel</button>
+                  <button class="quiz-option" data-correct="true">Baseado em objetivos e tarefas</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. O que e native advertising?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Publicidade apenas para publico local</button>
+                  <button class="quiz-option" data-correct="true">Conteudo pago que se integra no fluxo editorial da plataforma</button>
+                  <button class="quiz-option">Anuncios exclusivamente em idioma nativo</button>
+                  <button class="quiz-option">Publicidade em aplicacoes moveis nativas</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">6. Qual das seguintes NAO e uma vantagem da publicidade em redes sociais?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Segmentacao granular</button>
+                  <button class="quiz-option">Interacao direta com o consumidor</button>
+                  <button class="quiz-option">Custo acessivel</button>
+                  <button class="quiz-option" data-correct="true">Alcance organico ilimitado e garantido</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('tmv-t3')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 4: Metricas de Marketing e Vendas Digitais             -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="tmv-t4">
+        <button class="accordion-header">
+          <span class="topic-number">04</span>
+          <span class="topic-title">Metricas de Marketing e Vendas Digitais</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>A importancia das metricas:</strong> No marketing digital, tudo e mensuravel. As metricas permitem avaliar o desempenho das acoes de marketing, justificar investimentos, identificar oportunidades de otimizacao e tomar decisoes baseadas em dados. Sem metricas, o marketing opera no escuro; com metricas, opera com precisao cirurgica.</p>
+
+                <p><strong>Indicadores de Aquisicao:</strong> Medem a capacidade de atrair novos visitantes e potenciais clientes:</p>
+                <ul>
+                  <li><strong>Visitantes unicos:</strong> numero de pessoas distintas que visitam o site num periodo — dimensao da audiencia</li>
+                  <li><strong>Fans/Seguidores:</strong> dimensao da comunidade nas redes sociais — alcance potencial</li>
+                  <li><strong>Impressoes/Alcance:</strong> impressoes = numero total de vezes que o conteudo foi exibido; alcance = numero de pessoas unicas que o viram</li>
+                  <li><strong>CPA (Custo por Aquisicao):</strong> quanto custa adquirir um novo cliente — investimento total / numero de novos clientes</li>
+                  <li><strong>CPC (Custo por Clique):</strong> custo medio de cada clique nos anuncios — investimento / numero de cliques</li>
+                  <li><strong>CPL (Custo por Lead):</strong> quanto custa gerar um contacto qualificado — investimento / numero de leads</li>
+                </ul>
+
+                <p><strong>Indicadores de Comportamento:</strong> Analisam como os visitantes se comportam no site ou plataforma:</p>
+                <ul>
+                  <li><strong>Recorrencia (novos vs. recorrentes):</strong> proporcao de visitantes que regressam — indicador de fidelidade e relevancia do conteudo</li>
+                  <li><strong>Bounce rate (taxa de rejeicao):</strong> percentagem de visitantes que abandonam o site apos ver apenas uma pagina — indica problemas de relevancia, UX ou performance</li>
+                  <li><strong>Open rate (taxa de abertura):</strong> percentagem de emails abertos vs. enviados — eficacia do assunto e do remetente</li>
+                  <li><strong>CTR (Click-Through Rate):</strong> percentagem de cliques vs. impressoes — eficacia do anuncio ou conteudo em gerar acao</li>
+                  <li><strong>Tempo no site:</strong> duracao media da visita — engagement e qualidade do conteudo</li>
+                  <li><strong>Pagina de entrada/saida:</strong> por onde os visitantes entram e por onde saem — identifica paginas fortes e pontos de fuga</li>
+                  <li><strong>Testes A/B:</strong> comparacao de duas versoes de uma pagina, anuncio ou email para determinar qual performa melhor</li>
+                </ul>
+
+                <p><strong>Indicadores de Conversao:</strong> Medem a eficacia em transformar visitantes em clientes ou atingir objetivos:</p>
+                <ul>
+                  <li><strong>Taxa de conversao (CTA):</strong> percentagem de visitantes que realizam a acao desejada (compra, registo, download) — conversoes / visitantes x 100</li>
+                  <li><strong>Dias para conversao / Time Lag:</strong> quanto tempo decorre entre o primeiro contacto e a conversao — importante para entender o ciclo de decisao</li>
+                  <li><strong>Intencao de compra / Abandono de carrinho:</strong> percentagem de utilizadores que adicionam ao carrinho mas nao concluem a compra — media global de ~70% de abandono</li>
+                </ul>
+
+                <p><strong>Indicadores de Engagement:</strong> Medem o nivel de envolvimento e interacao da audiencia com a marca:</p>
+                <ul>
+                  <li><strong>Engagement:</strong> soma de likes + comentarios + partilhas — medida global de interacao com o conteudo</li>
+                  <li><strong>Stickiness:</strong> capacidade de reter os utilizadores — usuarios ativos diarios / usuarios ativos mensais (DAU/MAU)</li>
+                  <li><strong>Applause rate:</strong> likes (ou reacoes positivas) / numero de seguidores x 100 — medida de aprovacao</li>
+                  <li><strong>Conversation rate:</strong> comentarios / numero de seguidores x 100 — medida de dialogo e interacao profunda</li>
+                  <li><strong>Amplification rate:</strong> partilhas / numero de seguidores x 100 — medida de propagacao do conteudo</li>
+                  <li><strong>Share of Voice (SOV):</strong> proporcao de mencoes da marca vs. total de mencoes do setor — visibilidade relativa no mercado</li>
+                  <li><strong>Valor de um Like:</strong> calcula-se dividindo o valor total gerado pelo canal social pelo numero de fans — formula simplificada: (receita atribuida a redes sociais) / (numero de fans)</li>
+                  <li><strong>Sentiment analysis:</strong> analise automatizada do tom (positivo, negativo, neutro) das mencoes e comentarios sobre a marca — utiliza NLP (Natural Language Processing)</li>
+                </ul>
+
+                <div class="highlight-box">
+                  <p><strong>Modelo RACE (Smart Insights):</strong> Framework que estrutura as metricas ao longo do funil digital: <strong>Reach</strong> (alcance — atrair visitantes) → <strong>Act</strong> (interagir — gerar engagement e leads) → <strong>Convert</strong> (converter — transformar em clientes) → <strong>Engage</strong> (fidelizar — reter e criar defensores da marca).</p>
+                </div>
+
+                <p><strong>Analise por tipologia:</strong> As metricas podem ser agrupadas por area funcional:</p>
+                <ul>
+                  <li><strong>Publicidade:</strong> impressoes, alcance, frequencia, CPM, CPC, CPA, ROAS (Return on Ad Spend)</li>
+                  <li><strong>Audiencia/Trafego:</strong> visitantes unicos, sessoes, fontes de trafego (organico, pago, direto, referral, social)</li>
+                  <li><strong>Navegacao/Performance:</strong> bounce rate, paginas por sessao, tempo no site, velocidade de carregamento</li>
+                  <li><strong>Consumo de media:</strong> visualizacoes de video, tempo de visualizacao, taxa de conclusao, downloads</li>
+                  <li><strong>Engagement:</strong> likes, comentarios, partilhas, mencoes, applause/conversation/amplification rates</li>
+                  <li><strong>Amplificacao:</strong> partilhas, retweets, forwarding, viralidade, earned media value</li>
+                  <li><strong>Conversao:</strong> taxa de conversao, valor medio de encomenda, receita por visita, funil de conversao</li>
+                  <li><strong>E-commerce:</strong> receita, AOV (Average Order Value), CLV (Customer Lifetime Value), taxa de repeticao</li>
+                </ul>
+
+                <p><strong>Analise por fase do ciclo de vida do cliente:</strong></p>
+                <ul>
+                  <li><strong>Captura de audiencia:</strong> SEO, publicidade, content marketing — atrair o publico certo para os canais da marca</li>
+                  <li><strong>Conexao:</strong> engagement, nurturing, personalizacao — construir relacao e confianca com os contactos</li>
+                  <li><strong>Fecho:</strong> conversao, checkout optimization, remarketing — transformar interesse em venda</li>
+                  <li><strong>Retencao:</strong> programas de fidelidade, email marketing pos-venda, upselling, cross-selling — manter e aumentar o valor do cliente</li>
+                </ul>
+
+                <p><strong>Metricas por ferramenta de comunicacao:</strong></p>
+                <ul>
+                  <li><strong>Forca de vendas:</strong> numero de visitas, taxa de conversao, valor medio por venda, ciclo de venda, pipeline</li>
+                  <li><strong>Marketing direto:</strong> taxa de resposta, custo por resposta, ROI, taxa de retencao</li>
+                  <li><strong>Publicidade:</strong> GRP (Gross Rating Points = reach x frequencia), OTS (Opportunity To See), recall, reconhecimento</li>
+                  <li><strong>Relacoes publicas:</strong> clipping, AVE (Advertising Value Equivalent), tom das mencoes, share of voice</li>
+                  <li><strong>Patrocinios:</strong> exposicao da marca, associacao de valores, recall, impacto nas vendas</li>
+                  <li><strong>Promocoes:</strong> taxa de resgate, incremento de vendas, custo por unidade incremental, canibalismo</li>
+                  <li><strong>Merchandising:</strong> sell-through rate, rotacao de stock, impacto no ponto de venda</li>
+                  <li><strong>Comunicacao digital:</strong> todas as metricas online — CTR, conversao, engagement, ROAS, CLV</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block tmv-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Modelo RACE</h4>
+                  <p>Reach, Act, Convert, Engage — framework que estrutura as metricas ao longo do funil digital (Smart Insights).</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Bounce Rate</h4>
+                  <p>Percentagem de visitantes que abandonam o site apos uma so pagina — indica problemas de relevancia, UX ou velocidade.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>CTR</h4>
+                  <p>Click-Through Rate = cliques / impressoes x 100 — mede a eficacia do anuncio ou conteudo em gerar acao.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Share of Voice (SOV)</h4>
+                  <p>Proporcao de mencoes da marca vs. total do setor — mede a visibilidade e presenca relativa no mercado.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>GRP</h4>
+                  <p>Gross Rating Points = Reach x Frequencia — medida padrao de pressao publicitaria nos media tradicionais.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>CLV</h4>
+                  <p>Customer Lifetime Value — valor total que um cliente gera ao longo de toda a sua relacao com a marca.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block tmv-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que mede a Bounce Rate?</div>
+                    <div class="flashcard-back">Percentagem de visitantes que abandonam o site apos ver apenas uma pagina. Indica problemas de relevancia do conteudo, experiencia do utilizador ou velocidade de carregamento.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que sao as 4 fases do modelo RACE?</div>
+                    <div class="flashcard-back">Reach (atrair visitantes), Act (gerar engagement e leads), Convert (transformar em clientes), Engage (fidelizar e criar defensores da marca).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Como se calcula o CTR?</div>
+                    <div class="flashcard-back">CTR = (numero de cliques / numero de impressoes) x 100. Mede a eficacia do anuncio ou conteudo em gerar acao por parte do utilizador.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o Share of Voice (SOV)?</div>
+                    <div class="flashcard-back">Proporcao de mencoes da marca vs. total de mencoes do setor. Mede a visibilidade e presenca relativa da marca no mercado em comparacao com os concorrentes.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre Applause Rate, Conversation Rate e Amplification Rate?</div>
+                    <div class="flashcard-back">Applause Rate = likes/seguidores (aprovacao). Conversation Rate = comentarios/seguidores (dialogo). Amplification Rate = partilhas/seguidores (propagacao do conteudo).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o GRP e como se calcula?</div>
+                    <div class="flashcard-back">Gross Rating Points = Reach x Frequencia. Medida padrao de pressao publicitaria. Ex.: alcance de 60% do publico-alvo com frequencia media de 3 = 180 GRP.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o abandono de carrinho e qual a sua media global?</div>
+                    <div class="flashcard-back">Percentagem de utilizadores que adicionam produtos ao carrinho mas nao concluem a compra. A media global e de aproximadamente 70% — um dos maiores desafios do e-commerce.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 4 fases do ciclo de vida do cliente na analise de metricas?</div>
+                    <div class="flashcard-back">1. Captura de audiencia (atrair), 2. Conexao (construir relacao), 3. Fecho (converter em venda), 4. Retencao (fidelizar e aumentar valor do cliente).</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. O CTR (Click-Through Rate) e calculado como:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Conversoes / Cliques x 100</button>
+                  <button class="quiz-option" data-correct="true">Cliques / Impressoes x 100</button>
+                  <button class="quiz-option">Impressoes / Cliques x 100</button>
+                  <button class="quiz-option">Cliques / Visitantes unicos x 100</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. No modelo RACE (Smart Insights), qual fase se refere a fidelizacao e criacao de defensores da marca?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Reach</button>
+                  <button class="quiz-option">Act</button>
+                  <button class="quiz-option">Convert</button>
+                  <button class="quiz-option" data-correct="true">Engage</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. A Amplification Rate mede especificamente:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Likes por seguidor</button>
+                  <button class="quiz-option">Comentarios por seguidor</button>
+                  <button class="quiz-option" data-correct="true">Partilhas por seguidor</button>
+                  <button class="quiz-option">Cliques por impressao</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. O GRP (Gross Rating Points) calcula-se como:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Impressoes x CPC</button>
+                  <button class="quiz-option">Cliques x Frequencia</button>
+                  <button class="quiz-option" data-correct="true">Reach x Frequencia</button>
+                  <button class="quiz-option">Conversoes x Custo</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. Qual a media global aproximada de abandono de carrinho no e-commerce?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">30%</button>
+                  <button class="quiz-option">50%</button>
+                  <button class="quiz-option" data-correct="true">70%</button>
+                  <button class="quiz-option">90%</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">6. A Sentiment Analysis utiliza que tipo de tecnologia para analisar o tom das mencoes?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Blockchain</button>
+                  <button class="quiz-option">Realidade Aumentada</button>
+                  <button class="quiz-option" data-correct="true">NLP (Natural Language Processing)</button>
+                  <button class="quiz-option">IoT (Internet of Things)</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('tmv-t4')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Avaliacao                                                      -->
+  <!-- ============================================================ -->
+  <section class="section">
+    <h2>Avaliacao</h2>
+    <div class="card">
+      <div class="eval-grid">
+        <div class="eval-card">
+          <div class="eval-weight" style="background:linear-gradient(135deg,var(--tmv),var(--tmv-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">50%</div>
+          <div class="eval-label">Trabalho Individual</div>
+          <div class="eval-detail">15 de maio</div>
+        </div>
+        <div class="eval-card">
+          <div class="eval-weight" style="background:linear-gradient(135deg,var(--tmv),var(--tmv-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">40%</div>
+          <div class="eval-label">Trabalho de Grupo</div>
+          <div class="eval-detail">22 de maio</div>
+        </div>
+        <div class="eval-card">
+          <div class="eval-weight" style="background:linear-gradient(135deg,var(--tmv),var(--tmv-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">10%</div>
+          <div class="eval-label">Participacao</div>
+          <div class="eval-detail">Avaliacao continua</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Trabalhos                                                      -->
+  <!-- ============================================================ -->
+  <section class="section">
+    <h2>Informacao sobre Trabalhos</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 style="text-transform:none; letter-spacing:normal; color:var(--tmv); border:none; padding:0;">Trabalho Individual (50%)</h3>
+        <p><strong>Proposta de investigacao academica</strong> composta pelos seguintes elementos:</p>
+        <ul>
+          <li>Titulo e palavras-chave</li>
+          <li>Problematica e justificacao do tema</li>
+          <li>Objetivos gerais e especificos</li>
+          <li>Revisao de literatura (enquadramento teorico)</li>
+          <li>Questoes de investigacao</li>
+          <li>Metodologia proposta</li>
+          <li>Bibliografia em formato APA</li>
+        </ul>
+        <p class="text-muted text-sm">Entrega: 15 de maio de 2026</p>
+      </div>
+      <div class="card">
+        <h3 style="text-transform:none; letter-spacing:normal; color:var(--tmv); border:none; padding:0;">Trabalho de Grupo (40%)</h3>
+        <p><strong>Plano de Marketing completo</strong> para uma empresa ou produto, incluindo:</p>
+        <ul>
+          <li>Diagnostico (analise interna e externa)</li>
+          <li>Analise SWOT</li>
+          <li>Objetivos DREAM</li>
+          <li>Estrategia (STP — Segmentacao, Targeting, Posicionamento)</li>
+          <li>Marketing Mix (7Ps)</li>
+          <li>Orcamento detalhado</li>
+          <li>Implementacao (diagrama de Gantt)</li>
+          <li>Mecanismos de controlo e KPIs</li>
+        </ul>
+        <p class="text-muted text-sm">Entrega: 22 de maio de 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Recursos Uteis                                                 -->
+  <!-- ============================================================ -->
+  <section class="section">
+    <h2>Recursos Uteis</h2>
+    <div class="links-grid">
+      <a href="https://www.ama.org/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128218;</div>
+        <div class="link-info">
+          <div class="link-title">American Marketing Association</div>
+          <div class="link-desc">Definicoes e recursos de marketing</div>
+        </div>
+      </a>
+      <a href="https://www.smartinsights.com/digital-marketing-strategy/race-a-practical-framework-to-improve-your-digital-marketing/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128202;</div>
+        <div class="link-info">
+          <div class="link-title">RACE Framework</div>
+          <div class="link-desc">Smart Insights — modelo de metricas</div>
+        </div>
+      </a>
+      <a href="https://analytics.google.com/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128200;</div>
+        <div class="link-info">
+          <div class="link-title">Google Analytics</div>
+          <div class="link-desc">Plataforma de analise de trafego web</div>
+        </div>
+      </a>
+      <a href="https://www.kotlermarketing.com/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128214;</div>
+        <div class="link-info">
+          <div class="link-title">Philip Kotler</div>
+          <div class="link-desc">Marketing 5.0 e recursos do autor</div>
+        </div>
+      </a>
+      <a href="https://ads.google.com/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128161;</div>
+        <div class="link-info">
+          <div class="link-title">Google Ads</div>
+          <div class="link-desc">Plataforma de publicidade digital</div>
+        </div>
+      </a>
+      <a href="https://business.facebook.com/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#127760;</div>
+        <div class="link-info">
+          <div class="link-title">Meta Business Suite</div>
+          <div class="link-desc">Gestao de publicidade Facebook/Instagram</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Mestrado em Transformacao Digital — UMAIA 2025/26</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

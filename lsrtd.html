@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSRTD — Laboratorios de Scrum e Roadmap para a Transformacao Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9889;</text></svg>">
+</head>
+<body data-page="lsrtd">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-logo">TD</span>
+      <span class="nav-title">Mestrado 2026</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+      <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+      <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+      <a href="tmv.html" class="nav-link discipline-tmv">TMV</a>
+      <a href="lsrtd.html" class="nav-link discipline-lsrtd">Scrum</a>
+      <a href="tese.html" class="nav-link discipline-tese">Tese</a>
+    </div>
+    <div class="nav-controls">
+      <button class="btn-icon" onclick="changeFontSize(-2)" title="Diminuir fonte">A-</button>
+      <button class="btn-icon" onclick="changeFontSize(2)" title="Aumentar fonte">A+</button>
+      <button class="btn-icon" onclick="toggleTheme()" title="Alternar tema">
+        <span class="theme-icon-light">&#9790;</span>
+        <span class="theme-icon-dark">&#9788;</span>
+      </button>
+      <button class="btn-icon mobile-menu-btn" onclick="toggleMobile()" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</nav>
+<div class="nav-links-mobile-overlay" id="mobileOverlay">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+  <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+  <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+  <a href="tmv.html" class="nav-link discipline-tmv">TMV</a>
+  <a href="lsrtd.html" class="nav-link discipline-lsrtd">Scrum</a>
+  <a href="tese.html" class="nav-link discipline-tese">Tese</a>
+</div>
+
+<main class="container main-content">
+
+  <!-- Hero -->
+  <section class="hero hero-lsrtd">
+    <h1>Laboratorios de Scrum e Roadmap para a Transformacao Digital</h1>
+    <p>Aplicar Scrum, WordPress e ferramentas digitais para construir uma proposta de Transformacao Digital</p>
+    <div class="hero-meta">
+      <span>Joao Almeida &bull; Carlos Alves &bull; Samuel Anjos</span>
+      <span>6 ECTS</span>
+      <span>PL-48h</span>
+    </div>
+  </section>
+
+  <!-- Countdowns -->
+  <section class="section">
+    <h2>Proximos Eventos</h2>
+    <div class="countdown-grid" id="countdownGrid"></div>
+  </section>
+
+  <!-- Progress -->
+  <section class="section">
+    <div class="card">
+      <div class="progress-label">
+        <span>Progresso de Estudo</span>
+        <span id="progressLabel">0/3 (0%)</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill lsrtd" id="progressBar" style="width:0%"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section class="section">
+    <div class="search-container">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar nos topicos...">
+    </div>
+  </section>
+
+  <!-- Evaluation -->
+  <section class="section">
+    <h2>Avaliacao</h2>
+    <div class="eval-grid">
+      <div class="eval-card">
+        <div class="eval-weight">40%</div>
+        <div class="eval-label">WordPress</div>
+        <div class="eval-detail">Projeto de grupo — site funcional</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">10%</div>
+        <div class="eval-label">E-Goi</div>
+        <div class="eval-detail">Projeto de grupo — marketing automation</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">10%</div>
+        <div class="eval-label">Scrum</div>
+        <div class="eval-detail">Projeto de grupo — pratica do framework</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">10%</div>
+        <div class="eval-label">Apresentacao</div>
+        <div class="eval-detail">Projeto de grupo — defesa oral</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">30%</div>
+        <div class="eval-label">Proposta Individual TD</div>
+        <div class="eval-detail">Proposta estrategica de Transformacao Digital</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sprint Roadmap -->
+  <section class="section">
+    <h2>Sprint Roadmap</h2>
+    <div class="card">
+      <div class="theory-text">
+        <div style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; text-align:center; font-size:0.92em;">
+            <thead>
+              <tr style="background:var(--surface-2,#f0f0f0);">
+                <th style="padding:10px 8px; border:1px solid var(--border,#ddd);">Fase</th>
+                <th style="padding:10px 8px; border:1px solid var(--border,#ddd);">Data</th>
+                <th style="padding:10px 8px; border:1px solid var(--border,#ddd);">Descricao</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);"><strong>Sprint 0</strong></td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">24 Fev</td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">Formacao de equipas, definicao do Product Backlog, configuracao WordPress</td>
+              </tr>
+              <tr>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);"><strong>Sprint 1</strong></td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">3 - 17 Mar</td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">Primeiro ciclo de desenvolvimento — estrutura do site, paginas base, tema</td>
+              </tr>
+              <tr>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);"><strong>Review 1</strong></td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">24 Mar</td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">Sprint Review + Retrospective do Sprint 1</td>
+              </tr>
+              <tr>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);"><strong>Sprint 2</strong></td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">7 - 21 Abr</td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">Segundo ciclo — conteudo, SEO, integracao E-Goi, formularios</td>
+              </tr>
+              <tr>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);"><strong>Review 2</strong></td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">28 Abr</td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">Sprint Review + Retrospective do Sprint 2</td>
+              </tr>
+              <tr>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);"><strong>Sprint 3</strong></td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">12 - 26 Mai</td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">Terceiro ciclo — otimizacao, analytics, testes finais, polish</td>
+              </tr>
+              <tr style="background:var(--surface-2,#f0f0f0);">
+                <td style="padding:8px; border:1px solid var(--border,#ddd);"><strong>Entrega Final</strong></td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">2 Jun</td>
+                <td style="padding:8px; border:1px solid var(--border,#ddd);">Entrega do projeto de grupo + apresentacao + proposta individual</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACCORDION TOPICS ========== -->
+  <section class="section">
+    <h2>Conteudos Programaticos</h2>
+    <div class="accordion">
+
+      <!-- ==================== TOPIC 1: Scrum e Metodologias Ageis ==================== -->
+      <div class="accordion-item" data-topic="lsrtd-t1">
+        <button class="accordion-header">
+          <span class="topic-number">01</span>
+          <span class="topic-title">Scrum e Metodologias Ageis</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content lsrtd-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>1.1. Problemas dos Projetos Tradicionais (Waterfall)</h4>
+                <p>O modelo tradicional de gestao de projetos, conhecido como <strong>Waterfall</strong> (cascata), segue uma abordagem sequencial e rigida: requisitos completos no inicio, planeamento detalhado, desenvolvimento, testes e entrega no final. Este modelo apresenta problemas graves no contexto da transformacao digital:</p>
+                <p><strong>Planeamento fechado:</strong> Todos os requisitos sao definidos no inicio do projeto, assumindo que o cliente sabe exatamente o que quer. Na realidade, os requisitos evoluem a medida que o cliente ve o produto a tomar forma. Estudos do Standish Group (CHAOS Report) mostram que mais de 60% dos requisitos iniciais mudam durante o projeto.</p>
+                <p><strong>Mudancas vistas como ameacas:</strong> No modelo Waterfall, qualquer alteracao apos a fase de requisitos implica retrabalho, atrasos e custos adicionais. As equipas resistem as mudancas em vez de as abracar, mesmo quando essas mudancas trariam mais valor ao cliente.</p>
+                <p><strong>Entrega apenas no final:</strong> O cliente so ve o produto funcional no final do projeto (meses ou anos depois). Se o resultado nao corresponder as expectativas, todo o investimento pode estar comprometido. Nao ha oportunidade de feedback intermedio.</p>
+                <p><strong>Falta de alinhamento:</strong> Equipas trabalham em silos (design, desenvolvimento, testes), com pouca comunicacao entre si. O resultado final frequentemente nao reflete a visao do cliente nem as necessidades reais do mercado.</p>
+                <p><strong>Estatisticas reveladoras:</strong> Segundo o CHAOS Report, apenas 29% dos projetos tradicionais de software sao considerados bem-sucedidos (dentro do prazo, orcamento e com funcionalidades previstas). 19% falham completamente e 52% sao considerados "desafiados" (atrasados, acima do orcamento ou com funcionalidades reduzidas).</p>
+
+                <div class="highlight-box">
+                  <p><strong>Ponto-chave:</strong> O modelo Waterfall funciona bem para projetos com requisitos estaveis e bem conhecidos (ex.: construcao civil). Para projetos digitais, onde a incerteza e alta e os requisitos evoluem, as metodologias ageis sao mais adequadas.</p>
+                </div>
+
+                <h4>1.2. O Manifesto Agil (2001)</h4>
+                <p>Em fevereiro de 2001, 17 profissionais de desenvolvimento de software reuniram-se em Snowbird, Utah (EUA), para discutir alternativas aos processos pesados e burocraticos que dominavam a industria. O resultado foi o <strong>Manifesto para o Desenvolvimento Agil de Software</strong>, que estabeleceu uma nova filosofia de trabalho.</p>
+
+                <p><strong>Os 4 Valores Fundamentais:</strong></p>
+                <p><strong>1. Individuos e interacoes</strong> mais do que processos e ferramentas — Pessoas motivadas e boa comunicacao sao mais importantes que ferramentas sofisticadas ou processos rigidos.</p>
+                <p><strong>2. Software funcional</strong> mais do que documentacao abrangente — Entregar software que funciona e mais valioso que produzir documentacao exaustiva que rapidamente fica desatualizada.</p>
+                <p><strong>3. Colaboracao com o cliente</strong> mais do que negociacao contratual — Envolver o cliente continuamente no processo garante que o produto final corresponde as suas necessidades reais.</p>
+                <p><strong>4. Responder a mudanca</strong> mais do que seguir um plano — Aceitar e abracar mudancas, mesmo tardias no desenvolvimento, porque trazem vantagem competitiva ao cliente.</p>
+
+                <p><strong>Os 12 Principios do Manifesto Agil:</strong></p>
+                <p>1. A maior prioridade e satisfazer o cliente atraves da entrega rapida e continua de software com valor.</p>
+                <p>2. Aceitar mudancas de requisitos, mesmo tardias no desenvolvimento. Os processos ageis tiram vantagem da mudanca em beneficio da vantagem competitiva do cliente.</p>
+                <p>3. Entregar software funcional frequentemente, de poucas semanas a poucos meses, com preferencia para intervalos mais curtos.</p>
+                <p>4. Pessoas de negocio e desenvolvedores devem trabalhar juntos diariamente ao longo do projeto.</p>
+                <p>5. Construir projetos em torno de individuos motivados. Dar-lhes o ambiente e o suporte de que necessitam e confiar neles para realizar o trabalho.</p>
+                <p>6. O metodo mais eficiente e eficaz de transmitir informacao numa equipa e a conversa cara a cara.</p>
+                <p>7. Software funcional e a principal medida de progresso.</p>
+                <p>8. Os processos ageis promovem o desenvolvimento sustentavel. Patrocinadores, desenvolvedores e utilizadores devem manter um ritmo constante indefinidamente.</p>
+                <p>9. Atencao continua a excelencia tecnica e ao bom design aumenta a agilidade.</p>
+                <p>10. Simplicidade — a arte de maximizar a quantidade de trabalho nao feito — e essencial.</p>
+                <p>11. As melhores arquiteturas, requisitos e designs emergem de equipas auto-organizadas.</p>
+                <p>12. Em intervalos regulares, a equipa reflete sobre como se tornar mais eficaz, e ajusta o seu comportamento em conformidade.</p>
+
+                <h4>1.3. Agile na Transformacao Digital</h4>
+                <p>A <strong>Transformacao Digital</strong> exige que as organizacoes se adaptem rapidamente a novas tecnologias, comportamentos dos consumidores e modelos de negocio. O Agile e a filosofia natural para esta transformacao porque:</p>
+                <p><strong>Experimentacao:</strong> Em vez de planear tudo antecipadamente, as organizacoes testam hipoteses rapidamente com prototipos e MVPs (Minimum Viable Products). Se a hipotese falha, o custo e baixo e a aprendizagem e rapida.</p>
+                <p><strong>MVPs (Minimum Viable Products):</strong> Lancar a versao mais simples do produto que permite validar a proposta de valor junto do mercado. O MVP nao e um produto incompleto — e o produto minimo que entrega valor real e permite recolher feedback genuino.</p>
+                <p><strong>Iteracao:</strong> O produto evolui em ciclos curtos (sprints), incorporando feedback dos utilizadores a cada iteracao. Cada ciclo produz um incremento funcional que pode ser testado e validado.</p>
+                <p><strong>Aprendizagem continua:</strong> A filosofia Build-Measure-Learn (Lean Startup) complementa o Agile: construir rapidamente, medir resultados e aprender com os dados para informar o proximo ciclo.</p>
+
+                <div class="highlight-box">
+                  <p><strong>Importante:</strong> Agile e uma <strong>filosofia/mindset</strong> — um conjunto de valores e principios. Scrum e um <strong>framework</strong> — uma estrutura concreta com papeis, eventos e artefactos que implementa os principios ageis. Pode-se ser agil sem usar Scrum, mas Scrum so funciona bem se a equipa adotar o mindset agil.</p>
+                </div>
+
+                <h4>1.4. Os 3 Papeis do Scrum</h4>
+                <p>O Scrum define tres papeis fundamentais, cada um com responsabilidades claras e complementares:</p>
+
+                <p><strong>Scrum Master:</strong></p>
+                <p>O Scrum Master e o facilitador do processo Scrum. Nao e um gestor de projeto tradicional — nao da ordens nem atribui tarefas. As suas responsabilidades incluem: garantir que a equipa segue as praticas Scrum; remover impedimentos que bloqueiam o progresso da equipa; proteger a equipa de interferencias externas; facilitar os eventos Scrum (Planning, Daily, Review, Retrospective); coaching da organizacao na adocao do Agile; promover a melhoria continua da equipa. O Scrum Master e um <em>servant-leader</em> — lidera servindo a equipa.</p>
+
+                <p><strong>Product Owner (PO):</strong></p>
+                <p>O Product Owner e a voz do cliente dentro da equipa Scrum. E responsavel por maximizar o valor do produto e do trabalho da equipa de desenvolvimento. As suas responsabilidades incluem: definir e comunicar a visao do produto; criar, priorizar e manter o Product Backlog; garantir que os itens do backlog sao claros e compreendidos pela equipa; aceitar ou rejeitar o trabalho realizado com base nos criterios de aceitacao; tomar decisoes sobre o que construir a seguir com base no valor de negocio. O PO e uma unica pessoa, nao um comite.</p>
+
+                <p><strong>Development Team (Equipa de Desenvolvimento):</strong></p>
+                <p>A equipa de desenvolvimento e responsavel por entregar incrementos "Done" (potencialmente entregaveis) ao final de cada Sprint. Caracteristicas: auto-organizada (a equipa decide como fazer o trabalho, nao o Scrum Master nem o PO); multifuncional (possui todas as competencias necessarias para entregar o incremento sem dependencias externas); tamanho ideal de 3 a 9 pessoas; sem hierarquias internas — todos sao "Developers" independentemente da sua especializacao; responsabilidade coletiva pelo trabalho entregue.</p>
+
+                <h4>1.5. Os 3 Artefactos do Scrum</h4>
+
+                <p><strong>Product Backlog:</strong></p>
+                <p>Lista ordenada e dinamica de tudo o que e necessario no produto. E a unica fonte de requisitos para qualquer mudanca no produto. O Product Owner e responsavel pelo seu conteudo, disponibilidade e priorizacao. Caracteristicas: nunca esta completo — evolui com o produto e o mercado; os itens no topo sao mais detalhados e prontos para desenvolvimento; os itens do fundo sao mais vagos e de menor prioridade; contem User Stories, bugs, melhorias, requisitos tecnicos. Os itens sao tipicamente escritos como <strong>User Stories</strong>: "Como [tipo de utilizador], quero [funcionalidade] para [beneficio]."</p>
+
+                <p><strong>Sprint Backlog:</strong></p>
+                <p>Conjunto de itens do Product Backlog selecionados para o Sprint atual, mais o plano para os entregar. E propriedade da equipa de desenvolvimento. Inclui: os itens do Product Backlog comprometidos para o Sprint; as tarefas necessarias para transformar esses itens em incremento "Done"; uma meta do Sprint (Sprint Goal) que da coerencia ao trabalho. Apenas a equipa de desenvolvimento pode alterar o Sprint Backlog durante o Sprint.</p>
+
+                <p><strong>Incremento (Product Increment):</strong></p>
+                <p>A soma de todos os itens do Product Backlog completados durante o Sprint atual e todos os Sprints anteriores. Ao final de cada Sprint, o novo incremento deve estar "Done" — ou seja, numa condicao utilizavel e em conformidade com a Definition of Done (DoD). O incremento deve ser potencialmente entregavel, mesmo que o Product Owner decida nao o lancar.</p>
+
+                <h4>1.6. Os 5 Eventos do Scrum</h4>
+
+                <p><strong>Sprint:</strong></p>
+                <p>O Sprint e o coracao do Scrum — um periodo fixo de 1 a 4 semanas durante o qual se cria um incremento "Done". Regras: a duracao e fixa e nao muda durante o Sprint; nao se fazem mudancas que ponham em perigo o Sprint Goal; a qualidade nao diminui; o scope pode ser clarificado e renegociado entre o PO e a equipa. Um novo Sprint comeca imediatamente apos o anterior terminar.</p>
+
+                <p><strong>Sprint Planning:</strong></p>
+                <p>Reuniao que inicia cada Sprint. Define o que pode ser entregue no Sprint e como o trabalho sera realizado. Duracao maxima: 8 horas para um Sprint de 4 semanas. Duas perguntas-chave: "O que pode ser feito neste Sprint?" (PO apresenta itens prioritarios, equipa seleciona) e "Como sera feito o trabalho selecionado?" (equipa decompoe itens em tarefas). O resultado e o Sprint Backlog e o Sprint Goal.</p>
+
+                <p><strong>Daily Scrum (Stand-up):</strong></p>
+                <p>Reuniao diaria de no maximo <strong>15 minutos</strong>, sempre no mesmo horario e local, exclusiva para a equipa de desenvolvimento. Cada membro responde a tres perguntas: O que fiz ontem que ajudou a equipa a atingir o Sprint Goal? O que vou fazer hoje? Ha algum impedimento no meu caminho? Nao e uma reuniao de status report para o gestor — e uma ferramenta de sincronizacao da equipa.</p>
+
+                <p><strong>Sprint Review:</strong></p>
+                <p>Reuniao ao final do Sprint para inspecionar o incremento e adaptar o Product Backlog. A equipa demonstra o trabalho "Done" ao Product Owner e stakeholders. E uma sessao colaborativa, nao uma simples apresentacao. O PO identifica o que esta "Done" e o que nao esta. Discute-se o estado do Product Backlog e projetam-se datas de entrega provaveis. Duracao maxima: 4 horas para Sprint de 4 semanas.</p>
+
+                <p><strong>Sprint Retrospective:</strong></p>
+                <p>Reuniao apos a Sprint Review para a equipa inspecionar-se a si propria e criar um plano de melhorias. Foco em: o que correu bem durante o Sprint; o que pode ser melhorado; que acoes concretas a equipa vai implementar no proximo Sprint. E o evento mais importante para a melhoria continua. Duracao maxima: 3 horas para Sprint de 4 semanas.</p>
+
+                <h4>1.7. Definition of Done vs Acceptance Criteria</h4>
+                <p><strong>Definition of Done (DoD):</strong> E uma lista de criterios que um incremento deve satisfazer para ser considerado "Done". Aplica-se a todos os itens do Product Backlog. Exemplos: codigo revisto por pares, testes unitarios passam, documentacao atualizada, deployado em ambiente de staging. A DoD e definida pela equipa e assegura transparencia e qualidade consistente.</p>
+                <p><strong>Acceptance Criteria:</strong> Sao condicoes especificas de cada User Story que devem ser satisfeitas para o PO aceitar o trabalho. Exemplos: "O formulario de contacto deve enviar email de confirmacao", "A pagina deve carregar em menos de 3 segundos". Sao definidos pelo Product Owner para cada item do backlog.</p>
+                <p><strong>Diferenca fundamental:</strong> A DoD e global (aplica-se a todo o trabalho), enquanto os Acceptance Criteria sao locais (especificos de cada item). Um item so esta "Done" quando cumpre tanto os seus Acceptance Criteria como a DoD da equipa.</p>
+
+                <h4>1.8. Estimativa Agil</h4>
+                <p><strong>Planning Poker:</strong> Tecnica de estimativa em equipa usando cartas com numeros da sequencia de Fibonacci (1, 2, 3, 5, 8, 13, 21...). Cada membro estima independentemente, revelam simultaneamente e discutem as divergencias. Promove consenso e evita ancoragem (influencia de estimativas de outros).</p>
+                <p><strong>Story Points:</strong> Unidade relativa de estimativa que combina esforco, complexidade e incerteza. Nao representam horas — sao uma medida relativa. Uma User Story de 8 pontos e aproximadamente o dobro do esforco de uma de 4 pontos. Permitem medir a velocidade da equipa ao longo do tempo.</p>
+                <p><strong>T-shirt Sizing:</strong> Estimativa simplificada usando tamanhos (XS, S, M, L, XL, XXL). Util para estimativas de alto nivel no Product Backlog quando nao e necessaria precisao. Cada tamanho pode ser mapeado para um intervalo de Story Points.</p>
+
+                <h4>1.9. Velocity e Burndown Charts</h4>
+                <p><strong>Velocity (Velocidade):</strong> Quantidade media de Story Points que a equipa completa por Sprint. Calculada como a media dos ultimos 3-5 Sprints. Usada para previsao: se a equipa tem velocidade de 30 pontos/Sprint e o backlog restante tem 120 pontos, precisa de aproximadamente 4 Sprints. A velocidade e unica para cada equipa e nao deve ser usada para comparar equipas.</p>
+                <p><strong>Burndown Chart:</strong> Grafico que mostra o trabalho restante ao longo do tempo do Sprint. O eixo Y representa o trabalho restante (em Story Points ou tarefas) e o eixo X representa os dias do Sprint. A linha ideal e uma descida linear do total no inicio ate zero no final. Desvios da linha ideal indicam se a equipa esta a frente ou atras do planeado.</p>
+
+                <h4>1.10. Kanban vs Scrum</h4>
+                <p><strong>Kanban:</strong> Metodo visual de gestao de fluxo de trabalho. Utiliza um quadro com colunas representando etapas do processo (To Do, In Progress, Done). Nao tem Sprints — o fluxo e continuo. Limita o WIP (Work In Progress) para evitar sobrecarga. Foco em otimizar o fluxo e reduzir o lead time. Ideal para trabalho de suporte, manutencao e fluxos continuos.</p>
+                <p><strong>Scrum:</strong> Framework com Sprints fixos, papeis definidos e eventos obrigatorios. Mudancas nao sao permitidas durante o Sprint (scope fixo). Foco em entregar incrementos a cada Sprint. Ideal para desenvolvimento de novos produtos e projetos com objetivos claros.</p>
+                <p><strong>Quando usar cada um:</strong> Use Scrum quando tem um produto com visao clara e quer entregar valor em ciclos regulares. Use Kanban quando tem fluxo continuo de trabalho (suporte, operacoes) ou quando a equipa nao consegue comprometer-se com Sprints fixos. Muitas equipas usam <strong>Scrumban</strong> — combinacao dos dois.</p>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Manifesto Agil</h4>
+                  <p>4 valores e 12 principios que priorizam individuos, software funcional, colaboracao com o cliente e resposta a mudanca.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Scrum Master</h4>
+                  <p>Servant-leader que facilita o processo Scrum, remove impedimentos e protege a equipa de interferencias externas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Product Owner</h4>
+                  <p>Voz do cliente. Prioriza o Product Backlog e maximiza o valor do produto. E uma unica pessoa, nao um comite.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Sprint</h4>
+                  <p>Ciclo fixo de 1-4 semanas que produz um incremento potencialmente entregavel. O coracao do Scrum.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Product Backlog</h4>
+                  <p>Lista ordenada e dinamica de todos os requisitos do produto. Gerido pelo Product Owner. Contem User Stories.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Daily Scrum</h4>
+                  <p>Reuniao diaria de 15 minutos para sincronizacao da equipa. Tres perguntas: fiz, vou fazer, impedimentos.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Definition of Done</h4>
+                  <p>Lista de criterios que todo incremento deve cumprir. Garante transparencia e qualidade consistente.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Velocity</h4>
+                  <p>Media de Story Points completados por Sprint. Usada para previsao. Unica para cada equipa.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique no cartao para ver a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 valores do Manifesto Agil?</div>
+                    <div class="flashcard-back">1) Individuos e interacoes sobre processos e ferramentas. 2) Software funcional sobre documentacao abrangente. 3) Colaboracao com o cliente sobre negociacao contratual. 4) Responder a mudanca sobre seguir um plano.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre Agile e Scrum?</div>
+                    <div class="flashcard-back">Agile e uma filosofia/mindset (valores e principios). Scrum e um framework concreto (papeis, eventos, artefactos) que implementa os principios ageis. Pode-se ser agil sem usar Scrum.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 3 papeis do Scrum?</div>
+                    <div class="flashcard-back">Scrum Master (facilita, remove impedimentos), Product Owner (visao do produto, prioriza backlog) e Development Team (auto-organizado, multifuncional, 3-9 pessoas).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 3 artefactos do Scrum?</div>
+                    <div class="flashcard-back">Product Backlog (lista priorizada de requisitos), Sprint Backlog (itens selecionados + plano do Sprint) e Incremento (produto potencialmente entregavel, em conformidade com a DoD).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 5 eventos do Scrum?</div>
+                    <div class="flashcard-back">Sprint (1-4 semanas), Sprint Planning (planear o Sprint), Daily Scrum (15 min, sincronizacao diaria), Sprint Review (demonstrar incremento) e Sprint Retrospective (melhoria continua).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e um MVP (Minimum Viable Product)?</div>
+                    <div class="flashcard-back">A versao mais simples do produto que permite validar a proposta de valor junto do mercado. Nao e um produto incompleto — e o produto minimo que entrega valor real e permite recolher feedback genuino.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o Planning Poker?</div>
+                    <div class="flashcard-back">Tecnica de estimativa em equipa usando cartas com numeros de Fibonacci (1,2,3,5,8,13,21...). Cada membro estima independentemente, revelam simultaneamente e discutem divergencias. Evita ancoragem.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre Definition of Done e Acceptance Criteria?</div>
+                    <div class="flashcard-back">DoD e global — aplica-se a todo o trabalho (ex.: testes passam, codigo revisto). Acceptance Criteria sao locais — especificos de cada User Story (ex.: formulario envia email). Um item precisa de cumprir ambos.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual dos seguintes NAO e um valor do Manifesto Agil?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Individuos e interacoes sobre processos e ferramentas</button>
+                  <button class="quiz-option" data-correct="true">Documentacao completa sobre software funcional</button>
+                  <button class="quiz-option">Colaboracao com o cliente sobre negociacao contratual</button>
+                  <button class="quiz-option">Responder a mudanca sobre seguir um plano</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Qual e o papel do Scrum Master?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Definir os requisitos do produto e priorizar o backlog</button>
+                  <button class="quiz-option">Atribuir tarefas a equipa e controlar o cronograma</button>
+                  <button class="quiz-option" data-correct="true">Facilitar o processo Scrum, remover impedimentos e proteger a equipa</button>
+                  <button class="quiz-option">Desenvolver o codigo e testar as funcionalidades</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Qual a duracao maxima da Daily Scrum?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">30 minutos</button>
+                  <button class="quiz-option" data-correct="true">15 minutos</button>
+                  <button class="quiz-option">1 hora</button>
+                  <button class="quiz-option">Nao tem limite de tempo</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Quem e responsavel por priorizar o Product Backlog?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Scrum Master</button>
+                  <button class="quiz-option">Development Team</button>
+                  <button class="quiz-option" data-correct="true">Product Owner</button>
+                  <button class="quiz-option">Stakeholders</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. O que e a Velocity em Scrum?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">A velocidade com que o codigo e escrito</button>
+                  <button class="quiz-option">O numero de bugs encontrados por Sprint</button>
+                  <button class="quiz-option" data-correct="true">A media de Story Points completados por Sprint pela equipa</button>
+                  <button class="quiz-option">O tempo que demora cada Daily Scrum</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">6. Qual a principal diferenca entre Kanban e Scrum?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Kanban tem papeis definidos, Scrum nao</button>
+                  <button class="quiz-option">Scrum usa quadros visuais, Kanban nao</button>
+                  <button class="quiz-option" data-correct="true">Scrum trabalha em Sprints fixos, Kanban tem fluxo continuo com limites de WIP</button>
+                  <button class="quiz-option">Kanban e Agile, Scrum nao e</button>
+                </div>
+              </div>
+
+              <div class="quiz-score hidden quiz-score-display"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('lsrtd-t1')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== TOPIC 2: WordPress e Presenca Digital ==================== -->
+      <div class="accordion-item" data-topic="lsrtd-t2">
+        <button class="accordion-header">
+          <span class="topic-number">02</span>
+          <span class="topic-title">WordPress e Presenca Digital</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content lsrtd-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>2.1. O que e WordPress</h4>
+                <p><strong>WordPress</strong> e um sistema de gestao de conteudo (CMS — Content Management System) open-source, originalmente criado em 2003 por Matt Mullenweg e Mike Little como plataforma de blogging. Desde entao, evoluiu para o CMS mais utilizado no mundo, alimentando aproximadamente <strong>43% de todos os websites da internet</strong> (dados W3Techs, 2024).</p>
+                <p>E escrito em PHP e utiliza MySQL/MariaDB como base de dados. A sua popularidade deve-se a facilidade de uso (nao requer conhecimentos de programacao para criar conteudo), a enorme comunidade (milhares de temas e plugins gratuitos), a flexibilidade (desde blogs a e-commerce com WooCommerce) e ao facto de ser gratuito e open-source (licenca GPL).</p>
+                <p><strong>Exemplos de sites construidos com WordPress:</strong> The New York Times, BBC America, Sony Music, TechCrunch, The Walt Disney Company, entre muitos outros.</p>
+
+                <h4>2.2. WordPress.com vs WordPress.org</h4>
+                <p>Existem duas formas de utilizar WordPress, e a distincao e fundamental:</p>
+                <p><strong>WordPress.org (Self-hosted):</strong> Descarrega-se o software gratuitamente e instala-se num servidor proprio (ou num servico de alojamento). Controlo total sobre o site: temas, plugins, codigo, base de dados. Requer um dominio proprio e alojamento web (custos mensais). Ideal para projetos profissionais, empresas e e-commerce. Permite monetizacao total e acesso ao codigo-fonte.</p>
+                <p><strong>WordPress.com (Hosted):</strong> Servico de alojamento gerido pela Automattic (empresa de Matt Mullenweg). Plano gratuito disponivel com limitacoes (subdominio wordpress.com, sem plugins personalizados, publicidade da plataforma). Planos pagos desbloqueiam funcionalidades. Mais facil de comecar, mas menos flexivel. Ideal para blogs pessoais e projetos simples.</p>
+
+                <div class="highlight-box">
+                  <p><strong>Para o projeto desta UC:</strong> Tipicamente usa-se WordPress.org com alojamento gratuito ou de teste (ex.: InfinityFree, 000webhost, ou ambiente local com XAMPP/Local by Flywheel) para ter controlo total sobre temas e plugins.</p>
+                </div>
+
+                <h4>2.3. Estrutura do WordPress</h4>
+                <p><strong>Temas:</strong> Definem a aparencia visual do site (layout, cores, tipografia, estrutura de paginas). Podem ser gratuitos (repositorio oficial) ou premium (ThemeForest, Elegant Themes). Temas populares e recomendados: Astra, GeneratePress, OceanWP, Hello Elementor, Twenty Twenty-Four. Os temas controlam o aspeto visual mas nao o conteudo — e possivel mudar de tema sem perder paginas, posts ou configuracoes.</p>
+                <p><strong>Plugins:</strong> Extensoes que adicionam funcionalidades ao WordPress sem necessidade de programacao. Existem mais de 60.000 plugins gratuitos no repositorio oficial. Os plugins permitem adicionar formularios, SEO, seguranca, cache, e-commerce, analytics e praticamente qualquer funcionalidade imaginavel.</p>
+                <p><strong>Paginas vs Posts:</strong> Paginas sao conteudo estatico e atemporal (Sobre Nos, Contactos, Servicos). Posts sao conteudo dinamico e cronologico (artigos de blog, noticias), organizados por categorias e tags. Paginas nao aparecem no feed do blog; posts sim.</p>
+                <p><strong>Menus:</strong> Sistema de navegacao do site. Definidos em Aparencia > Menus. Podem conter paginas, posts, categorias, links personalizados. Suportam niveis hierarquicos (submenus/dropdowns).</p>
+                <p><strong>Widgets:</strong> Pequenos blocos de conteudo que podem ser colocados em areas predefinidas do tema (sidebars, footers). Exemplos: lista de posts recentes, barra de pesquisa, categorias, texto personalizado, imagens.</p>
+
+                <h4>2.4. Temas e Page Builders</h4>
+                <p><strong>Personalizacao de temas:</strong> O WordPress Customizer (Aparencia > Personalizar) permite alterar cores, tipografia, logotipo, header, footer e layout sem tocar em codigo. Temas avancados oferecem opcoes extensivas de personalizacao.</p>
+                <p><strong>Gutenberg (Block Editor):</strong> Editor nativo do WordPress desde a versao 5.0 (2018). Utiliza um sistema de blocos para criar conteudo: paragrafos, imagens, galerias, colunas, botoes, tabelas, etc. Cada elemento e um bloco independente que pode ser movido, duplicado e personalizado. Suporta Full Site Editing (FSE) para personalizar o site inteiro com blocos.</p>
+                <p><strong>Elementor:</strong> O page builder mais popular para WordPress (5+ milhoes de instalacoes ativas). Oferece um editor visual drag-and-drop com preview em tempo real. Versao gratuita com widgets basicos; versao Pro com theme builder, popup builder, WooCommerce widgets, etc. Permite criar layouts complexos sem conhecimentos de codigo. Alternativas: Beaver Builder, Divi Builder, WPBakery.</p>
+
+                <h4>2.5. Plugins Essenciais</h4>
+                <p><strong>SEO — Yoast SEO / Rank Math:</strong> Otimizacao para motores de busca. Permite definir meta titles, meta descriptions, URLs amigaveis, gerar sitemaps XML, configurar breadcrumbs, analisar legibilidade do conteudo e otimizar para palavras-chave. Rank Math e uma alternativa crescente com funcionalidades semelhantes.</p>
+                <p><strong>Seguranca — Wordfence Security:</strong> Firewall de aplicacao web (WAF), scanner de malware, protecao contra brute force, autenticacao de dois fatores (2FA), bloqueio de IPs maliciosos, alertas de seguranca em tempo real. Alternativas: Sucuri, iThemes Security.</p>
+                <p><strong>Cache — WP Super Cache / W3 Total Cache:</strong> Geram versoes estaticas (HTML) das paginas dinamicas (PHP), reduzindo drasticamente o tempo de carregamento e a carga no servidor. Suportam minificacao de CSS/JS, compressao gzip e integracao com CDN. LiteSpeed Cache e ideal para servidores LiteSpeed.</p>
+                <p><strong>Formularios — Contact Form 7 / WPForms:</strong> Criacao de formularios de contacto, inscricao, feedback e outros. Contact Form 7 e gratuito e flexivel (requer algum conhecimento de markup). WPForms oferece um builder visual drag-and-drop mais intuitivo. Alternativas: Gravity Forms, Ninja Forms.</p>
+                <p><strong>Analytics — Google Site Kit:</strong> Plugin oficial da Google que integra Google Analytics, Search Console, AdSense e PageSpeed Insights diretamente no dashboard do WordPress. Permite monitorizar trafego, comportamento dos utilizadores e desempenho do site sem sair do WordPress.</p>
+
+                <h4>2.6. SEO Basico</h4>
+                <p><strong>Titulos (Title Tags):</strong> O titulo que aparece nos resultados de pesquisa do Google. Deve conter a palavra-chave principal, ter entre 50-60 caracteres e ser atrativo para o utilizador clicar.</p>
+                <p><strong>Meta Descriptions:</strong> A descricao que aparece abaixo do titulo nos resultados de pesquisa. Deve ter 150-160 caracteres, conter a palavra-chave e incluir um call-to-action. Nao e um fator direto de ranking, mas influencia o CTR (Click-Through Rate).</p>
+                <p><strong>URLs Amigaveis (Permalinks):</strong> URLs claras e descritivas em vez de parametros numericos. Em WordPress: Definicoes > Permalinks > "Nome do artigo". Exemplo: meusite.pt/servicos/consultoria em vez de meusite.pt/?p=123.</p>
+                <p><strong>Headings (H1-H6):</strong> Estrutura hierarquica do conteudo. Cada pagina deve ter apenas um H1 (titulo principal). H2 para seccoes principais, H3 para subseccoes, etc. Os headings ajudam os motores de busca a compreender a estrutura e o tema do conteudo.</p>
+                <p><strong>Alt Text (Texto Alternativo):</strong> Descricao textual de imagens para acessibilidade e SEO. Os motores de busca nao "veem" imagens — usam o alt text para compreender o conteudo visual. Deve ser descritivo e conter palavras-chave quando relevante.</p>
+                <p><strong>Sitemap XML:</strong> Ficheiro que lista todas as paginas do site para os motores de busca indexarem. Gerado automaticamente por plugins como Yoast SEO. Submetido na Google Search Console.</p>
+                <p><strong>Velocidade do site:</strong> A velocidade de carregamento e um fator de ranking direto no Google. Ferramentas de medicao: Google PageSpeed Insights, GTmetrix, WebPageTest. Otimizacoes: compressao de imagens, cache, minificacao de CSS/JS, CDN, alojamento de qualidade.</p>
+
+                <h4>2.7. Landing Pages e Responsive Design</h4>
+                <p><strong>Landing Page:</strong> Pagina especificamente desenhada para converter visitantes numa acao desejada (inscricao, compra, download). Estrutura tipica: headline impactante acima do fold (above the fold — visivel sem scroll), proposta de valor clara, beneficios (nao funcionalidades), prova social (testemunhos, logos de clientes), CTA (Call-to-Action) proeminente e formulario de captura simples (pedir apenas dados essenciais).</p>
+                <p><strong>Responsive Design:</strong> O site deve adaptar-se a qualquer tamanho de ecra (desktop, tablet, smartphone). A abordagem <strong>mobile-first</strong> e recomendada: desenhar primeiro para dispositivos moveis e depois expandir para ecras maiores. A maioria dos temas WordPress modernos ja e responsive. Media queries CSS permitem aplicar estilos diferentes com base na largura do ecra. O Google utiliza mobile-first indexing — a versao mobile do site e a versao primaria para indexacao.</p>
+
+                <h4>2.8. Performance e Seguranca</h4>
+                <p><strong>Otimizacao de imagens:</strong> Imagens sao tipicamente o recurso mais pesado de uma pagina web. Usar formatos modernos (WebP, AVIF), redimensionar para a resolucao necessaria, comprimir sem perda visivel de qualidade. Plugins: Imagify, ShortPixel, Smush.</p>
+                <p><strong>Caching:</strong> Guardar versoes estaticas das paginas para servir rapidamente sem processar PHP/MySQL a cada pedido. Tipos: browser cache, server cache, object cache (Redis/Memcached), page cache.</p>
+                <p><strong>CDN (Content Delivery Network):</strong> Rede global de servidores que distribui conteudo estatico (imagens, CSS, JS) a partir do servidor mais proximo do utilizador. Reduz latencia e melhora a velocidade. Cloudflare oferece um plano gratuito.</p>
+                <p><strong>Core Web Vitals:</strong> Metricas da Google para a experiencia do utilizador: LCP (Largest Contentful Paint — velocidade de carregamento, ideal ate 2.5s), FID/INP (interatividade, ideal ate 100ms), CLS (Cumulative Layout Shift — estabilidade visual, ideal ate 0.1).</p>
+                <p><strong>Seguranca WordPress:</strong> HTTPS/SSL obrigatorio (certificado gratuito com Let's Encrypt), manter WordPress, temas e plugins atualizados, backups regulares (UpdraftPlus), passwords fortes e unicas, limitar tentativas de login, desativar XML-RPC se nao for necessario, remover temas e plugins nao utilizados.</p>
+
+                <h4>2.9. Google Analytics</h4>
+                <p>Ferramenta gratuita da Google para monitorizar o trafego e comportamento dos utilizadores no site. <strong>Metricas basicas:</strong></p>
+                <p><strong>Sessoes:</strong> Numero de visitas ao site. Uma sessao inclui todas as interacoes de um utilizador num periodo de tempo (expira apos 30 minutos de inatividade).</p>
+                <p><strong>Utilizadores:</strong> Numero de visitantes unicos (medido por cookies ou login).</p>
+                <p><strong>Bounce Rate (Taxa de Rejeicao):</strong> Percentagem de sessoes em que o utilizador visitou apenas uma pagina e saiu sem interagir. Uma bounce rate alta pode indicar que o conteudo nao e relevante ou que a experiencia e ma.</p>
+                <p><strong>Taxa de Conversao:</strong> Percentagem de sessoes que resultaram numa conversao (acao desejada: compra, inscricao, download). Calculada como: conversoes / sessoes x 100.</p>
+                <p><strong>Paginas por Sessao:</strong> Numero medio de paginas visitadas por sessao. Indica o nivel de envolvimento dos utilizadores.</p>
+                <p><strong>Duracao Media da Sessao:</strong> Tempo medio que os utilizadores passam no site por sessao.</p>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>WordPress CMS</h4>
+                  <p>Sistema de gestao de conteudo open-source que alimenta ~43% da web. Escrito em PHP + MySQL. Extensivel via temas e plugins.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>.org vs .com</h4>
+                  <p>WordPress.org e self-hosted (controlo total). WordPress.com e servico gerido pela Automattic (mais simples, menos flexivel).</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Yoast SEO</h4>
+                  <p>Plugin essencial para otimizacao: meta titles, descriptions, sitemaps, analise de legibilidade e palavras-chave.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Core Web Vitals</h4>
+                  <p>LCP (velocidade), FID/INP (interatividade), CLS (estabilidade visual). Metricas Google para experiencia do utilizador.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Elementor</h4>
+                  <p>Page builder drag-and-drop mais popular para WordPress. Permite criar layouts complexos sem codigo.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Landing Page</h4>
+                  <p>Pagina de conversao: headline acima do fold, proposta de valor, beneficios, prova social, CTA e formulario simples.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique no cartao para ver a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre WordPress.org e WordPress.com?</div>
+                    <div class="flashcard-back">WordPress.org e self-hosted (descarregar e instalar num servidor proprio, controlo total). WordPress.com e um servico gerido pela Automattic (mais facil, mas menos flexivel, plano gratuito com limitacoes).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre Paginas e Posts no WordPress?</div>
+                    <div class="flashcard-back">Paginas sao conteudo estatico e atemporal (Sobre Nos, Contactos). Posts sao conteudo dinamico e cronologico (artigos de blog), organizados por categorias e tags.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que sao os Core Web Vitals?</div>
+                    <div class="flashcard-back">Metricas da Google para experiencia do utilizador: LCP (Largest Contentful Paint, velocidade, ideal ate 2.5s), FID/INP (interatividade, ideal ate 100ms) e CLS (estabilidade visual, ideal ate 0.1).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os plugins essenciais para um site WordPress?</div>
+                    <div class="flashcard-back">SEO (Yoast/Rank Math), seguranca (Wordfence), cache (WP Super Cache/W3TC), formularios (Contact Form 7/WPForms) e analytics (Google Site Kit). Mais Imagify para otimizacao de imagens.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e uma Landing Page e quais os seus elementos essenciais?</div>
+                    <div class="flashcard-back">Pagina desenhada para converter visitantes numa acao. Elementos: headline acima do fold, proposta de valor, beneficios, prova social (testemunhos), CTA proeminente e formulario de captura simples.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o Bounce Rate (Taxa de Rejeicao)?</div>
+                    <div class="flashcard-back">Percentagem de sessoes em que o utilizador visitou apenas uma pagina e saiu sem interagir. Uma bounce rate alta pode indicar conteudo irrelevante ou ma experiencia de utilizador.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual a quota de mercado aproximada do WordPress na web?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">15%</button>
+                  <button class="quiz-option">25%</button>
+                  <button class="quiz-option" data-correct="true">43%</button>
+                  <button class="quiz-option">60%</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Qual a diferenca entre WordPress.org e WordPress.com?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Sao a mesma coisa com URLs diferentes</button>
+                  <button class="quiz-option" data-correct="true">WordPress.org e self-hosted com controlo total; WordPress.com e um servico gerido com limitacoes</button>
+                  <button class="quiz-option">WordPress.org e pago; WordPress.com e gratuito</button>
+                  <button class="quiz-option">WordPress.com tem mais plugins que WordPress.org</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. O que e o Gutenberg no WordPress?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Um plugin de seguranca</button>
+                  <button class="quiz-option">Um tema premium</button>
+                  <button class="quiz-option" data-correct="true">O editor nativo de blocos do WordPress desde a versao 5.0</button>
+                  <button class="quiz-option">Um servico de alojamento web</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Qual das seguintes metricas e um Core Web Vital?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Bounce Rate</button>
+                  <button class="quiz-option">Sessoes por Utilizador</button>
+                  <button class="quiz-option" data-correct="true">LCP (Largest Contentful Paint)</button>
+                  <button class="quiz-option">Domain Authority</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. Qual plugin e utilizado para gerar sitemaps XML e otimizar SEO no WordPress?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Wordfence</button>
+                  <button class="quiz-option">WP Super Cache</button>
+                  <button class="quiz-option">Elementor</button>
+                  <button class="quiz-option" data-correct="true">Yoast SEO</button>
+                </div>
+              </div>
+
+              <div class="quiz-score hidden quiz-score-display"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('lsrtd-t2')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== TOPIC 3: Marketing Digital e Ferramentas ==================== -->
+      <div class="accordion-item" data-topic="lsrtd-t3">
+        <button class="accordion-header">
+          <span class="topic-number">03</span>
+          <span class="topic-title">Marketing Digital e Ferramentas</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content lsrtd-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>3.1. E-Goi: Plataforma de Marketing Automation</h4>
+                <p><strong>E-Goi</strong> e uma plataforma de marketing automation portuguesa, fundada em 2008 no Porto. Oferece uma solucao multicanal que integra email marketing, SMS, notificacoes push, voice marketing e landing pages numa unica plataforma. E utilizada por mais de 750.000 utilizadores em todo o mundo e destaca-se pela sua interface em portugues e pelo suporte local.</p>
+
+                <p><strong>Email Marketing com E-Goi:</strong></p>
+                <p>O email marketing continua a ser um dos canais digitais com maior ROI (Return on Investment) — em media, 36 dolares por cada 1 dolar investido (DMA, 2023). A E-Goi permite: criar campanhas de email com editor drag-and-drop ou templates pre-definidos; gerir listas de contactos com importacao, segmentacao e tags; realizar testes A/B (testar duas versoes do email para determinar qual tem melhor desempenho); automatizar envios com base em triggers (inscricao, aniversario, abandono de carrinho); personalizar conteudo com campos dinamicos (nome, empresa, localizacao).</p>
+
+                <p><strong>SMS Marketing:</strong></p>
+                <p>Campanhas de texto com taxas de abertura superiores a 98% (comparado com ~20% do email). Ideal para comunicacoes urgentes, lembretes, confirmacoes e promocoes flash. A E-Goi permite personalizacao de SMS, agendamento, encurtamento de URLs e rastreamento de cliques.</p>
+
+                <p><strong>Voice Marketing:</strong></p>
+                <p>Campanhas de voz automatizadas — chamadas telefonicas com mensagem pre-gravada ou sintetizada. Utilizadas para lembretes de consultas, notificacoes de entregas, campanhas politicas ou promocionais. A E-Goi integra este canal na mesma plataforma, permitindo campanhas multicanal coordenadas.</p>
+
+                <p><strong>Landing Pages com E-Goi:</strong></p>
+                <p>A plataforma inclui um criador de landing pages com editor visual, formularios integrados, templates otimizados para conversao e integracao direta com as listas de contactos. Permite capturar leads diretamente para campanhas de email ou SMS sem necessidade de ferramentas externas.</p>
+
+                <div class="highlight-box">
+                  <p><strong>Para o projeto:</strong> Espera-se que os grupos utilizem o E-Goi para criar pelo menos uma campanha de email marketing e um formulario de captura de leads integrado com o site WordPress.</p>
+                </div>
+
+                <h4>3.2. Email Marketing Best Practices</h4>
+                <p><strong>Assunto (Subject Line):</strong> E o fator mais determinante para a taxa de abertura. Deve ser curto (30-50 caracteres), despertar curiosidade ou urgencia, evitar palavras spam (GRATIS, URGENTE, !!!, letras maiusculas excessivas), e ser relevante para o destinatario. Personalizacao no assunto (incluir o nome) pode aumentar a taxa de abertura em 26%.</p>
+                <p><strong>Personalizacao:</strong> Alem do nome, usar dados do contacto para personalizar conteudo: localizacao, historico de compras, interesses, comportamento no site. Emails personalizados geram 6x mais transacoes que emails genericos.</p>
+                <p><strong>Timing e Frequencia:</strong> Os melhores dias para envio de email sao tipicamente terca a quinta-feira, entre as 9h-11h ou 14h-16h. No entanto, o timing ideal varia por audiencia — o mais importante e testar e analisar os dados proprios. A frequencia deve equilibrar presenca com saturacao (evitar que o destinatario se desinscreva por excesso de emails).</p>
+                <p><strong>CTA (Call-to-Action):</strong> Cada email deve ter um objetivo claro e um CTA proeminente. O botao CTA deve ter cor contrastante, texto orientado para a acao ("Inscrever-me Agora", "Ver Oferta", "Descarregar Guia") e ser facilmente clicavel em mobile.</p>
+                <p><strong>Mobile Optimization:</strong> Mais de 60% dos emails sao abertos em dispositivos moveis. O design deve ser responsive, com texto legivel sem zoom, botoes grandes o suficiente para tocar com o dedo (minimo 44x44 pixels) e imagens otimizadas para carregamento rapido.</p>
+
+                <h4>3.3. Metricas de Email Marketing</h4>
+                <p><strong>Open Rate (Taxa de Abertura):</strong> Percentagem de destinatarios que abriram o email. Media da industria: 15-25%. Influenciada pelo assunto, remetente e timing. Nota: com a protecao de privacidade da Apple (Mail Privacy Protection), esta metrica esta a tornar-se menos fiavel.</p>
+                <p><strong>CTR (Click-Through Rate):</strong> Percentagem de destinatarios que clicaram num link do email. Media: 2-5%. Indica a relevancia do conteudo e a eficacia do CTA. Calculado como: cliques / emails entregues x 100.</p>
+                <p><strong>Bounce Rate (Taxa de Rejeicao):</strong> Percentagem de emails nao entregues. Hard bounce: endereco invalido ou inexistente (remover da lista). Soft bounce: problema temporario (caixa cheia, servidor offline). Manter abaixo de 2%.</p>
+                <p><strong>Unsubscribe Rate (Taxa de Desinscricao):</strong> Percentagem de destinatarios que se desinscreveram apos receber o email. Manter abaixo de 0.5%. Se subir, reavaliar a frequencia, relevancia e segmentacao.</p>
+                <p><strong>Conversion Rate (Taxa de Conversao):</strong> Percentagem de destinatarios que realizaram a acao desejada apos clicar no email (compra, inscricao, download). E a metrica mais importante porque mede o impacto real no negocio.</p>
+
+                <h4>3.4. Lead Generation e Marketing Automation</h4>
+                <p><strong>Lead Generation (Geracao de Leads):</strong></p>
+                <p><strong>Formularios:</strong> Colocados no site (WordPress) e nas landing pages. Devem pedir apenas informacao essencial (nome, email). Cada campo adicional reduz a taxa de conversao em ~10%. Formularios em pop-up, slide-in ou inline.</p>
+                <p><strong>Lead Magnets:</strong> Conteudo de valor oferecido em troca dos dados do contacto. Exemplos: ebooks, whitepapers, checklists, templates, webinars, descontos, periodos de teste gratuito. O lead magnet deve resolver um problema especifico da audiencia-alvo.</p>
+                <p><strong>Lead Nurturing:</strong> Processo de cultivar relacoes com leads ao longo do tempo atraves de conteudo relevante e personalizado. Tipicamente implementado com sequencias automatizadas de emails (drip campaigns) que educam, informam e movem o lead pelo funil de vendas.</p>
+                <p><strong>Lead Scoring:</strong> Sistema de pontuacao que classifica leads com base no seu nivel de interesse e adequacao. Pontos atribuidos por acoes (abrir email: +5, clicar link: +10, visitar pagina de precos: +20) e por dados demograficos (cargo, industria, tamanho da empresa). Quando o lead atinge uma pontuacao-alvo, e considerado qualificado para vendas.</p>
+
+                <p><strong>Marketing Automation:</strong></p>
+                <p><strong>Workflows:</strong> Sequencias automatizadas de acoes desencadeadas por triggers. Exemplo: um novo subscritor recebe email de boas-vindas (dia 0), email com conteudo relevante (dia 3), email com testemunhos (dia 7), email com oferta especial (dia 14).</p>
+                <p><strong>Triggers (Disparadores):</strong> Eventos que iniciam um workflow: inscricao no formulario, clique num link, visita a uma pagina especifica, aniversario, abandono de carrinho, inatividade prolongada.</p>
+                <p><strong>Segmentacao Automatica:</strong> Os contactos sao automaticamente classificados em segmentos com base no seu comportamento, interesses ou dados demograficos. Permite enviar conteudo altamente relevante para cada grupo.</p>
+
+                <h4>3.5. Proposta de Transformacao Digital</h4>
+                <p>A componente individual da avaliacao (30%) consiste na elaboracao de uma <strong>proposta estrategica de Transformacao Digital</strong> para uma organizacao real ou ficticia. A estrutura recomendada inclui:</p>
+
+                <p><strong>1. Diagnostico da Presenca Digital:</strong></p>
+                <p>Analise do estado atual da organizacao no digital: website (existe? e responsive? tem SEO?), redes sociais (quais? frequencia? engagement?), email marketing (existe lista? sao enviadas campanhas?), analytics (existem dados? sao analisados?), processos internos (sao digitais? ha ferramentas colaborativas?). Ferramentas de auditoria: Google PageSpeed Insights, SEMrush, SimilarWeb, Google Analytics.</p>
+
+                <p><strong>2. Definicao de Objetivos:</strong></p>
+                <p>Objetivos SMART: Especificos (Specific), Mensuraveis (Measurable), Atingiveis (Achievable), Relevantes (Relevant) e Temporais (Time-bound). Exemplo: "Aumentar o trafego organico do website em 50% nos proximos 6 meses" em vez de "Melhorar a presenca digital". Alinhar os objetivos digitais com os objetivos estrategicos da organizacao.</p>
+
+                <p><strong>3. Plano de Acao:</strong></p>
+                <p>Lista priorizada de iniciativas com cronograma, responsaveis e recursos necessarios. Exemplos de iniciativas: redesign do website em WordPress, implementacao de estrategia de SEO, criacao de presenca em redes sociais, setup de email marketing com E-Goi, implementacao de Google Analytics, formacao da equipa interna em ferramentas digitais. Cada iniciativa deve ter: descricao, timeline, responsavel, orcamento estimado e metricas de sucesso.</p>
+
+                <p><strong>4. KPIs e Metricas de Sucesso:</strong></p>
+                <p>Definir indicadores claros para medir o progresso e o sucesso da transformacao. Exemplos: trafego do website (sessoes/mes), taxa de conversao, numero de leads gerados, engagement nas redes sociais, taxa de abertura de emails, NPS (Net Promoter Score), receita digital. Cada KPI deve ter uma baseline (valor atual), um target (valor desejado) e uma frequencia de medicao.</p>
+
+                <div class="highlight-box">
+                  <p><strong>Dica para a proposta:</strong> Escolha uma organizacao que conheca bem (pode ser o seu local de trabalho, uma associacao ou um pequeno negocio local). A autenticidade do diagnostico e mais valorizada que a complexidade da proposta. Use os conceitos de Scrum (sprints, backlog, iteracao) para estruturar o plano de implementacao.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>E-Goi</h4>
+                  <p>Plataforma portuguesa de marketing automation multicanal: email, SMS, voice, landing pages, push notifications.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>A/B Testing</h4>
+                  <p>Testar duas versoes de um email (assunto, conteudo, CTA) para determinar qual tem melhor desempenho. Enviar a versao vencedora ao resto da lista.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Lead Scoring</h4>
+                  <p>Sistema de pontuacao que classifica leads por interesse e adequacao. Acoes (abrir, clicar) somam pontos ate o lead ser qualificado para vendas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Open Rate vs CTR</h4>
+                  <p>Open Rate mede quem abriu o email (~20%). CTR mede quem clicou num link (~3%). CTR indica melhor a relevancia do conteudo.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Lead Magnet</h4>
+                  <p>Conteudo de valor (ebook, template, webinar) oferecido em troca dos dados do contacto. Deve resolver um problema especifico da audiencia.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Objetivos SMART</h4>
+                  <p>Especificos, Mensuraveis, Atingiveis, Relevantes e Temporais. Framework para definir objetivos claros na proposta de TD.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique no cartao para ver a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o E-Goi e quais os seus canais?</div>
+                    <div class="flashcard-back">Plataforma portuguesa de marketing automation multicanal. Canais: email marketing, SMS, voice (chamadas automatizadas), notificacoes push, landing pages. Fundada em 2008 no Porto.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 5 metricas principais de email marketing?</div>
+                    <div class="flashcard-back">Open Rate (taxa de abertura, ~20%), CTR (cliques, ~3%), Bounce Rate (emails nao entregues, manter abaixo de 2%), Unsubscribe Rate (desinscricoes, manter abaixo de 0.5%) e Conversion Rate (conversoes, a mais importante).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e um Lead Magnet? De 3 exemplos.</div>
+                    <div class="flashcard-back">Conteudo de valor oferecido em troca dos dados do contacto. Exemplos: ebooks, checklists, templates, webinars, periodos de teste gratuito, descontos exclusivos. Deve resolver um problema especifico da audiencia-alvo.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e Marketing Automation e o que sao Workflows?</div>
+                    <div class="flashcard-back">Marketing Automation e a automatizacao de acoes de marketing com base em triggers. Workflows sao sequencias automatizadas: ex., dia 0 boas-vindas, dia 3 conteudo, dia 7 testemunhos, dia 14 oferta. Desencadeados por acoes do utilizador.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais as 4 seccoes de uma Proposta de Transformacao Digital?</div>
+                    <div class="flashcard-back">1) Diagnostico da presenca digital (estado atual). 2) Definicao de objetivos SMART. 3) Plano de acao (iniciativas com cronograma e responsaveis). 4) KPIs e metricas de sucesso (baseline, target, frequencia).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que significa SMART na definicao de objetivos?</div>
+                    <div class="flashcard-back">Specific (Especifico), Measurable (Mensuravel), Achievable (Atingivel), Relevant (Relevante) e Time-bound (Temporal). Exemplo: "Aumentar trafego organico em 50% em 6 meses" em vez de "Melhorar presenca digital".</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. O que e o E-Goi?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Um CMS open-source para criar websites</button>
+                  <button class="quiz-option" data-correct="true">Uma plataforma portuguesa de marketing automation multicanal</button>
+                  <button class="quiz-option">Um servico de alojamento web</button>
+                  <button class="quiz-option">Uma rede social profissional</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Qual a metrica de email marketing que mede a percentagem de destinatarios que clicaram num link?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Open Rate</button>
+                  <button class="quiz-option" data-correct="true">CTR (Click-Through Rate)</button>
+                  <button class="quiz-option">Bounce Rate</button>
+                  <button class="quiz-option">Conversion Rate</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. O que e Lead Scoring?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Uma tecnica de design de formularios</button>
+                  <button class="quiz-option">Um metodo de otimizacao de SEO</button>
+                  <button class="quiz-option" data-correct="true">Um sistema de pontuacao que classifica leads com base no seu interesse e adequacao</button>
+                  <button class="quiz-option">Uma metrica de performance do website</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Qual das seguintes NAO e uma seccao tipica de uma Proposta de Transformacao Digital?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Diagnostico da presenca digital</button>
+                  <button class="quiz-option">Definicao de objetivos SMART</button>
+                  <button class="quiz-option" data-correct="true">Analise financeira dos ultimos 10 anos</button>
+                  <button class="quiz-option">KPIs e metricas de sucesso</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. Qual e o ROI medio do email marketing?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">5 dolares por cada 1 dolar investido</button>
+                  <button class="quiz-option">12 dolares por cada 1 dolar investido</button>
+                  <button class="quiz-option" data-correct="true">36 dolares por cada 1 dolar investido</button>
+                  <button class="quiz-option">100 dolares por cada 1 dolar investido</button>
+                </div>
+              </div>
+
+              <div class="quiz-score hidden quiz-score-display"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('lsrtd-t3')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+  </section>
+
+  <!-- Docentes -->
+  <section class="section">
+    <h2>Contactos dos Docentes</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <h4>Joao Almeida</h4>
+        <p>jmalmeida@umaia.pt</p>
+      </div>
+      <div class="concept-card">
+        <h4>Carlos Alves</h4>
+        <p>calves@umaia.pt</p>
+      </div>
+      <div class="concept-card">
+        <h4>Samuel Anjos</h4>
+        <p>D012226@umaia.pt</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Mestrado em Transformacao Digital — UMAIA 2025/26</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

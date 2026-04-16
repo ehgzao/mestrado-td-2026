@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orientacoes para Tese — Mestrado TD 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127891;</text></svg>">
+</head>
+<body data-page="tese">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-logo">TD</span>
+      <span class="nav-title">Mestrado 2026</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+      <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+      <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+      <a href="tmv.html" class="nav-link discipline-tmv">TMV</a>
+      <a href="lsrtd.html" class="nav-link discipline-lsrtd">Scrum</a>
+      <a href="tese.html" class="nav-link discipline-tese">Tese</a>
+    </div>
+    <div class="nav-controls">
+      <button class="btn-icon" onclick="changeFontSize(-2)" title="Diminuir fonte">A-</button>
+      <button class="btn-icon" onclick="changeFontSize(2)" title="Aumentar fonte">A+</button>
+      <button class="btn-icon" onclick="toggleTheme()" title="Alternar tema">
+        <span class="theme-icon-light">&#9790;</span>
+        <span class="theme-icon-dark">&#9788;</span>
+      </button>
+      <button class="btn-icon mobile-menu-btn" onclick="toggleMobile()" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</nav>
+<div class="nav-links-mobile-overlay" id="mobileOverlay">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+  <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+  <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+  <a href="tmv.html" class="nav-link discipline-tmv">TMV</a>
+  <a href="lsrtd.html" class="nav-link discipline-lsrtd">Scrum</a>
+  <a href="tese.html" class="nav-link discipline-tese">Tese</a>
+</div>
+
+<main class="container main-content">
+
+  <!-- Hero -->
+  <section class="hero hero-tese">
+    <h1>Orientacoes para Tese</h1>
+    <p>Mestrado em Transformacao Digital | UMAIA 2025/26 | Regulamento aprovado pelo Conselho Cientifico</p>
+    <div class="hero-meta">
+      <span>Dissertacao / Projeto</span>
+      <span>45 ECTS (Ano 2)</span>
+      <span>120 ECTS Total</span>
+    </div>
+  </section>
+
+  <!-- Countdowns -->
+  <section class="section">
+    <h2>Proximos Eventos</h2>
+    <div class="countdown-grid" id="countdownGrid"></div>
+  </section>
+
+  <!-- Progress -->
+  <section class="section">
+    <div class="card">
+      <div class="progress-label">
+        <span>Progresso de Estudo</span>
+        <span id="progressLabel">0/3 (0%)</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill tese" id="progressBar" style="width:0%"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section class="section">
+    <div class="search-container">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar nos topicos...">
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="section">
+    <h2>Informacoes de Referencia</h2>
+    <div class="eval-grid">
+      <div class="eval-card">
+        <div class="eval-weight">120</div>
+        <div class="eval-label">Total ECTS</div>
+        <div class="eval-detail">4 semestres</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">45</div>
+        <div class="eval-label">ECTS Dissertacao/Projeto</div>
+        <div class="eval-detail">Ano 2</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">50</div>
+        <div class="eval-label">Max. Paginas Corpo</div>
+        <div class="eval-detail">Introducao ate Conclusoes</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">300</div>
+        <div class="eval-label">Max. Palavras Resumo</div>
+        <div class="eval-detail">Resumo e Abstract</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">APA</div>
+        <div class="eval-label">Normas de Referencia</div>
+        <div class="eval-detail">Ultima versao</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACCORDION TOPICS ========== -->
+  <section class="section">
+    <h2>Conteudos de Referencia</h2>
+    <div class="accordion">
+
+      <!-- ==================== TOPIC 1: Regulamento e Estrutura da Dissertacao/Projeto ==================== -->
+      <div class="accordion-item" data-topic="tese-t1">
+        <button class="accordion-header">
+          <span class="topic-number">01</span>
+          <span class="topic-title">Regulamento e Estrutura da Dissertacao/Projeto</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content tese-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>1.1. O Mestrado em Transformacao Digital</h4>
+                <p>O Mestrado em Transformacao Digital da UMAIA tem uma carga total de <strong>120 ECTS</strong>, distribuidos ao longo de <strong>4 semestres</strong> (2 anos letivos). As areas cientificas abrangidas sao: <strong>Gestao e Administracao (345)</strong>, <strong>Ciencias Informaticas (481)</strong> e <strong>Marketing e Publicidade (342)</strong>, refletindo o carater interdisciplinar do programa.</p>
+
+                <h4>1.2. Tipologias de Trabalho Final</h4>
+                <p>O estudante pode optar por duas tipologias de trabalho final: <strong>Dissertacao</strong> ou <strong>Projeto</strong>. A dissertacao e orientada para a investigacao academica e producao de conhecimento cientifico, enquanto o projeto tem uma vertente mais aplicada e pratica, embora ambos exijam rigor metodologico e fundamentacao teorica.</p>
+                <p>De acordo com as tipologias APA, os trabalhos podem classificar-se como: <strong>estudos empiricos</strong> (recolha e analise de dados originais), <strong>estudos metodologicos</strong> (desenvolvimento ou avaliacao de metodologias) e <strong>estudos de caso</strong> (analise aprofundada de um caso especifico num contexto real).</p>
+
+                <h4>1.3. Estrutura Obrigatoria</h4>
+                <p>A estrutura da dissertacao ou projeto segue um formato padronizado com os seguintes componentes:</p>
+                <ol>
+                  <li><strong>Capa</strong> — pagina de rosto com titulo, autor, orientador, instituicao e data</li>
+                  <li><strong>Dedicatoria</strong> (opcional) — breve dedicatoria pessoal</li>
+                  <li><strong>Agradecimentos</strong> (opcional) — reconhecimento a quem contribuiu</li>
+                  <li><strong>Resumo e Abstract</strong> — maximo de 300 palavras cada, em portugues e ingles</li>
+                  <li><strong>Indice</strong> — indice geral, indice de figuras, indice de tabelas, lista de abreviaturas</li>
+                  <li><strong>Introducao</strong> — contextualizacao, problema, objetivos, estrutura do documento</li>
+                  <li><strong>Revisao de Literatura</strong> — enquadramento teorico, estado da arte</li>
+                  <li><strong>Metodo</strong> — metodologia, tecnicas, instrumentos, amostra</li>
+                  <li><strong>Resultados</strong> — apresentacao dos dados e analise</li>
+                  <li><strong>Discussao</strong> — interpretacao dos resultados a luz da literatura</li>
+                  <li><strong>Conclusoes</strong> — sintese, contributos, limitacoes, trabalho futuro</li>
+                  <li><strong>Referencias</strong> — lista completa em formato APA</li>
+                  <li><strong>Anexos</strong> (opcional) — materiais complementares</li>
+                </ol>
+
+                <div class="highlight-box">
+                  <p><strong>Ponto-chave:</strong> O corpo do texto (da Introducao ate as Conclusoes) tem um limite maximo de <strong>50 paginas</strong>. As paginas preliminares sao numeradas em <strong>numeracao romana</strong> (I, II, III) e o corpo do texto em <strong>numeracao arabica</strong> (1, 2, 3).</p>
+                </div>
+
+                <h4>1.4. Normas e Formatacao</h4>
+                <p>Todas as referencias e formatacao de conteudo devem seguir as normas <strong>APA (versao mais recente)</strong>. Isto inclui citacoes no texto, lista de referencias, formatacao de tabelas, figuras, titulos e niveis de secao.</p>
+
+                <h4>1.5. Supervisao</h4>
+                <p>Cada trabalho final deve ter um <strong>orientador doutorado</strong>, podendo ter tambem um <strong>co-orientador</strong>. Pelo menos um dos orientadores deve ser <strong>docente da UMAIA</strong>. O orientador acompanha o estudante ao longo de todo o processo, desde a definicao do tema ate a defesa publica.</p>
+
+                <h4>1.6. Prazo da Proposta</h4>
+                <p>O prazo para submissao da proposta de dissertacao ou projeto e <strong>definido pelo coordenador do curso no inicio do Semestre 1 do Ano 2</strong>. O estudante deve respeitar rigorosamente este prazo para garantir a inscricao no trabalho final.</p>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block tese-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Dissertacao</h4>
+                  <p>Trabalho de investigacao academica com producao de conhecimento cientifico, orientado por rigor metodologico e fundamentacao teorica.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Projeto</h4>
+                  <p>Trabalho de vertente aplicada e pratica, que resolve um problema concreto, mas igualmente exige fundamentacao cientifica e rigor metodologico.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Normas APA</h4>
+                  <p>Conjunto de regras da American Psychological Association para formatacao academica, citacoes no texto e lista de referencias bibliograficas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Estudo de Caso</h4>
+                  <p>Tipologia APA que consiste na analise aprofundada de um caso especifico num contexto real, combinando multiplas fontes de evidencia.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>120 ECTS</h4>
+                  <p>Carga total do Mestrado em Transformacao Digital, distribuida por 4 semestres em tres areas cientificas complementares.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Orientador</h4>
+                  <p>Docente doutorado que supervisiona o trabalho final. Pelo menos um orientador deve pertencer ao corpo docente da UMAIA.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block tese-accent">
+              <h3>Flashcards</h3>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quantos ECTS tem o Mestrado em Transformacao Digital no total?</div>
+                    <div class="flashcard-back">120 ECTS, distribuidos ao longo de 4 semestres (2 anos letivos), abrangendo Gestao e Administracao, Ciencias Informaticas e Marketing e Publicidade.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as duas tipologias de trabalho final disponiveis?</div>
+                    <div class="flashcard-back">Dissertacao (investigacao academica) e Projeto (vertente aplicada/pratica). Ambos exigem rigor metodologico e fundamentacao teorica.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual o limite maximo de paginas para o corpo do texto?</div>
+                    <div class="flashcard-back">50 paginas, contando da Introducao ate as Conclusoes. As paginas preliminares e referencias nao contam para este limite.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Como e feita a numeracao de paginas?</div>
+                    <div class="flashcard-back">Paginas preliminares em numeracao romana (I, II, III) e o corpo do texto em numeracao arabica (1, 2, 3).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual o limite de palavras para o Resumo e o Abstract?</div>
+                    <div class="flashcard-back">Maximo de 300 palavras cada. O Resumo e em portugues e o Abstract em ingles, ambos sintetizando o trabalho completo.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as normas obrigatorias para referencias e formatacao?</div>
+                    <div class="flashcard-back">Normas APA (versao mais recente), abrangendo citacoes no texto, lista de referencias, formatacao de tabelas, figuras e niveis de secao.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as tres tipologias APA para o trabalho final?</div>
+                    <div class="flashcard-back">Estudos empiricos (recolha e analise de dados originais), estudos metodologicos (desenvolvimento de metodologias) e estudos de caso (analise aprofundada de um caso real).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Que requisitos existem para a supervisao do trabalho final?</div>
+                    <div class="flashcard-back">Orientador doutorado obrigatorio, possivel co-orientador. Pelo menos um dos orientadores deve ser docente da UMAIA.</div>
+                  </div>
+                </div>
+              </div>
+              <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual e a carga total de ECTS do Mestrado em Transformacao Digital?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">60 ECTS</button>
+                  <button class="quiz-option">90 ECTS</button>
+                  <button class="quiz-option" data-correct="true">120 ECTS</button>
+                  <button class="quiz-option">180 ECTS</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Qual o limite maximo de paginas para o corpo do texto da dissertacao?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">30 paginas</button>
+                  <button class="quiz-option">40 paginas</button>
+                  <button class="quiz-option" data-correct="true">50 paginas</button>
+                  <button class="quiz-option">80 paginas</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Como sao numeradas as paginas preliminares?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Numeracao arabica (1, 2, 3)</button>
+                  <button class="quiz-option" data-correct="true">Numeracao romana (I, II, III)</button>
+                  <button class="quiz-option">Letras (A, B, C)</button>
+                  <button class="quiz-option">Nao sao numeradas</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Qual o limite de palavras para o Resumo e o Abstract?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">150 palavras cada</button>
+                  <button class="quiz-option">200 palavras cada</button>
+                  <button class="quiz-option" data-correct="true">300 palavras cada</button>
+                  <button class="quiz-option">500 palavras cada</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. Qual das seguintes NAO e uma area cientifica do mestrado?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Gestao e Administracao (345)</button>
+                  <button class="quiz-option">Ciencias Informaticas (481)</button>
+                  <button class="quiz-option">Marketing e Publicidade (342)</button>
+                  <button class="quiz-option" data-correct="true">Engenharia Mecanica (521)</button>
+                </div>
+              </div>
+
+              <div class="quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('tese-t1')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== TOPIC 2: Defesa Intermedia e Defesa Publica ==================== -->
+      <div class="accordion-item" data-topic="tese-t2">
+        <button class="accordion-header">
+          <span class="topic-number">02</span>
+          <span class="topic-title">Defesa Intermedia e Defesa Publica</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content tese-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>2.1. Defesa Intermedia</h4>
+                <p>A <strong>Defesa Intermedia</strong> realiza-se no <strong>final do Semestre 1 do Ano 2</strong> e consiste na apresentacao de um documento rascunho (draft) do trabalho em curso. Trata-se de um <strong>momento construtivo</strong>, cujo objetivo principal e dar feedback e sugestoes de melhoria ao estudante, e nao uma avaliacao final.</p>
+                <p><strong>Composicao do juri:</strong> O juri da defesa intermedia e composto pelo(s) <strong>orientador(es)</strong> e por um <strong>leitor doutorado do programa</strong> que nao seja o orientador. O leitor traz uma perspetiva externa e complementar a avaliacao.</p>
+                <p><strong>Conteudo obrigatorio do documento rascunho:</strong></p>
+                <ol>
+                  <li><strong>Introducao:</strong> Deve apresentar claramente o <strong>problema de investigacao</strong>, os <strong>objetivos gerais e especificos</strong> e a <strong>justificacao</strong> para a escolha do tema. O estudante deve demonstrar que compreende a relevancia do problema.</li>
+                  <li><strong>Revisao da Literatura:</strong> Deve conter o <strong>enquadramento teorico</strong>, o <strong>estado da arte</strong> relevante para o tema e demonstrar <strong>qualidade das fontes</strong> utilizadas (artigos cientificos, livros de referencia, publicacoes recentes).</li>
+                  <li><strong>Proposta de Metodologia:</strong> Deve descrever a <strong>metodologia adequada</strong> ao tipo de estudo e as <strong>tecnicas de recolha de dados</strong> previstas (questionarios, entrevistas, observacao, analise documental, etc.).</li>
+                </ol>
+
+                <div class="highlight-box">
+                  <p><strong>Ponto-chave:</strong> A defesa intermedia e um momento formativo e construtivo. O objetivo e ajudar o estudante a melhorar o trabalho antes da versao final, nao atribuir uma classificacao definitiva.</p>
+                </div>
+
+                <h4>2.2. Defesa Publica</h4>
+                <p>A <strong>Defesa Publica</strong> e o momento final de avaliacao do trabalho. Tem uma <strong>duracao aproximada de 1 hora</strong> e esta estruturada em <strong>3 momentos</strong>:</p>
+                <ol>
+                  <li><strong>Apresentacao oral:</strong> O estudante apresenta o seu trabalho de forma sintetica e estruturada, destacando o problema, a metodologia, os resultados e as conclusoes.</li>
+                  <li><strong>Defesa/Debate com o juri:</strong> Os membros do juri colocam questoes, pedem esclarecimentos e desafiam as opcoes metodologicas e conclusoes do estudante. Este momento testa a capacidade de argumentacao e o dominio do tema.</li>
+                  <li><strong>Declaracao e atribuicao de nota:</strong> O juri delibera e comunica a classificacao final ao estudante.</li>
+                </ol>
+                <p>A defesa publica cumpre as regras do <strong>Regulamento Geral dos Cursos de 2.o Ciclo</strong> da instituicao.</p>
+
+                <h4>2.3. Criterios de Avaliacao Implicitos</h4>
+                <p>Embora os criterios especificos dependam do juri, existem dimensoes transversais que sao avaliadas:</p>
+                <ul>
+                  <li><strong>Qualidade e rigor cientifico:</strong> fundamentacao teorica, metodologia adequada, analise rigorosa dos dados</li>
+                  <li><strong>Capacidade de argumentacao:</strong> capacidade de justificar decisoes, responder a questoes criticas e defender as suas conclusoes</li>
+                  <li><strong>Dominio do tema:</strong> conhecimento aprofundado da area de investigacao e da literatura relevante</li>
+                  <li><strong>Clareza de apresentacao:</strong> organizacao do discurso, qualidade dos suportes visuais e gestao do tempo</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block tese-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Defesa Intermedia</h4>
+                  <p>Apresentacao do rascunho no final do Semestre 1, Ano 2. Momento construtivo para feedback e melhoria antes da versao final.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Defesa Publica</h4>
+                  <p>Avaliacao final com duracao de ~1 hora: apresentacao oral, debate com juri e atribuicao de nota. Cumpre o Regulamento de 2.o Ciclo.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Leitor</h4>
+                  <p>Doutorado do programa (que nao o orientador) que integra o juri da defesa intermedia, trazendo uma perspetiva externa e complementar.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Rigor Cientifico</h4>
+                  <p>Criterio transversal de avaliacao que abrange fundamentacao teorica, adequacao metodologica e analise rigorosa dos dados.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block tese-accent">
+              <h3>Flashcards</h3>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quando ocorre a Defesa Intermedia?</div>
+                    <div class="flashcard-back">No final do Semestre 1 do Ano 2. Consiste na apresentacao de um documento rascunho como momento construtivo de feedback.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quem compoe o juri da Defesa Intermedia?</div>
+                    <div class="flashcard-back">O(s) orientador(es) e um leitor doutorado do programa que nao seja o orientador, trazendo uma perspetiva externa complementar.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 3 conteudos obrigatorios do rascunho para a Defesa Intermedia?</div>
+                    <div class="flashcard-back">1) Introducao (problema, objetivos, justificacao), 2) Revisao da Literatura (enquadramento, estado da arte, qualidade das fontes), 3) Proposta de Metodologia (metodologia adequada, tecnicas de recolha).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 3 momentos da Defesa Publica?</div>
+                    <div class="flashcard-back">1) Apresentacao oral do trabalho, 2) Defesa/debate com o juri (questoes e esclarecimentos), 3) Declaracao e atribuicao de nota pelo juri.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a duracao aproximada da Defesa Publica?</div>
+                    <div class="flashcard-back">Aproximadamente 1 hora, dividida entre apresentacao oral, debate com o juri e deliberacao/atribuicao da nota final.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 criterios de avaliacao implicitos?</div>
+                    <div class="flashcard-back">1) Qualidade e rigor cientifico, 2) Capacidade de argumentacao, 3) Dominio do tema, 4) Clareza de apresentacao.</div>
+                  </div>
+                </div>
+              </div>
+              <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual e o principal proposito da Defesa Intermedia?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Atribuir uma nota parcial ao trabalho</button>
+                  <button class="quiz-option" data-correct="true">Dar feedback construtivo e sugestoes de melhoria</button>
+                  <button class="quiz-option">Aprovar ou reprovar o estudante</button>
+                  <button class="quiz-option">Avaliar a apresentacao oral</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Quem alem do orientador integra o juri da Defesa Intermedia?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Um colega de turma</button>
+                  <button class="quiz-option">O coordenador do curso</button>
+                  <button class="quiz-option" data-correct="true">Um leitor doutorado do programa que nao seja o orientador</button>
+                  <button class="quiz-option">Um especialista externo a instituicao</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Quantos momentos compoe a Defesa Publica?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">2 momentos</button>
+                  <button class="quiz-option" data-correct="true">3 momentos</button>
+                  <button class="quiz-option">4 momentos</button>
+                  <button class="quiz-option">5 momentos</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Qual das seguintes NAO e um criterio implicito de avaliacao?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Qualidade e rigor cientifico</button>
+                  <button class="quiz-option">Capacidade de argumentacao</button>
+                  <button class="quiz-option">Dominio do tema</button>
+                  <button class="quiz-option" data-correct="true">Numero de paginas da dissertacao</button>
+                </div>
+              </div>
+
+              <div class="quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('tese-t2')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== TOPIC 3: Proposta de Tese — Template e Guia ==================== -->
+      <div class="accordion-item" data-topic="tese-t3">
+        <button class="accordion-header">
+          <span class="topic-number">03</span>
+          <span class="topic-title">Proposta de Tese — Template e Guia</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content tese-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>3.1. Estrutura da Proposta de Tese</h4>
+                <p>A proposta de dissertacao ou projeto segue um template estruturado com <strong>12 seccoes</strong> que devem ser preenchidas de forma clara, concisa e fundamentada. O estudante deve tambem indicar se opta por <strong>Dissertacao ou Projeto</strong> e identificar o <strong>orientador e co-orientador</strong>.</p>
+
+                <h4>3.2. As 12 Seccoes da Proposta</h4>
+                <ol>
+                  <li><strong>Delimitacao do dominio de investigacao:</strong> Identificar as areas CNAEF (Classificacao Nacional de Areas de Educacao e Formacao) aplicaveis ao trabalho, situando-o no contexto das areas cientificas do mestrado.</li>
+                  <li><strong>Problematica (tema geral):</strong> Apresentar o contexto e background do tema, explicando a relevancia e atualidade do problema. Limite recomendado: ate 300 palavras.</li>
+                  <li><strong>Questao inicial:</strong> Formular a pergunta de investigacao central que o trabalho pretende responder. Deve ser clara, focada e investigavel.</li>
+                  <li><strong>Objetivos da investigacao:</strong> Listar os objetivos em bullet points, utilizando verbos no infinitivo (ex.: analisar, avaliar, desenvolver, propor, identificar). Devem ser mensuráveis e realistas.</li>
+                  <li><strong>Questoes de investigacao:</strong> Formular perguntas especificas que operacionalizam a questao inicial. Recomenda-se a utilizacao do framework <strong>PISCOS</strong> (Populacao, Intervencao, Comparacao, Outcomes, Setting) para estruturar as questoes.</li>
+                  <li><strong>Metodologia:</strong> Definir o tipo de estudo (exploratotio, descritivo, explicativo), os metodos (quantitativos, qualitativos ou mistos) e as ferramentas a utilizar (ex.: SPSS para analise estatistica, NVivo para analise qualitativa, Google Forms para recolha de dados).</li>
+                  <li><strong>Recursos necessarios:</strong> Listar as plataformas, participantes, equipamento e software necessarios para a realizacao do estudo.</li>
+                  <li><strong>Apresentacao resumida:</strong> Redigir um paragrafo sintetico que resuma todo o trabalho proposto — problema, objetivos, metodologia e resultados esperados.</li>
+                  <li><strong>Interesse da investigacao:</strong> Justificar a relevancia do trabalho para a <strong>academia</strong> (contributo teorico), a <strong>sociedade</strong> (impacto social) e a <strong>industria</strong> (aplicabilidade pratica).</li>
+                  <li><strong>Conceitos fundamentais:</strong> Identificar as palavras-chave e conceitos centrais do trabalho, que serao aprofundados na revisao de literatura.</li>
+                  <li><strong>Calendarizacao:</strong> Apresentar uma tabela com colunas: Tarefa, Designacao, Inicio, Duracao e Termino. Deve cobrir todo o periodo do trabalho final.</li>
+                  <li><strong>Bibliografia base inicial:</strong> Listar as referencias bibliograficas iniciais em formato APA. Devem ser fontes atualizadas e de qualidade cientifica.</li>
+                </ol>
+
+                <h4>3.3. Dicas para uma Boa Proposta</h4>
+                <ul>
+                  <li><strong>Questao de investigacao clara e focada:</strong> Evitar questoes demasiado amplas ou vagas. A questao deve ser respondivel dentro do ambito e recursos do mestrado.</li>
+                  <li><strong>Objetivos mensuraveis e realistas:</strong> Cada objetivo deve poder ser verificado. Usar verbos de acao concretos e evitar formulacoes ambiguas.</li>
+                  <li><strong>Metodologia coerente com os objetivos:</strong> A escolha metodologica deve decorrer naturalmente dos objetivos e da questao de investigacao, nao ser arbitraria.</li>
+                  <li><strong>Bibliografia atualizada e relevante:</strong> Privilegiar artigos cientificos recentes (ultimos 5 anos), publicacoes em revistas indexadas e livros de referencia na area.</li>
+                  <li><strong>Cronograma realista:</strong> Planear com margem para imprevistos. Considerar periodos de ferias, prazos institucionais e tempo de resposta de participantes.</li>
+                </ul>
+
+                <div class="highlight-box">
+                  <p><strong>Ponto-chave:</strong> Uma proposta bem estruturada e o alicerce de todo o trabalho final. Investir tempo na proposta poupa esforco e revisoes ao longo do processo.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block tese-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>CNAEF</h4>
+                  <p>Classificacao Nacional de Areas de Educacao e Formacao. Utilizada para situar o dominio de investigacao no contexto das areas cientificas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Framework PISCOS</h4>
+                  <p>Populacao, Intervencao, Comparacao, Outcomes, Setting. Estrutura para formular questoes de investigacao especificas e focadas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Metodos Mistos</h4>
+                  <p>Abordagem metodologica que combina metodos quantitativos e qualitativos, permitindo uma compreensao mais completa do fenomeno em estudo.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Calendarizacao</h4>
+                  <p>Planeamento temporal do trabalho em formato tabular (Tarefa, Designacao, Inicio, Duracao, Termino), cobrindo todo o periodo do projeto.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block tese-accent">
+              <h3>Flashcards</h3>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quantas seccoes tem a proposta de tese?</div>
+                    <div class="flashcard-back">12 seccoes: Delimitacao do dominio, Problematica, Questao inicial, Objetivos, Questoes de investigacao, Metodologia, Recursos, Apresentacao resumida, Interesse, Conceitos, Calendarizacao e Bibliografia.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o framework PISCOS?</div>
+                    <div class="flashcard-back">Populacao, Intervencao, Comparacao, Outcomes, Setting. E uma estrutura para formular questoes de investigacao especificas, focadas e investigaveis.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Como devem ser formulados os objetivos da investigacao?</div>
+                    <div class="flashcard-back">Em bullet points, com verbos no infinitivo (analisar, avaliar, desenvolver, propor, identificar). Devem ser mensuraveis e realistas.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Que ferramentas sao referidas para a metodologia?</div>
+                    <div class="flashcard-back">SPSS para analise estatistica, NVivo para analise qualitativa e Google Forms para recolha de dados. A escolha depende do tipo de estudo.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Que colunas deve ter a tabela de calendarizacao?</div>
+                    <div class="flashcard-back">Tarefa, Designacao, Inicio, Duracao e Termino. Deve cobrir todo o periodo do trabalho final com margem para imprevistos.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Que tres dimensoes justificam o interesse da investigacao?</div>
+                    <div class="flashcard-back">1) Academia (contributo teorico), 2) Sociedade (impacto social), 3) Industria (aplicabilidade pratica). Deve demonstrar relevancia em pelo menos uma dimensao.</div>
+                  </div>
+                </div>
+              </div>
+              <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. O que significa PISCOS no contexto da proposta de tese?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Problema, Investigacao, Solucao, Conclusao, Observacao, Sintese</button>
+                  <button class="quiz-option" data-correct="true">Populacao, Intervencao, Comparacao, Outcomes, Setting</button>
+                  <button class="quiz-option">Planeamento, Implementacao, Supervisao, Controlo, Operacao, Sucesso</button>
+                  <button class="quiz-option">Pesquisa, Inovacao, Ciencia, Organizacao, Sustentabilidade</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Como devem ser formulados os objetivos da investigacao?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Em paragrafos longos e detalhados</button>
+                  <button class="quiz-option">Em forma de perguntas</button>
+                  <button class="quiz-option" data-correct="true">Em bullet points com verbos no infinitivo</button>
+                  <button class="quiz-option">Em formato de tabela com metricas</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Quantas seccoes compoe a estrutura da proposta de tese?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">8 seccoes</button>
+                  <button class="quiz-option">10 seccoes</button>
+                  <button class="quiz-option" data-correct="true">12 seccoes</button>
+                  <button class="quiz-option">15 seccoes</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Qual das seguintes NAO e uma dica para uma boa proposta?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Questao de investigacao clara e focada</button>
+                  <button class="quiz-option">Bibliografia atualizada e relevante</button>
+                  <button class="quiz-option">Cronograma realista</button>
+                  <button class="quiz-option" data-correct="true">Usar o maior numero possivel de metodologias diferentes</button>
+                </div>
+              </div>
+
+              <div class="quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('tese-t3')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Mestrado em Transformacao Digital — UMAIA 2025/26</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

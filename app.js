@@ -5,9 +5,15 @@
 
 const EVENTS = [
   { date: '2026-04-22T19:00', title: 'Teste TP1', weight: '20%', discipline: 'ggdsi', type: 'Teste' },
+  { date: '2026-04-28T19:00', title: 'Sprint Review S2', weight: 'Sprint', discipline: 'lsrtd', type: 'Review' },
   { date: '2026-05-13T19:00', title: 'Teste TP2', weight: '40%', discipline: 'ggdsi', type: 'Teste' },
+  { date: '2026-05-15T23:59', title: 'Proposta Individual', weight: '50%', discipline: 'tmv', type: 'Prazo' },
+  { date: '2026-05-21T19:00', title: 'Apresentacao Individual', weight: '50%', discipline: 'tmv', type: 'Apresentacao' },
+  { date: '2026-05-22T23:59', title: 'Plano de Marketing', weight: '40%', discipline: 'tmv', type: 'Prazo' },
   { date: '2026-05-25T19:00', title: 'Teste M1 + Projeto', weight: '60%+25%', discipline: 'ba', type: 'Teste' },
+  { date: '2026-05-28T19:00', title: 'Apresentacao Plano Mkt', weight: '40%', discipline: 'tmv', type: 'Apresentacao' },
   { date: '2026-05-29T19:15', title: 'Pitch + Projeto Final', weight: '60%', discipline: 'ihmr', type: 'Projeto' },
+  { date: '2026-06-02T19:00', title: 'Apresentacao Final', weight: '10%', discipline: 'lsrtd', type: 'Projeto' },
   { date: '2026-06-02T23:59', title: 'Apresentacao + Relatorio', weight: '15%', discipline: 'ba', type: 'Prazo' },
   { date: '2026-06-15T23:59', title: 'Entrega Projeto', weight: '40%', discipline: 'ggdsi', type: 'Prazo' },
   { date: '2026-06-29T18:15', title: 'Exame Normal', weight: '100%', discipline: 'ihmr', type: 'Exame' },
@@ -18,10 +24,13 @@ const DISC = {
   ba: { name: 'Business Analytics', short: 'BA' },
   ggdsi: { name: 'Governanca de Dados', short: 'GGDSI' },
   ihmr: { name: 'Interface H-M e Robotica', short: 'IHMR' },
+  tmv: { name: 'Marketing e Vendas', short: 'TMV' },
+  lsrtd: { name: 'Scrum e Roadmap', short: 'LSRTD' },
+  tese: { name: 'Orientacoes para Tese', short: 'TESE' },
 };
 
 const MONTHS = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
-const TOPIC_COUNTS = { ba: 4, ggdsi: 7, ihmr: 6 };
+const TOPIC_COUNTS = { ba: 4, ggdsi: 7, ihmr: 6, tmv: 4, lsrtd: 3, tese: 3 };
 const MSG_KEY = 'mestrado-td-msgs';
 const COLORS = ['#6C5CE7','#0984E3','#00B894','#E17055','#FDCB6E','#E84393','#00CEC9','#636E72'];
 
