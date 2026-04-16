@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mestrado TD 2026 — Hub de Estudo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body data-page="home">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-logo">TD</span>
+      <span class="nav-title">Mestrado 2026</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+      <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+      <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+    </div>
+    <div class="nav-controls">
+      <button class="btn-icon" onclick="changeFontSize(-2)" title="Diminuir fonte">A-</button>
+      <button class="btn-icon" onclick="changeFontSize(2)" title="Aumentar fonte">A+</button>
+      <button class="btn-icon" onclick="toggleTheme()" title="Alternar tema">
+        <span class="theme-icon-light">&#9790;</span>
+        <span class="theme-icon-dark">&#9788;</span>
+      </button>
+      <button class="btn-icon mobile-menu-btn" onclick="toggleMobile()" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</nav>
+<div class="nav-links-mobile-overlay" id="mobileOverlay">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+  <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+  <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+</div>
+
+<main class="container main-content">
+
+  <!-- Hero -->
+  <section class="hero hero-home">
+    <h1>Mestrado em Transformacao Digital</h1>
+    <p>UMAIA 2025/26 — 2.o Semestre — Hub de Estudo Colaborativo</p>
+    <div class="hero-meta">
+      <span>3 Disciplinas</span>
+      <span>18 ECTS</span>
+      <span>Pos-laboral</span>
+    </div>
+  </section>
+
+  <!-- Countdowns -->
+  <section class="section">
+    <h2>Proximos Eventos</h2>
+    <div class="countdown-grid" id="countdownGrid"></div>
+  </section>
+
+  <!-- Disciplines -->
+  <section class="section">
+    <h2>Disciplinas</h2>
+    <div class="grid grid-3">
+      <a href="ba.html" class="card-link">
+        <div class="card discipline-card ba animate-in">
+          <div class="card-icon">&#128202;</div>
+          <h3>Business Analytics, Metrics e Big Data</h3>
+          <p class="text-sm text-muted">Prof. Rui Humberto Pereira &bull; 6 ECTS</p>
+          <p class="text-sm text-muted">Big Data, Data Science, ETL, DW, BI, KPIs, Power BI</p>
+          <div class="progress-container mt-2">
+            <div class="progress-bar"><div class="progress-fill ba" id="ba-progress" style="width:0%"></div></div>
+          </div>
+        </div>
+      </a>
+      <a href="ggdsi.html" class="card-link">
+        <div class="card discipline-card ggdsi animate-in">
+          <div class="card-icon">&#128737;</div>
+          <h3>Gestao e Governanca de Dados e de SI</h3>
+          <p class="text-sm text-muted">Prof. Pedro Pimenta &bull; 6 ECTS</p>
+          <p class="text-sm text-muted">Governanca, DAMA-DMBOK, Qualidade, Ciclo de Vida, RGPD</p>
+          <div class="progress-container mt-2">
+            <div class="progress-bar"><div class="progress-fill ggdsi" id="ggdsi-progress" style="width:0%"></div></div>
+          </div>
+        </div>
+      </a>
+      <a href="ihmr.html" class="card-link">
+        <div class="card discipline-card ihmr animate-in">
+          <div class="card-icon">&#129302;</div>
+          <h3>Interface Homem-Maquina e Robotica</h3>
+          <p class="text-sm text-muted">Prof.a Ana Melro &bull; 6 ECTS</p>
+          <p class="text-sm text-muted">HCI, Interfaces, Robotica, Cyborgs, IA, Etica</p>
+          <div class="progress-container mt-2">
+            <div class="progress-bar"><div class="progress-fill ihmr" id="ihmr-progress" style="width:0%"></div></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Calendar -->
+  <section class="section">
+    <h2>Calendario Completo</h2>
+    <div class="card">
+      <div class="event-list" id="eventList"></div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="section">
+    <h2>Links Uteis</h2>
+    <div class="links-grid">
+      <a href="https://moodle.maieutica.pt/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#127891;</div>
+        <div class="link-info">
+          <div class="link-title">Moodle UMAIA</div>
+          <div class="link-desc">Plataforma de e-learning</div>
+        </div>
+      </a>
+      <a href="https://moodle.maieutica.pt/course/view.php?id=22554" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128218;</div>
+        <div class="link-info">
+          <div class="link-title">Moodle GGDSI</div>
+          <div class="link-desc">Pagina da disciplina</div>
+        </div>
+      </a>
+      <a href="https://restupubpriv.onrender.com/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#127869;</div>
+        <div class="link-info">
+          <div class="link-title">Projeto GGDSI</div>
+          <div class="link-desc">Plataforma de restaurantes</div>
+        </div>
+      </a>
+      <a href="https://docs.google.com/document/d/1P046F_OcIB_hIO0X36hhz1vWdeSVrtE7WllfaIY_ycA/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128196;</div>
+        <div class="link-info">
+          <div class="link-title">Doc Projeto GGDSI</div>
+          <div class="link-desc">Google Docs do projeto</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Mestrado em Transformacao Digital — UMAIA 2025/26</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

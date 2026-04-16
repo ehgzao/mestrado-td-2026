@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GGDSI — Gestao e Governanca de Dados e de SI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128737;</text></svg>">
+</head>
+<body data-page="ggdsi">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-logo">TD</span>
+      <span class="nav-title">Mestrado 2026</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+      <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+      <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+    </div>
+    <div class="nav-controls">
+      <button class="btn-icon" onclick="changeFontSize(-2)" title="Diminuir fonte">A-</button>
+      <button class="btn-icon" onclick="changeFontSize(2)" title="Aumentar fonte">A+</button>
+      <button class="btn-icon" onclick="toggleTheme()" title="Alternar tema">
+        <span class="theme-icon-light">&#9790;</span>
+        <span class="theme-icon-dark">&#9788;</span>
+      </button>
+      <button class="btn-icon mobile-menu-btn" onclick="toggleMobile()" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</nav>
+<div class="nav-links-mobile-overlay" id="mobileOverlay">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+  <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+  <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+</div>
+
+<main class="container main-content">
+
+  <!-- Hero -->
+  <section class="hero hero-ggdsi">
+    <h1>Gestao e Governanca de Dados e de Sistemas de Informacao</h1>
+    <p>Dominar a governanca de dados para garantir qualidade, conformidade e valor estrategico da informacao organizacional.</p>
+    <div class="hero-meta">
+      <span>Prof. Pedro Pimenta</span>
+      <span>Carlos Pais Montes</span>
+      <span>6 ECTS</span>
+      <span>24h TP + 24h OT</span>
+    </div>
+  </section>
+
+  <!-- Progress -->
+  <section class="section">
+    <div class="card">
+      <div class="progress-label">
+        <span>Progresso de Estudo</span>
+        <span id="progressLabel">0/7 (0%)</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill ggdsi" id="progressBar" style="width:0%"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdowns -->
+  <section class="section">
+    <h2>Proximas Entregas</h2>
+    <div class="countdown-grid" id="countdownGrid"></div>
+  </section>
+
+  <!-- Search -->
+  <section class="section">
+    <div class="search-container">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar nos topicos...">
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TOPIC 1 — O Papel dos Dados
+       ========================================================= -->
+  <div class="accordion">
+
+    <div class="accordion-item" data-topic="ggdsi-t1">
+      <button class="accordion-header">
+        <span class="topic-number">1</span>
+        <span class="topic-title">O Papel dos Dados</span>
+        <span class="topic-status">Pendente</span>
+        <span class="accordion-icon">&#9654;</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+
+          <!-- Teoria -->
+          <div class="content-block">
+            <h3>Teoria</h3>
+            <div class="theory-text">
+              <p><strong>Dados como ativo organizacional na era digital:</strong> Na economia digital, os dados sao considerados um dos ativos mais valiosos de qualquer organizacao. Empresas como Google, Amazon e Meta demonstram que o valor de mercado esta intrinsecamente ligado a capacidade de recolher, processar e monetizar dados. Os dados deixaram de ser um subproduto das operacoes para se tornarem um recurso estrategico que alimenta decisoes, inovacao e vantagem competitiva. O conceito de "dados como o novo petroleo" (Clive Humby, 2006) reflete esta realidade — tal como o petroleo, os dados precisam de ser refinados para gerar valor.</p>
+
+              <p><strong>Dados operacionais vs estrategicos:</strong> Os dados operacionais sao gerados nas atividades do dia a dia da organizacao (transacoes, registos de clientes, logs de sistemas) e suportam processos rotineiros. Os dados estrategicos, por outro lado, sao resultado de analise, agregacao e contextualizacao — permitem identificar tendencias, prever comportamentos e orientar a direcao do negocio. A transicao de dados operacionais para estrategicos envolve processos de ETL (Extract, Transform, Load), data warehousing e Business Intelligence.</p>
+
+              <p><strong>Decisao individual vs coletiva baseada em dados:</strong> A decisao individual baseada em dados refere-se a um decisor que utiliza dashboards, relatorios ou analytics para fundamentar as suas escolhas. A decisao coletiva envolve comites, equipas ou organizacoes inteiras que partilham metricas e KPIs comuns, alinhando a tomada de decisao com os objetivos estrategicos. Organizacoes maduras promovem a democratizacao dos dados — todos os colaboradores, nao apenas os gestores de topo, devem ter acesso a informacao relevante para o seu papel.</p>
+
+              <p><strong>Data-driven vs Data-informed organizations:</strong> Uma organizacao <em>data-driven</em> baseia todas as decisoes exclusivamente em dados e algoritmos, minimizando o julgamento humano. Uma organizacao <em>data-informed</em> utiliza os dados como um dos inputs para a decisao, combinando-os com experiencia, intuicao e contexto qualitativo. Na pratica, a abordagem data-informed e considerada mais realista e eficaz, pois reconhece que nem todos os fatores podem ser quantificados e que o contexto humano e essencial para interpretar dados corretamente.</p>
+
+              <p><strong>O valor economico dos dados:</strong> O valor dos dados pode ser medido de diversas formas: valor intrinseco (custo de recolha e armazenamento), valor de negocio (receitas geradas a partir de analytics), valor de mercado (preco que terceiros pagariam pelos dados) e valor de risco (custo de perda ou violacao). Segundo estudos da IBM, a ma qualidade de dados custa as organizacoes americanas cerca de 3,1 trilhoes de dolares por ano. Investir em governanca de dados e, portanto, investir diretamente na preservacao e maximizacao do valor economico dos dados.</p>
+
+              <div class="highlight-box">
+                <p><strong>Ponto-chave:</strong> Os dados so geram valor quando sao de qualidade, acessiveis, governados e alinhados com os objetivos de negocio. Sem governanca, os dados sao um passivo, nao um ativo.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conceitos -->
+          <div class="content-block ggdsi-accent">
+            <h3>Conceitos-Chave</h3>
+            <div class="concept-grid">
+              <div class="concept-card">
+                <h4>Ativo Organizacional</h4>
+                <p>Recurso que gera valor para a organizacao. Os dados sao hoje reconhecidos como ativo intangivel de elevado valor estrategico.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data-driven</h4>
+                <p>Modelo onde as decisoes sao determinadas exclusivamente por dados e algoritmos, sem intervencao do julgamento humano.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data-informed</h4>
+                <p>Modelo equilibrado que usa dados como input para decisoes, combinando-os com experiencia e contexto qualitativo.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Dados Operacionais</h4>
+                <p>Dados gerados nas operacoes diarias: transacoes, logs, registos. Suportam processos rotineiros e sao a materia-prima para analytics.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Dados Estrategicos</h4>
+                <p>Dados processados e contextualizados que suportam decisoes de alto nivel: tendencias, previsoes, benchmarks.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Democratizacao de Dados</h4>
+                <p>Pratica de tornar os dados acessiveis a todos os colaboradores, nao apenas a gestao de topo, para suportar decisoes informadas em toda a organizacao.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flashcards -->
+          <div class="content-block ggdsi-accent">
+            <h3>Flashcards</h3>
+            <div class="flashcard-grid">
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que significa considerar dados como ativo organizacional?</div>
+                  <div class="flashcard-back">Significa reconhecer os dados como um recurso estrategico que gera valor, tal como ativos financeiros ou propriedade intelectual, exigindo gestao e governanca adequadas.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Qual a diferenca entre dados operacionais e estrategicos?</div>
+                  <div class="flashcard-back">Operacionais suportam processos diarios (transacoes, logs). Estrategicos resultam de analise e agregacao, suportando decisoes de alto nivel e planeamento futuro.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Data-driven vs Data-informed?</div>
+                  <div class="flashcard-back">Data-driven: decisoes 100% baseadas em dados. Data-informed: dados sao um input combinado com experiencia e contexto humano. A abordagem data-informed e geralmente mais realista.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quem cunhou a expressao "dados sao o novo petroleo"?</div>
+                  <div class="flashcard-back">Clive Humby, em 2006. A metafora destaca que, como o petroleo, os dados precisam de ser refinados (processados) para gerar valor real.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Que formas existem de medir o valor economico dos dados?</div>
+                  <div class="flashcard-back">Valor intrinseco (custo de recolha), valor de negocio (receitas geradas), valor de mercado (preco para terceiros) e valor de risco (custo de perda/violacao).</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que e a democratizacao de dados?</div>
+                  <div class="flashcard-back">E a pratica de tornar dados acessiveis a todos os colaboradores de uma organizacao, para que possam tomar decisoes informadas no seu ambito de trabalho, nao ficando limitado a gestao de topo.</div>
+                </div>
+              </div>
+            </div>
+            <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+          </div>
+
+          <!-- Quiz -->
+          <div class="content-block">
+            <h3>Quiz</h3>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">1. Qual das seguintes afirmacoes melhor descreve uma organizacao data-informed?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Todas as decisoes sao tomadas exclusivamente por algoritmos</button>
+                <button class="quiz-option" data-correct="true">Os dados sao combinados com experiencia e contexto para suportar decisoes</button>
+                <button class="quiz-option">Os dados sao recolhidos mas raramente utilizados nas decisoes</button>
+                <button class="quiz-option">Apenas a gestao de topo tem acesso aos dados</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">2. Qual e o conceito associado a Clive Humby (2006)?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Data-driven management</button>
+                <button class="quiz-option">Business Intelligence</button>
+                <button class="quiz-option" data-correct="true">Dados sao o novo petroleo</button>
+                <button class="quiz-option">DAMA-DMBOK framework</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">3. Dados estrategicos diferem dos operacionais porque:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Sao mais baratos de armazenar</button>
+                <button class="quiz-option">Sao gerados automaticamente pelos sistemas</button>
+                <button class="quiz-option" data-correct="true">Resultam de analise e agregacao, suportando decisoes de alto nivel</button>
+                <button class="quiz-option">Sao exclusivamente quantitativos</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">4. Qual o custo estimado da ma qualidade de dados para as organizacoes americanas, segundo a IBM?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">500 milhoes de dolares por ano</button>
+                <button class="quiz-option">1 trilhao de dolares por ano</button>
+                <button class="quiz-option" data-correct="true">3,1 trilhoes de dolares por ano</button>
+                <button class="quiz-option">10 trilhoes de dolares por ano</button>
+              </div>
+            </div>
+
+            <div class="quiz-score-display hidden"></div>
+            <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+          </div>
+
+          <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ggdsi-t1')">Marcar como estudado</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         TOPIC 2 — O que e Governanca de Dados?
+         ========================================================= -->
+    <div class="accordion-item" data-topic="ggdsi-t2">
+      <button class="accordion-header">
+        <span class="topic-number">2</span>
+        <span class="topic-title">O que e Governanca de Dados?</span>
+        <span class="topic-status">Pendente</span>
+        <span class="accordion-icon">&#9654;</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+
+          <div class="content-block">
+            <h3>Teoria</h3>
+            <div class="theory-text">
+              <p><strong>Definicoes de Governanca de Dados:</strong> A governanca de dados e o exercicio de autoridade, controlo e tomada de decisao partilhada sobre a gestao dos ativos de dados. Diferentes grandes players oferecem definicoes complementares:</p>
+              <ul>
+                <li><strong>Microsoft Azure:</strong> "Governanca de dados e o conjunto de politicas, processos e standards que garantem que os dados sao geridos de forma eficaz e segura ao longo do seu ciclo de vida."</li>
+                <li><strong>Google Cloud:</strong> "E o processo de gerir a disponibilidade, usabilidade, integridade e seguranca dos dados de uma organizacao, baseado em standards e politicas internas."</li>
+                <li><strong>AWS:</strong> "Governanca de dados define quem pode tomar que acoes, sobre que dados, em que situacoes e usando que metodos."</li>
+                <li><strong>IBM:</strong> "E a capacidade de gerir dados como um ativo real do negocio, incluindo pessoas, processos e tecnologia necessarios para criar um tratamento consistente e adequado dos dados."</li>
+              </ul>
+
+              <p><strong>Diferenca entre Gestao de Dados e Governanca de Dados:</strong> A <em>Gestao de Dados</em> (Data Management) refere-se as atividades operacionais e tecnicas de recolher, armazenar, proteger e fornecer dados — e o "como" e o "fazer". A <em>Governanca de Dados</em> (Data Governance) e o framework de decisao que define as regras, politicas, papeis e responsabilidades — e o "quem decide" e o "o que e permitido". A governanca orienta a gestao; a gestao executa o que a governanca define.</p>
+
+              <div class="highlight-box">
+                <p><strong>Analogia:</strong> A governanca esta para a gestao como a constituicao de um pais esta para as leis e regulamentos. A governanca define principios e autoridade; a gestao operacionaliza no dia a dia.</p>
+              </div>
+
+              <p><strong>Framework DAMA-DMBOK (Data Management Body of Knowledge):</strong> O DAMA-DMBOK e o framework de referencia global para gestao de dados, publicado pela DAMA International. A versao 2 (2017) define 11 areas de conhecimento organizadas em torno da Governanca de Dados como area central:</p>
+              <ol>
+                <li><strong>Governanca de Dados</strong> — area central que coordena todas as outras. Define politicas, standards, organizacao e roles.</li>
+                <li><strong>Arquitetura de Dados</strong> — modelos e designs que definem como os dados se estruturam e integram na organizacao.</li>
+                <li><strong>Modelacao e Design de Dados</strong> — criacao de modelos logicos e fisicos (conceptual, logico, fisico).</li>
+                <li><strong>Armazenamento e Operacoes de Dados</strong> — gestao de bases de dados, backups, recuperacao e performance.</li>
+                <li><strong>Seguranca de Dados</strong> — protecao contra acessos nao autorizados, encriptacao, controlo de acessos.</li>
+                <li><strong>Integracao e Interoperabilidade de Dados</strong> — ETL, APIs, integracao entre sistemas e formatos.</li>
+                <li><strong>Gestao de Conteudo e Documentos</strong> — dados nao estruturados: documentos, imagens, emails.</li>
+                <li><strong>Dados de Referencia e Master Data</strong> — gestao de dados mestres e de referencia (MDM).</li>
+                <li><strong>Data Warehousing e Business Intelligence</strong> — armazens de dados e sistemas de reporting e analytics.</li>
+                <li><strong>Gestao de Metadados</strong> — catalogacao e gestao de informacao sobre os dados (dados sobre dados).</li>
+                <li><strong>Qualidade de Dados</strong> — metricas, monitorizacao e melhoria continua da qualidade dos dados.</li>
+              </ol>
+
+              <p><strong>Framework DCAM (Data Management Capability Assessment Model):</strong> Desenvolvido pelo EDM Council, o DCAM e um modelo de avaliacao de maturidade em gestao de dados. Complementa o DAMA-DMBOK ao fornecer um framework prático de avaliacao com 8 componentes: estrategia, programa de negocio, estrutura organizacional, arquitetura, tecnologia, gestao do ciclo de vida dos dados, controlos e gestao de risco. E amplamente utilizado no setor financeiro para demonstrar conformidade regulatoria.</p>
+
+              <p><strong>Beneficios da implementacao de governanca:</strong></p>
+              <ul>
+                <li>Melhoria da qualidade e consistencia dos dados</li>
+                <li>Reducao de riscos de conformidade (RGPD, regulamentos setoriais)</li>
+                <li>Maior eficiencia operacional (menos duplicacao, menos erros)</li>
+                <li>Confianca nas decisoes baseadas em dados</li>
+                <li>Melhor colaboracao entre TI e areas de negocio</li>
+                <li>Valorizacao dos dados como ativo organizacional</li>
+              </ul>
+
+              <p><strong>Desafios da implementacao:</strong></p>
+              <ul>
+                <li>Resistencia a mudanca por parte dos colaboradores</li>
+                <li>Falta de patrocinio executivo</li>
+                <li>Dificuldade em demonstrar ROI a curto prazo</li>
+                <li>Complexidade tecnica e organizacional</li>
+                <li>Silos de dados entre departamentos</li>
+              </ul>
+
+              <p><strong>Niveis de maturidade em governanca de dados:</strong> A maturidade organizacional em governanca de dados e tipicamente avaliada em 5 niveis:</p>
+              <ol>
+                <li><strong>Inicial (Ad hoc):</strong> Nao existem processos formais. A gestao de dados e reativa e individual.</li>
+                <li><strong>Gerido:</strong> Existem alguns processos basicos, mas sao inconsistentes. Comecam a surgir responsabilidades definidas.</li>
+                <li><strong>Definido:</strong> Processos documentados e standards estabelecidos. Existe um programa formal de governanca.</li>
+                <li><strong>Gerido quantitativamente:</strong> Metricas de qualidade sao monitorizadas. Processos sao medidos e controlados.</li>
+                <li><strong>Otimizado:</strong> Melhoria continua sistematica. A governanca e parte da cultura organizacional.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Conceitos-Chave</h3>
+            <div class="concept-grid">
+              <div class="concept-card">
+                <h4>DAMA-DMBOK</h4>
+                <p>Framework de referencia global com 11 areas de conhecimento para gestao de dados. A Governanca e a area central que coordena todas as outras.</p>
+              </div>
+              <div class="concept-card">
+                <h4>DCAM</h4>
+                <p>Data Management Capability Assessment Model do EDM Council. Framework de avaliacao de maturidade em gestao de dados com 8 componentes.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data Management</h4>
+                <p>Atividades operacionais e tecnicas de recolher, armazenar e fornecer dados. E o "fazer" — a execucao da estrategia de dados.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data Governance</h4>
+                <p>Framework de decisao: politicas, papeis, responsabilidades e standards. E o "decidir" — define as regras que a gestao executa.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Maturidade de Governanca</h4>
+                <p>Modelo de 5 niveis (Inicial a Otimizado) que avalia o grau de formalizacao e eficacia da governanca de dados numa organizacao.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Silos de Dados</h4>
+                <p>Situacao onde dados ficam isolados em departamentos, sem integracao ou partilha. Um dos principais desafios que a governanca visa resolver.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Flashcards</h3>
+            <div class="flashcard-grid">
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Qual a diferenca entre Data Management e Data Governance?</div>
+                  <div class="flashcard-back">Data Management e a execucao operacional (recolher, armazenar, fornecer). Data Governance define as regras, politicas e papeis — e o nivel de decisao que orienta a gestao.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quantas areas de conhecimento define o DAMA-DMBOK v2?</div>
+                  <div class="flashcard-back">11 areas, com a Governanca de Dados como area central: Arquitetura, Modelacao, Armazenamento, Seguranca, Integracao, Conteudo, Master Data, DW/BI, Metadados e Qualidade.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que e o DCAM?</div>
+                  <div class="flashcard-back">Data Management Capability Assessment Model, do EDM Council. Framework de avaliacao de maturidade em gestao de dados, com 8 componentes. Muito usado no setor financeiro.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quais sao os 5 niveis de maturidade em governanca?</div>
+                  <div class="flashcard-back">1. Inicial (Ad hoc), 2. Gerido, 3. Definido, 4. Gerido quantitativamente, 5. Otimizado. A progressao reflete maior formalizacao e integracao na cultura organizacional.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que sao silos de dados?</div>
+                  <div class="flashcard-back">Sao situacoes onde os dados ficam isolados em departamentos, sem integracao ou partilha. Resultam em duplicacao, inconsistencias e ineficiencias organizacionais.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Como a AWS define Data Governance?</div>
+                  <div class="flashcard-back">"Governanca de dados define quem pode tomar que acoes, sobre que dados, em que situacoes e usando que metodos." Foco na autorizacao e controlo de acesso.</div>
+                </div>
+              </div>
+            </div>
+            <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+          </div>
+
+          <div class="content-block">
+            <h3>Quiz</h3>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">1. Qual afirmacao descreve corretamente a relacao entre gestao e governanca de dados?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Sao sinonimos que se referem ao mesmo conjunto de atividades</button>
+                <button class="quiz-option" data-correct="true">A governanca define as regras e a gestao operacionaliza-as</button>
+                <button class="quiz-option">A gestao define as politicas e a governanca executa-as</button>
+                <button class="quiz-option">Sao independentes e nao se relacionam</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">2. Qual e a area central do DAMA-DMBOK que coordena todas as outras?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Qualidade de Dados</button>
+                <button class="quiz-option">Seguranca de Dados</button>
+                <button class="quiz-option" data-correct="true">Governanca de Dados</button>
+                <button class="quiz-option">Arquitetura de Dados</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">3. No modelo de maturidade, uma organizacao de nivel 3 (Definido) caracteriza-se por:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Nao ter processos formais</button>
+                <button class="quiz-option">Melhoria continua sistematica</button>
+                <button class="quiz-option" data-correct="true">Processos documentados e standards estabelecidos com programa formal</button>
+                <button class="quiz-option">Metricas de qualidade monitorizadas quantitativamente</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">4. O DCAM foi desenvolvido por qual organizacao?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">DAMA International</button>
+                <button class="quiz-option">ISO/IEC</button>
+                <button class="quiz-option" data-correct="true">EDM Council</button>
+                <button class="quiz-option">W3C</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">5. Qual dos seguintes NAO e um beneficio tipico da implementacao de governanca de dados?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Melhoria da qualidade dos dados</button>
+                <button class="quiz-option">Reducao de riscos de conformidade</button>
+                <button class="quiz-option" data-correct="true">Eliminacao completa de todos os custos com TI</button>
+                <button class="quiz-option">Maior eficiencia operacional</button>
+              </div>
+            </div>
+
+            <div class="quiz-score-display hidden"></div>
+            <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+          </div>
+
+          <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ggdsi-t2')">Marcar como estudado</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         TOPIC 3 — Fundamentos da Governanca
+         ========================================================= -->
+    <div class="accordion-item" data-topic="ggdsi-t3">
+      <button class="accordion-header">
+        <span class="topic-number">3</span>
+        <span class="topic-title">Fundamentos da Governanca</span>
+        <span class="topic-status">Pendente</span>
+        <span class="accordion-icon">&#9654;</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+
+          <div class="content-block">
+            <h3>Teoria</h3>
+            <div class="theory-text">
+              <p><strong>Politicas e standards de dados:</strong> As politicas de dados sao documentos formais que definem as regras e diretrizes para a gestao de dados na organizacao. Incluem politicas de classificacao (publica, interna, confidencial, restrita), politicas de acesso (quem pode ver/editar que dados), politicas de retencao (quanto tempo manter) e politicas de qualidade (niveis minimos aceitaveis). Os standards de dados sao especificacoes tecnicas que garantem uniformidade: formatos de data, convencoes de nomenclatura, codigos de pais, formatos de moeda, entre outros.</p>
+
+              <p><strong>Catalogacao de dados (Data Catalog):</strong> Um catalogo de dados e um inventario organizado de todos os ativos de dados de uma organizacao. Funciona como uma "loja de dados" onde os utilizadores podem descobrir, compreender e aceder a dados relevantes. Um bom catalogo inclui: descricao dos datasets, proprietarios e stewards, linhagem (de onde vem o dado), classificacao de sensibilidade, metricas de qualidade e termos de negocio associados. Ferramentas populares incluem: Apache Atlas (open source), Alation, Collibra Data Catalog, Microsoft Purview, Google Data Catalog e AWS Glue Data Catalog.</p>
+
+              <p><strong>Qualidade de dados — 6 dimensoes fundamentais:</strong></p>
+              <ul>
+                <li><strong>Accuracy (Exatidao):</strong> Os dados refletem corretamente a realidade que representam? Exemplo: o endereco de um cliente corresponde ao seu endereco real?</li>
+                <li><strong>Completeness (Completude):</strong> Todos os campos obrigatorios estao preenchidos? Existem lacunas na informacao? Exemplo: todos os clientes tem email e telefone registados?</li>
+                <li><strong>Consistency (Consistencia):</strong> Os mesmos dados sao iguais em diferentes sistemas ou bases de dados? Exemplo: o nome do cliente e identico no CRM e no sistema de faturacao?</li>
+                <li><strong>Timeliness (Atualidade):</strong> Os dados estao suficientemente atualizados para o uso pretendido? Exemplo: os precos dos produtos refletem os precos atuais?</li>
+                <li><strong>Validity (Validade):</strong> Os dados estao no formato e nas regras de negocio esperados? Exemplo: o campo "idade" contem apenas numeros positivos razoaveis?</li>
+                <li><strong>Uniqueness (Unicidade):</strong> Nao existem duplicados? Cada entidade esta representada uma unica vez? Exemplo: cada cliente tem um unico registo no sistema?</li>
+              </ul>
+
+              <div class="highlight-box">
+                <p><strong>Regra dos 1-10-100:</strong> Custa 1 unidade prevenir um erro de dados, 10 unidades para corrigi-lo e 100 unidades para compensar o impacto de um erro nao corrigido. Investir em qualidade de dados na origem e sempre mais economico.</p>
+              </div>
+
+              <p><strong>Gestao de metadados:</strong> Metadados sao "dados sobre dados" — informacao que descreve, explica e contextualiza outros dados. Existem tres tipos principais:</p>
+              <ul>
+                <li><strong>Metadados tecnicos:</strong> Esquema de base de dados, tipos de campo, tamanhos, indices, chaves primarias e estrangeiras, estruturas de tabelas.</li>
+                <li><strong>Metadados operacionais:</strong> Informacao sobre processamento: quando o dado foi carregado, frequencia de atualizacao, jobs de ETL, logs de execucao, regras de transformacao.</li>
+                <li><strong>Metadados de negocio:</strong> Definicoes, significados e regras de negocio associadas ao dado. Exemplo: "cliente ativo" significa um cliente com pelo menos uma transacao nos ultimos 12 meses. Essenciais para que todos na organizacao interpretem os dados da mesma forma.</li>
+              </ul>
+
+              <p><strong>Master Data Management (MDM):</strong> MDM e a disciplina que garante a uniformidade, exatidao, consistencia e responsabilidade dos dados mestres partilhados por toda a organizacao. Dados mestres sao as entidades centrais do negocio — clientes, produtos, fornecedores, localizacoes, colaboradores. O MDM cria uma "versao unica da verdade" (single source of truth) para estas entidades, evitando duplicacoes e inconsistencias entre departamentos. Implementacoes de MDM podem seguir abordagens: consolidacao (merge), coexistencia, centralizada ou de registo.</p>
+
+              <p><strong>Data Lineage (Linhagem de dados):</strong> Data lineage refere-se a rastreabilidade dos dados — de onde vem o dado, por onde passa e onde e utilizado. Permite: compreender o impacto de mudancas (impact analysis), investigar problemas de qualidade ate a origem (root cause analysis), cumprir requisitos regulatorios de auditoria, e documentar transformacoes ao longo do pipeline de dados. Ferramentas como o Apache Atlas, Alation e Collibra oferecem visualizacao grafica da linhagem de dados.</p>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Conceitos-Chave</h3>
+            <div class="concept-grid">
+              <div class="concept-card">
+                <h4>Data Catalog</h4>
+                <p>Inventario organizado de ativos de dados com descricao, proprietarios, linhagem, classificacao e metricas de qualidade.</p>
+              </div>
+              <div class="concept-card">
+                <h4>6 Dimensoes de Qualidade</h4>
+                <p>Accuracy, Completeness, Consistency, Timeliness, Validity, Uniqueness — os pilares para avaliar qualidade de dados.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Metadados Tecnicos</h4>
+                <p>Esquemas, tipos de campo, chaves, indices — a estrutura tecnica dos dados armazenados nas bases de dados.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Metadados de Negocio</h4>
+                <p>Definicoes e regras de negocio associadas ao dado. Garantem que todos interpretam a informacao da mesma forma.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Master Data Management</h4>
+                <p>Disciplina que garante uma "versao unica da verdade" para entidades centrais: clientes, produtos, fornecedores.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data Lineage</h4>
+                <p>Rastreabilidade dos dados: origem, transformacoes e destino. Essencial para auditoria, impact analysis e troubleshooting.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Regra 1-10-100</h4>
+                <p>Custa 1 para prevenir erros, 10 para corrigi-los, 100 para compensar impactos. Investir na prevencao e sempre mais economico.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Single Source of Truth</h4>
+                <p>Principio do MDM: uma unica versao autoritativa de cada entidade mestre, eliminando conflitos entre sistemas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Flashcards</h3>
+            <div class="flashcard-grid">
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que e um Data Catalog?</div>
+                  <div class="flashcard-back">Inventario organizado dos ativos de dados com descricao, proprietarios, linhagem, classificacao de sensibilidade e metricas de qualidade. Permite descobrir e compreender os dados da organizacao.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quais sao as 6 dimensoes de qualidade de dados?</div>
+                  <div class="flashcard-back">Accuracy (exatidao), Completeness (completude), Consistency (consistencia), Timeliness (atualidade), Validity (validade) e Uniqueness (unicidade).</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Que tipos de metadados existem?</div>
+                  <div class="flashcard-back">Tecnicos (esquemas, tipos, chaves), Operacionais (logs, frequencia de carga, jobs ETL) e de Negocio (definicoes, regras de negocio, significados partilhados).</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que e Master Data Management?</div>
+                  <div class="flashcard-back">Disciplina que garante uniformidade e consistencia das entidades centrais do negocio (clientes, produtos, fornecedores), criando uma "versao unica da verdade" em toda a organizacao.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que e Data Lineage?</div>
+                  <div class="flashcard-back">Rastreabilidade dos dados: de onde vem, por onde passa, que transformacoes sofre e onde e utilizado. Essencial para auditoria, impact analysis e resolucao de problemas de qualidade.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que diz a regra 1-10-100?</div>
+                  <div class="flashcard-back">Custa 1 unidade para prevenir um erro de dados, 10 para corrigi-lo apos detecao, e 100 para compensar o impacto de um erro nao corrigido. Prevencao e sempre a opcao mais economica.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Diferenca entre metadados tecnicos e de negocio?</div>
+                  <div class="flashcard-back">Tecnicos descrevem a estrutura (campos, tipos, esquemas). De negocio descrevem o significado e regras de interpretacao (ex: "cliente ativo" = pelo menos 1 transacao em 12 meses).</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Que ferramentas populares existem para Data Catalog?</div>
+                  <div class="flashcard-back">Apache Atlas (open source), Alation, Collibra Data Catalog, Microsoft Purview, Google Data Catalog, AWS Glue Data Catalog.</div>
+                </div>
+              </div>
+            </div>
+            <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+          </div>
+
+          <div class="content-block">
+            <h3>Quiz</h3>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">1. Qual dimensao de qualidade verifica se os dados refletem corretamente a realidade?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Completeness</button>
+                <button class="quiz-option" data-correct="true">Accuracy</button>
+                <button class="quiz-option">Consistency</button>
+                <button class="quiz-option">Validity</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">2. Metadados de negocio servem para:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Definir a estrutura tecnica das bases de dados</button>
+                <button class="quiz-option">Registar a frequencia de atualizacao dos dados</button>
+                <button class="quiz-option" data-correct="true">Definir significados e regras de negocio que garantem interpretacao uniforme</button>
+                <button class="quiz-option">Gerir backups e recuperacao de desastres</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">3. O conceito de "single source of truth" esta mais associado a:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Data Lineage</button>
+                <button class="quiz-option">Data Catalog</button>
+                <button class="quiz-option" data-correct="true">Master Data Management</button>
+                <button class="quiz-option">Data Profiling</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">4. A dimensao "Uniqueness" na qualidade de dados refere-se a:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Dados estarem no formato correto</button>
+                <button class="quiz-option">Dados serem iguais em todos os sistemas</button>
+                <button class="quiz-option">Dados estarem atualizados</button>
+                <button class="quiz-option" data-correct="true">Inexistencia de registos duplicados para a mesma entidade</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">5. Segundo a regra 1-10-100, qual o custo relativo de compensar o impacto de um erro nao corrigido?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">1 unidade</button>
+                <button class="quiz-option">10 unidades</button>
+                <button class="quiz-option" data-correct="true">100 unidades</button>
+                <button class="quiz-option">1000 unidades</button>
+              </div>
+            </div>
+
+            <div class="quiz-score-display hidden"></div>
+            <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+          </div>
+
+          <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ggdsi-t3')">Marcar como estudado</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         TOPIC 4 — Qualidade de Dados e Ciclo de Vida
+         ========================================================= -->
+    <div class="accordion-item" data-topic="ggdsi-t4">
+      <button class="accordion-header">
+        <span class="topic-number">4</span>
+        <span class="topic-title">Qualidade de Dados e Ciclo de Vida</span>
+        <span class="topic-status">Pendente</span>
+        <span class="accordion-icon">&#9654;</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+
+          <div class="content-block">
+            <h3>Teoria</h3>
+            <div class="theory-text">
+              <p><strong>ISO 38505 — Framework de governanca de dados:</strong> A norma ISO/IEC 38505 fornece um modelo de governanca de dados para orgaos de direcao das organizacoes. Define tres atividades fundamentais: <em>Avaliar</em> (o estado atual dos dados e as necessidades), <em>Dirigir</em> (preparar e implementar planos e politicas) e <em>Monitorizar</em> (medir o desempenho e conformidade). O modelo alinha-se com a ISO/IEC 38500 (governanca de TI) e enfatiza que a governanca de dados e uma responsabilidade da gestao de topo, nao apenas de TI. A norma aborda seis principios: responsabilidade, estrategia, aquisicao, desempenho, conformidade e comportamento humano.</p>
+
+              <p><strong>Ciclo de vida dos dados:</strong> Os dados passam por fases distintas ao longo da sua existencia na organizacao:</p>
+              <ol>
+                <li><strong>Recolha (Capture/Create):</strong> Dados sao gerados ou capturados de fontes internas (formularios, transacoes, sensores) ou externas (APIs, web scraping, dados abertos). E fundamental garantir qualidade na origem — dados mal capturados propagam erros ao longo de todo o ciclo.</li>
+                <li><strong>Armazenamento (Store):</strong> Dados sao guardados em bases de dados relacionais, data lakes, data warehouses ou cloud storage. Requisitos incluem seguranca, redundancia, performance e escalabilidade.</li>
+                <li><strong>Relatorio (Process/Report):</strong> Dados sao transformados, agregados e apresentados em dashboards, relatorios e visualizacoes para suportar a analise e o entendimento.</li>
+                <li><strong>Decisao (Use/Decide):</strong> Dados sao utilizados para suportar decisoes operacionais, taticas ou estrategicas. O valor dos dados materializa-se nesta fase.</li>
+                <li><strong>Distribuicao (Share/Distribute):</strong> Dados sao partilhados internamente entre departamentos ou externamente com parceiros, reguladores ou publico, respeitando politicas de acesso e privacidade.</li>
+                <li><strong>Descarte (Archive/Destroy):</strong> Dados que ja nao sao necessarios sao arquivados ou destruidos de acordo com politicas de retencao e requisitos legais (RGPD, regulamentos setoriais).</li>
+              </ol>
+
+              <p><strong>Politicas de retencao e destruicao:</strong> As politicas de retencao definem quanto tempo cada tipo de dado deve ser mantido, considerando requisitos legais (ex: dados fiscais 10 anos em Portugal), necessidades de negocio e custos de armazenamento. A destruicao deve ser segura e auditavel — simples eliminacao de ficheiros nao e suficiente para dados sensiveis. Metodos incluem: wiping (sobrescrita), degaussing (desmagnetizacao) e destruicao fisica para suportes fisicos.</p>
+
+              <p><strong>Data Quality Management:</strong> A gestao de qualidade de dados e um processo continuo que inclui:</p>
+              <ul>
+                <li><strong>Metricas:</strong> Definir KPIs de qualidade para cada dimensao (ex: % de registos completos, taxa de duplicados, tempo de atualizacao medio).</li>
+                <li><strong>Monitorizacao:</strong> Dashboards e alertas automaticos que detetam anomalias ou degradacao da qualidade em tempo real.</li>
+                <li><strong>Remediacao:</strong> Processos para corrigir dados incorretos, completar lacunas e eliminar duplicados. Pode ser manual (revisao humana) ou automatizada (regras de limpeza).</li>
+              </ul>
+
+              <p><strong>Data Profiling e Data Cleansing:</strong> O <em>Data Profiling</em> e a analise exploratoria dos dados para compreender a sua estrutura, conteudo e qualidade — distribuicao de valores, valores nulos, padroes, outliers, relacoes entre campos. E o diagnostico que precede qualquer acao de melhoria. O <em>Data Cleansing</em> (ou data scrubbing) e o processo de corrigir ou remover dados incorretos, incompletos, duplicados ou irrelevantes. Inclui: padronizacao de formatos, correcao de erros ortograficos, merge de duplicados, preenchimento de valores em falta e validacao contra fontes autoritativas.</p>
+
+              <div class="highlight-box">
+                <p><strong>Impacto da ma qualidade:</strong> Segundo a Gartner, organizacoes perdem em media 12,9 milhoes de dolares por ano devido a ma qualidade dos dados. Os custos manifestam-se em decisoes erradas, ineficiencias operacionais, perda de confianca dos clientes, multas regulatorias e oportunidades de negocio perdidas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Conceitos-Chave</h3>
+            <div class="concept-grid">
+              <div class="concept-card">
+                <h4>ISO 38505</h4>
+                <p>Norma internacional de governanca de dados. Modelo Avaliar-Dirigir-Monitorizar com 6 principios fundamentais.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Ciclo de Vida dos Dados</h4>
+                <p>Recolha, Armazenamento, Relatorio, Decisao, Distribuicao e Descarte — as fases que os dados atravessam na organizacao.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data Profiling</h4>
+                <p>Analise exploratoria que examina estrutura, conteudo e qualidade dos dados. E o diagnostico antes de qualquer acao de melhoria.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data Cleansing</h4>
+                <p>Processo de corrigir dados incorretos, completar lacunas, eliminar duplicados e padronizar formatos.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Politica de Retencao</h4>
+                <p>Define quanto tempo cada tipo de dado deve ser mantido, considerando requisitos legais, necessidades de negocio e custos.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data Quality KPIs</h4>
+                <p>Metricas quantificaveis para monitorizar qualidade: % completude, taxa de duplicados, tempo de atualizacao, % de erros.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Flashcards</h3>
+            <div class="flashcard-grid">
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quais sao as 3 atividades da ISO 38505?</div>
+                  <div class="flashcard-back">Avaliar (estado atual e necessidades), Dirigir (preparar e implementar planos/politicas) e Monitorizar (medir desempenho e conformidade).</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quais sao as 6 fases do ciclo de vida dos dados?</div>
+                  <div class="flashcard-back">1. Recolha, 2. Armazenamento, 3. Relatorio, 4. Decisao, 5. Distribuicao, 6. Descarte. Em cada fase aplicam-se controlos de governanca especificos.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que e Data Profiling?</div>
+                  <div class="flashcard-back">Analise exploratoria dos dados para compreender estrutura, conteudo, qualidade, distribuicao de valores, nulos, outliers e relacoes entre campos. E o diagnostico antes da correcao.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que inclui o Data Cleansing?</div>
+                  <div class="flashcard-back">Padronizacao de formatos, correcao de erros, merge de duplicados, preenchimento de lacunas e validacao contra fontes autoritativas.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quanto custa a ma qualidade de dados (Gartner)?</div>
+                  <div class="flashcard-back">Em media, 12,9 milhoes de dolares por ano por organizacao. Custos: decisoes erradas, ineficiencias, perda de confianca, multas e oportunidades perdidas.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Que metodos seguros existem para destruicao de dados?</div>
+                  <div class="flashcard-back">Wiping (sobrescrita de dados), Degaussing (desmagnetizacao de suportes magneticos) e Destruicao fisica (trituracao ou incineracao para suportes fisicos).</div>
+                </div>
+              </div>
+            </div>
+            <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+          </div>
+
+          <div class="content-block">
+            <h3>Quiz</h3>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">1. O modelo da ISO 38505 baseia-se em que tres atividades?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Planear, Executar, Verificar</button>
+                <button class="quiz-option" data-correct="true">Avaliar, Dirigir, Monitorizar</button>
+                <button class="quiz-option">Definir, Implementar, Auditar</button>
+                <button class="quiz-option">Recolher, Processar, Distribuir</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">2. Qual fase do ciclo de vida dos dados e onde o valor se materializa?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Recolha</button>
+                <button class="quiz-option">Armazenamento</button>
+                <button class="quiz-option" data-correct="true">Decisao</button>
+                <button class="quiz-option">Descarte</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">3. Data Profiling e:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">O processo de corrigir dados incorretos</button>
+                <button class="quiz-option" data-correct="true">A analise exploratoria para compreender estrutura e qualidade dos dados</button>
+                <button class="quiz-option">A destruicao segura de dados expirados</button>
+                <button class="quiz-option">A classificacao de dados por sensibilidade</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">4. A ISO 38505 enfatiza que a governanca de dados e responsabilidade de:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Apenas do departamento de TI</button>
+                <button class="quiz-option">Apenas do Data Steward</button>
+                <button class="quiz-option" data-correct="true">Da gestao de topo da organizacao</button>
+                <button class="quiz-option">Apenas dos utilizadores finais</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">5. Qual das seguintes NAO e uma tecnica de destruicao segura de dados?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Wiping</button>
+                <button class="quiz-option">Degaussing</button>
+                <button class="quiz-option">Destruicao fisica</button>
+                <button class="quiz-option" data-correct="true">Mover para a reciclagem do sistema operativo</button>
+              </div>
+            </div>
+
+            <div class="quiz-score-display hidden"></div>
+            <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+          </div>
+
+          <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ggdsi-t4')">Marcar como estudado</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         TOPIC 5 — Papeis e Responsabilidades
+         ========================================================= -->
+    <div class="accordion-item" data-topic="ggdsi-t5">
+      <button class="accordion-header">
+        <span class="topic-number">5</span>
+        <span class="topic-title">Papeis e Responsabilidades</span>
+        <span class="topic-status">Pendente</span>
+        <span class="accordion-icon">&#9654;</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+
+          <div class="content-block">
+            <h3>Teoria</h3>
+            <div class="theory-text">
+              <p><strong>Data Owner (Proprietario dos Dados):</strong> O Data Owner e tipicamente um lider de negocio (diretor ou gestor senior) que tem autoridade e responsabilidade final sobre um dominio de dados especifico. As suas responsabilidades incluem: aprovar politicas de acesso, definir requisitos de qualidade, autorizar a partilha de dados com terceiros e garantir que os dados do seu dominio cumprem os regulamentos aplicaveis. O Data Owner nao gere os dados no dia a dia — delega essa funcao ao Data Steward. Exemplo: o Diretor de Marketing e o Data Owner dos dados de campanhas e segmentacao de clientes.</p>
+
+              <p><strong>Data Steward (Guardiao dos Dados):</strong> O Data Steward e o responsavel operacional pela qualidade e integridade dos dados no dia a dia. Atua como ponte entre o negocio e a TI, traduzindo requisitos de negocio em especificacoes tecnicas. Responsabilidades: monitorizar a qualidade dos dados, manter definicoes e regras de negocio no catalogo de dados, resolver problemas de qualidade, garantir conformidade com standards organizacionais e documentar linhagem e transformacoes. Pode ser um papel a tempo parcial, exercido por alguem que conhece profundamente o dominio de dados.</p>
+
+              <p><strong>Data Custodian (Responsavel Tecnico):</strong> O Data Custodian e o profissional de TI responsavel pelo aspeto tecnico da gestao de dados: armazenamento, backups, seguranca, performance de bases de dados, infraestrutura e implementacao tecnica das politicas definidas pelo Data Owner. Implementa controlos de acesso, gere encriptacao, assegura disponibilidade e recuperacao de desastres. Responde ao Data Owner e ao Data Steward quanto a implementacao tecnica das suas diretrizes.</p>
+
+              <p><strong>Data Consumer (Utilizador Final):</strong> O Data Consumer e qualquer pessoa ou sistema que utiliza os dados para executar as suas funcoes. Pode ser um analista que cria relatorios, um gestor que consulta dashboards ou uma aplicacao que consome uma API. As suas responsabilidades incluem: usar os dados de acordo com as politicas definidas, reportar problemas de qualidade ao Data Steward e respeitar classificacoes de sensibilidade e restricoes de acesso.</p>
+
+              <p><strong>Chief Data Officer (CDO):</strong> O CDO e o executivo de nivel C responsavel pela estrategia global de dados da organizacao. Define a visao e roadmap para a gestao e governanca de dados, patrocina iniciativas de governanca a nivel executivo, gere o orcamento de dados e garante o alinhamento entre a estrategia de dados e a estrategia de negocio. E um papel relativamente recente — segundo a Gartner, em 2023 apenas 25% das organizacoes tinham um CDO formal, mas este numero esta em rapido crescimento.</p>
+
+              <p><strong>Data Governance Council/Committee:</strong> O Conselho de Governanca de Dados e o orgao decisorio maximo do programa de governanca. Composto por representantes de diferentes areas de negocio e TI, tipicamente presidido pelo CDO ou por um executivo senior. Responsabilidades: definir e aprovar politicas de dados, resolver conflitos entre dominios, priorizar iniciativas de governanca, monitorizar KPIs de qualidade e aprovar excecoes as politicas estabelecidas. Reune-se periodicamente (mensal ou trimestral).</p>
+
+              <p><strong>Modelo RACI aplicado a governanca:</strong> O RACI (Responsible, Accountable, Consulted, Informed) e uma matriz que clarifica papeis e responsabilidades para cada atividade de governanca:</p>
+              <ul>
+                <li><strong>R — Responsible:</strong> Quem executa a tarefa (ex: Data Steward executa o profiling de dados).</li>
+                <li><strong>A — Accountable:</strong> Quem tem autoridade e responsabilidade final (ex: Data Owner aprova as regras de qualidade).</li>
+                <li><strong>C — Consulted:</strong> Quem e consultado antes da decisao (ex: Data Custodian sobre viabilidade tecnica).</li>
+                <li><strong>I — Informed:</strong> Quem e informado apos a decisao (ex: Data Consumers sobre novas politicas).</li>
+              </ul>
+
+              <p><strong>Colaboracao entre TI e negocio:</strong> Um dos fatores criticos de sucesso da governanca e a colaboracao eficaz entre as equipas de TI e as areas de negocio. TI fornece a infraestrutura, ferramentas e expertise tecnica; o negocio fornece o contexto, as definicoes e os requisitos. Sem esta colaboracao, surgem silos, definicoes conflitantes e decisoes baseadas em dados incorretamente interpretados. O Data Steward atua como elo de ligacao essencial entre estas duas perspetivas.</p>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Conceitos-Chave</h3>
+            <div class="concept-grid">
+              <div class="concept-card">
+                <h4>Data Owner</h4>
+                <p>Lider de negocio com autoridade final sobre um dominio de dados. Aprova politicas de acesso e define requisitos de qualidade.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data Steward</h4>
+                <p>Guardiao operacional: monitoriza qualidade, mantem catalogo, resolve problemas. Ponte entre negocio e TI.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data Custodian</h4>
+                <p>Responsavel tecnico de TI: armazenamento, backups, seguranca, performance e implementacao tecnica das politicas.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Chief Data Officer</h4>
+                <p>Executivo nivel C responsavel pela estrategia global de dados. Define visao, gere orcamento e alinha dados com negocio.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Modelo RACI</h4>
+                <p>Responsible (executa), Accountable (autoridade final), Consulted (consultado), Informed (informado). Clarifica papeis por atividade.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Governance Council</h4>
+                <p>Orgao decisorio maximo: aprova politicas, resolve conflitos, prioriza iniciativas. Composto por negocio e TI, presidido pelo CDO.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Flashcards</h3>
+            <div class="flashcard-grid">
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Qual a diferenca entre Data Owner e Data Steward?</div>
+                  <div class="flashcard-back">O Owner e o lider de negocio com autoridade e responsabilidade final sobre o dominio de dados. O Steward e o guardiao operacional que gere a qualidade e o catalogo no dia a dia, atuando como ponte entre negocio e TI.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que faz um Data Custodian?</div>
+                  <div class="flashcard-back">E o profissional de TI responsavel pelo armazenamento, backups, seguranca, performance e implementacao tecnica das politicas de dados definidas pelo Owner.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que significa RACI?</div>
+                  <div class="flashcard-back">Responsible (quem executa), Accountable (quem tem autoridade final), Consulted (quem e consultado antes), Informed (quem e informado depois). Matriz para clarificar papeis.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Qual o papel do CDO?</div>
+                  <div class="flashcard-back">Chief Data Officer: executivo de nivel C que define a estrategia global de dados, patrocina governanca a nivel executivo, gere orcamento e alinha dados com objetivos de negocio.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Qual o papel do Data Governance Council?</div>
+                  <div class="flashcard-back">Orgao decisorio maximo: define e aprova politicas, resolve conflitos entre dominios, prioriza iniciativas, monitoriza KPIs. Composto por negocio e TI, presidido pelo CDO.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Porque e crucial a colaboracao TI-Negocio?</div>
+                  <div class="flashcard-back">TI fornece infraestrutura e expertise tecnica; negocio fornece contexto e definicoes. Sem colaboracao surgem silos, definicoes conflitantes e decisoes baseadas em interpretacoes erradas dos dados.</div>
+                </div>
+              </div>
+            </div>
+            <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+          </div>
+
+          <div class="content-block">
+            <h3>Quiz</h3>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">1. Quem tem a autoridade final sobre as politicas de acesso a um dominio de dados?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Data Steward</button>
+                <button class="quiz-option" data-correct="true">Data Owner</button>
+                <button class="quiz-option">Data Custodian</button>
+                <button class="quiz-option">Data Consumer</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">2. No modelo RACI, a letra "A" (Accountable) significa:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Quem executa a tarefa</button>
+                <button class="quiz-option" data-correct="true">Quem tem autoridade e responsabilidade final pela decisao</button>
+                <button class="quiz-option">Quem e consultado antes da decisao</button>
+                <button class="quiz-option">Quem e informado apos a decisao</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">3. O Data Steward atua como:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Executivo responsavel pela estrategia de dados</button>
+                <button class="quiz-option">Tecnico responsavel por backups e seguranca</button>
+                <button class="quiz-option" data-correct="true">Ponte entre negocio e TI, garantindo qualidade dos dados no dia a dia</button>
+                <button class="quiz-option">Utilizador final que consome dashboards</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">4. O Data Governance Council e tipicamente presidido por:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Data Steward</button>
+                <button class="quiz-option">Data Custodian</button>
+                <button class="quiz-option" data-correct="true">CDO ou executivo senior</button>
+                <button class="quiz-option">Data Consumer</button>
+              </div>
+            </div>
+
+            <div class="quiz-score-display hidden"></div>
+            <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+          </div>
+
+          <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ggdsi-t5')">Marcar como estudado</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         TOPIC 6 — Implementacao de Governanca
+         ========================================================= -->
+    <div class="accordion-item" data-topic="ggdsi-t6">
+      <button class="accordion-header">
+        <span class="topic-number">6</span>
+        <span class="topic-title">Implementacao de Governanca</span>
+        <span class="topic-status">Pendente</span>
+        <span class="accordion-icon">&#9654;</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+
+          <div class="content-block">
+            <h3>Teoria</h3>
+            <div class="theory-text">
+              <p><strong>Roadmap de implementacao:</strong> A implementacao de um programa de governanca de dados segue tipicamente quatro fases:</p>
+              <ol>
+                <li><strong>Avaliacao (Assessment):</strong> Avaliar o estado atual — maturidade em governanca, qualidade dos dados existentes, processos em vigor, ferramentas disponiveis e silos de dados. Envolve entrevistas com stakeholders, analise de sistemas e data profiling.</li>
+                <li><strong>Planeamento (Planning):</strong> Definir a visao, objetivos, prioridades, papeis e responsabilidades. Criar o business case, identificar quick wins e definir a arquitetura alvo. Obter patrocinio executivo — sem apoio do C-level, o programa tera dificuldade em ser adotado.</li>
+                <li><strong>Execucao (Execution):</strong> Implementar politicas, standards, ferramentas e processos. Comecar com um dominio piloto (ex: dados de clientes), demonstrar valor e expandir progressivamente para outros dominios. Formar equipas, nomear Data Stewards e configurar ferramentas de governanca.</li>
+                <li><strong>Monitorizacao (Monitoring):</strong> Medir resultados com KPIs de governanca (qualidade, adocao de politicas, resolucao de incidentes). Estabelecer ciclos de melhoria continua e reportar progresso aos stakeholders.</li>
+              </ol>
+
+              <p><strong>Quick wins vs transformacao a longo prazo:</strong> Os <em>quick wins</em> sao acoes de impacto rapido e visivel que geram confianca e momentum para o programa: identificar e corrigir os piores problemas de qualidade, criar um glossario de termos de negocio, nomear os primeiros Data Stewards, implementar regras basicas de validacao. A <em>transformacao a longo prazo</em> envolve mudancas culturais profundas, integracao da governanca nos processos de negocio, automacao completa de controlos de qualidade e evolucao para niveis superiores de maturidade. Os quick wins sao essenciais para manter o patrocinio executivo enquanto a transformacao mais profunda se desenvolve.</p>
+
+              <p><strong>Metricas de sucesso:</strong> Um programa de governanca eficaz mede-se por:</p>
+              <ul>
+                <li>Melhoria nas metricas de qualidade de dados (% completude, exatidao, unicidade)</li>
+                <li>Reducao do tempo para encontrar e aceder a dados (eficiencia)</li>
+                <li>Numero de incidentes de qualidade resolvidos</li>
+                <li>Taxa de adocao das politicas de dados</li>
+                <li>Reducao de custos associados a dados de ma qualidade</li>
+                <li>Conformidade regulatoria (zero violacoes)</li>
+                <li>Satisfacao dos utilizadores (surveys periodicos)</li>
+              </ul>
+
+              <p><strong>Change management — resistencia e adocao:</strong> A resistencia a mudanca e o maior desafio na implementacao de governanca. Estrategias para supera-la incluem: comunicacao clara dos beneficios (nao apenas das obrigacoes), envolvimento precoce dos stakeholders-chave, formacao continua, celebracao de sucessos parciais, nomeacao de champions/ambassadors em cada departamento e alinhamento da governanca com objetivos individuais de desempenho. A abordagem "top-down" (patrocinio executivo) deve ser complementada com "bottom-up" (envolvimento dos utilizadores).</p>
+
+              <p><strong>Ferramentas de governanca:</strong></p>
+              <ul>
+                <li><strong>Collibra:</strong> Plataforma lider de mercado para governanca de dados. Oferece catalogo de dados, glossario de negocio, gestao de politicas, linhagem de dados e workflow de stewardship. Forte em colaboracao entre negocio e TI.</li>
+                <li><strong>Alation:</strong> Focada em catalogo de dados inteligente com machine learning. Destaca-se pela experiencia de utilizador intuitiva e pela capacidade de aprender com o comportamento dos utilizadores.</li>
+                <li><strong>Apache Atlas:</strong> Framework open source da Apache para governanca de metadados e dados. Integrado com o ecossistema Hadoop/Big Data. Oferece classificacao, linhagem e pesquisa de metadados.</li>
+                <li><strong>Microsoft Purview:</strong> Solucao integrada no ecossistema Microsoft que combina governanca de dados, conformidade e gestao de riscos. Integra-se nativamente com Azure, Power BI e Microsoft 365.</li>
+              </ul>
+
+              <div class="highlight-box">
+                <p><strong>Caso de estudo — Projeto do restaurante:</strong> No projeto pratico da disciplina, os alunos aplicam conceitos de governanca sobre dados reais de restaurantes, consumidores e criticas. Isto inclui: identificar Data Owners e Stewards, definir politicas de qualidade para reviews e classificacoes, criar um catalogo dos dados disponiveis, avaliar dimensoes de qualidade (completude das reviews, consistencia das classificacoes, unicidade dos estabelecimentos) e propor melhorias de governanca.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Conceitos-Chave</h3>
+            <div class="concept-grid">
+              <div class="concept-card">
+                <h4>Quick Wins</h4>
+                <p>Acoes de impacto rapido que geram confianca: corrigir piores problemas, criar glossario, nomear stewards. Essenciais para momentum.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Dominio Piloto</h4>
+                <p>Area de dados escolhida para a primeira implementacao (ex: dados de clientes). Permite demonstrar valor antes de expandir.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Collibra</h4>
+                <p>Plataforma lider em governanca: catalogo, glossario, politicas, linhagem e workflow de stewardship.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Microsoft Purview</h4>
+                <p>Solucao Microsoft integrada com Azure, Power BI e M365. Combina governanca, conformidade e gestao de riscos.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Change Management</h4>
+                <p>Gestao da mudanca: comunicacao de beneficios, envolvimento de stakeholders, formacao, champions e abordagem top-down + bottom-up.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Patrocinio Executivo</h4>
+                <p>Apoio do C-level ao programa de governanca. Sem ele, a adocao e limitada e o programa tende a perder prioridade.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Flashcards</h3>
+            <div class="flashcard-grid">
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quais sao as 4 fases do roadmap de implementacao?</div>
+                  <div class="flashcard-back">1. Avaliacao (estado atual), 2. Planeamento (visao, objetivos, business case), 3. Execucao (politicas, ferramentas, piloto), 4. Monitorizacao (KPIs, melhoria continua).</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que sao quick wins em governanca?</div>
+                  <div class="flashcard-back">Acoes de impacto rapido: corrigir piores problemas de qualidade, criar glossario, nomear stewards, implementar validacoes basicas. Geram confianca e momentum para o programa.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Que ferramentas de governanca deves conhecer?</div>
+                  <div class="flashcard-back">Collibra (lider, catalogo+linhagem), Alation (catalogo inteligente com ML), Apache Atlas (open source, ecossistema Hadoop), Microsoft Purview (integrado com Azure/M365).</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Porque e importante o patrocinio executivo?</div>
+                  <div class="flashcard-back">Sem apoio do C-level, o programa de governanca perde prioridade, orcamento e capacidade de impor mudancas organizacionais. E o fator mais critico de sucesso.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Como superar a resistencia a mudanca?</div>
+                  <div class="flashcard-back">Comunicacao clara de beneficios, envolvimento precoce de stakeholders, formacao continua, celebrar sucessos, nomear champions/ambassadors e combinar abordagem top-down com bottom-up.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Que metricas medem o sucesso de um programa de governanca?</div>
+                  <div class="flashcard-back">Metricas de qualidade, tempo de acesso a dados, incidentes resolvidos, taxa de adocao de politicas, reducao de custos, conformidade regulatoria e satisfacao dos utilizadores.</div>
+                </div>
+              </div>
+            </div>
+            <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+          </div>
+
+          <div class="content-block">
+            <h3>Quiz</h3>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">1. Qual e a primeira fase do roadmap de implementacao de governanca?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Planeamento</button>
+                <button class="quiz-option" data-correct="true">Avaliacao do estado atual</button>
+                <button class="quiz-option">Execucao do piloto</button>
+                <button class="quiz-option">Monitorizacao de KPIs</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">2. Os quick wins sao importantes porque:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Substituem a necessidade de transformacao a longo prazo</button>
+                <button class="quiz-option" data-correct="true">Geram confianca e momentum para manter o patrocinio executivo</button>
+                <button class="quiz-option">Sao a unica forma de medir sucesso</button>
+                <button class="quiz-option">Eliminam a necessidade de formacao</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">3. Qual ferramenta de governanca e open source e integrada com o ecossistema Hadoop?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Collibra</button>
+                <button class="quiz-option">Alation</button>
+                <button class="quiz-option" data-correct="true">Apache Atlas</button>
+                <button class="quiz-option">Microsoft Purview</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">4. Qual o fator mais critico de sucesso para um programa de governanca?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Escolha da ferramenta tecnologica adequada</button>
+                <button class="quiz-option">Contratacao de um Data Steward dedicado</button>
+                <button class="quiz-option" data-correct="true">Patrocinio e apoio do nivel executivo (C-level)</button>
+                <button class="quiz-option">Auditoria externa dos dados</button>
+              </div>
+            </div>
+
+            <div class="quiz-score-display hidden"></div>
+            <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+          </div>
+
+          <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ggdsi-t6')">Marcar como estudado</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         TOPIC 7 — Desafios, Riscos e Regulamentacao
+         ========================================================= -->
+    <div class="accordion-item" data-topic="ggdsi-t7">
+      <button class="accordion-header">
+        <span class="topic-number">7</span>
+        <span class="topic-title">Desafios, Riscos e Regulamentacao</span>
+        <span class="topic-status">Pendente</span>
+        <span class="accordion-icon">&#9654;</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+
+          <div class="content-block">
+            <h3>Teoria</h3>
+            <div class="theory-text">
+              <p><strong>RGPD — Regulamento Geral de Protecao de Dados (Regulamento UE 2016/679):</strong> O RGPD e o regulamento europeu que estabelece as regras para o tratamento de dados pessoais. Entrou em vigor em maio de 2018 e aplica-se a qualquer organizacao que trate dados de residentes da UE, independentemente da sua localizacao. Os principios fundamentais estao consagrados no Artigo 5:</p>
+              <ul>
+                <li><strong>Licitude, lealdade e transparencia:</strong> Os dados devem ser tratados de forma licita e transparente perante o titular.</li>
+                <li><strong>Limitacao de finalidade:</strong> Os dados so podem ser recolhidos para finalidades determinadas, explicitas e legitimas.</li>
+                <li><strong>Minimizacao de dados:</strong> So devem ser recolhidos os dados estritamente necessarios para a finalidade definida.</li>
+                <li><strong>Exatidao:</strong> Os dados devem ser exatos e, quando necessario, atualizados.</li>
+                <li><strong>Limitacao de conservacao:</strong> Os dados nao devem ser mantidos por mais tempo do que o necessario.</li>
+                <li><strong>Integridade e confidencialidade:</strong> Os dados devem ser tratados de forma segura, protegidos contra acesso nao autorizado.</li>
+                <li><strong>Responsabilidade (Accountability):</strong> O responsavel pelo tratamento deve poder demonstrar conformidade com todos os principios.</li>
+              </ul>
+
+              <p><strong>Direitos dos titulares dos dados (RGPD):</strong></p>
+              <ul>
+                <li><strong>Direito de acesso:</strong> O titular pode solicitar confirmacao de que os seus dados estao a ser tratados e obter uma copia.</li>
+                <li><strong>Direito de retificacao:</strong> Corrigir dados pessoais incorretos ou incompletos.</li>
+                <li><strong>Direito ao apagamento ("direito a ser esquecido"):</strong> Solicitar a eliminacao dos dados quando ja nao sao necessarios ou quando o consentimento e retirado.</li>
+                <li><strong>Direito a portabilidade:</strong> Receber os seus dados num formato estruturado e transferi-los para outro responsavel.</li>
+                <li><strong>Direito de oposicao:</strong> Opor-se ao tratamento dos dados em determinadas circunstancias.</li>
+                <li><strong>Direito a limitacao do tratamento:</strong> Restringir o tratamento em determinadas situacoes.</li>
+              </ul>
+
+              <p><strong>DPO (Encarregado de Protecao de Dados):</strong> O DPO (Data Protection Officer) e o profissional designado pela organizacao para garantir a conformidade com o RGPD. E obrigatorio em: autoridades publicas, organizacoes que realizam monitorizacao sistematica em larga escala, e organizacoes que tratam dados sensiveis em larga escala. O DPO atua de forma independente, reporta a gestao de topo e nao pode ser penalizado pelo exercicio das suas funcoes. As suas tarefas incluem: informar e aconselhar, monitorizar a conformidade, cooperar com a autoridade de controlo (CNPD em Portugal) e ser ponto de contacto para os titulares.</p>
+
+              <p><strong>Regulamento UE 2022/868 — Regulamento de Governanca de Dados (Data Governance Act):</strong> Este regulamento cria um framework para facilitar a partilha de dados na UE, promovendo a reutilizacao de dados do setor publico protegidos, criando intermediarios de dados de confianca (data intermediaries), estabelecendo regras para o altruismo de dados (organizacoes que recolhem dados para fins de interesse geral) e criando o European Data Innovation Board para coordenar a governanca a nivel europeu. O objetivo e criar um mercado europeu de dados, complementando o RGPD com regras para a partilha segura e controlada de dados.</p>
+
+              <p><strong>Regulamento UE 2023/2854 — Data Act:</strong> O Data Act estabelece regras harmonizadas sobre o acesso justo e a utilizacao de dados gerados por produtos conectados (IoT) e servicos relacionados. Define direitos dos utilizadores sobre dados gerados pelos seus dispositivos, obrigacoes de partilha de dados entre empresas (B2B) e entre empresas e governos (B2G), protecao contra transferencias ilicitas de dados para fora da UE, e requisitos de interoperabilidade para servicos de dados e cloud.</p>
+
+              <p><strong>AI Act (Regulamento UE 2024/1689):</strong> O AI Act e o regulamento europeu que estabelece um framework baseado em risco para a inteligencia artificial. Classifica os sistemas de IA em 4 niveis de risco:</p>
+              <ul>
+                <li><strong>Risco inaceitavel:</strong> Sistemas proibidos (ex: social scoring governamental, manipulacao subliminar).</li>
+                <li><strong>Alto risco:</strong> Sistemas sujeitos a requisitos rigorosos antes de entrarem no mercado (ex: IA em recrutamento, credito, justica, saude). Exigem avaliacao de conformidade, gestao de qualidade de dados, transparencia e supervisao humana.</li>
+                <li><strong>Risco limitado:</strong> Sistemas com obrigacoes de transparencia (ex: chatbots devem informar que sao IA, deepfakes devem ser assinalados).</li>
+                <li><strong>Risco minimo:</strong> Sem obrigacoes especificas (ex: filtros de spam, jogos com IA).</li>
+              </ul>
+
+              <p><strong>Anonimizacao vs Pseudonimizacao:</strong></p>
+              <ul>
+                <li><strong>Anonimizacao:</strong> Processo irreversivel que remove toda a possibilidade de identificar o titular dos dados. Dados anonimizados ja nao sao considerados dados pessoais pelo RGPD. Tecnicas: generalizacao (substituir idade exata por faixa etaria), supressao (remover campos identificadores), perturbacao (adicionar ruido aleatorio).</li>
+                <li><strong>Pseudonimizacao:</strong> Processo reversivel que substitui identificadores diretos por pseudonimos (tokens, hashes). Os dados continuam a ser considerados dados pessoais pelo RGPD, pois a re-identificacao e possivel com a chave de correspondencia. E uma medida de seguranca recomendada pelo RGPD, mas nao isenta das obrigacoes de protecao.</li>
+              </ul>
+
+              <p><strong>Riscos de re-identificacao:</strong> Mesmo dados aparentemente anonimizados podem ser re-identificados atraves de: combinacao com outros datasets (linkage attacks), quasi-identificadores (combinacao de atributos como codigo postal + data de nascimento + genero que identifica unicamente uma pessoa — estudo de Latanya Sweeney mostrou que 87% da populacao americana e unica nesta combinacao), model inversion attacks em modelos de machine learning e attribute inference. Garantir anonimizacao robusta exige testes rigorosos e tecnicas avancadas como k-anonymity, l-diversity e differential privacy.</p>
+
+              <p><strong>Seguranca de dados:</strong></p>
+              <ul>
+                <li><strong>Encryption (Encriptacao):</strong> At rest (dados armazenados) e in transit (dados em transferencia). Algoritmos comuns: AES-256, RSA, TLS/SSL para comunicacoes.</li>
+                <li><strong>Access controls (Controlo de acesso):</strong> RBAC (Role-Based Access Control) — acesso baseado em papeis organizacionais. ABAC (Attribute-Based Access Control) — acesso baseado em atributos (localizacao, hora, dispositivo). Principio do minimo privilegio: cada utilizador so tem acesso ao estritamente necessario.</li>
+                <li><strong>Audit trails (Trilhos de auditoria):</strong> Registos de quem acedeu a que dados, quando e que operacoes realizou. Essenciais para conformidade, investigacao de incidentes e detetar acessos nao autorizados.</li>
+              </ul>
+
+              <p><strong>Etica na utilizacao de dados e IA:</strong> Para alem da conformidade legal, as organizacoes devem considerar questoes eticas: vies algoritmico (dados historicos que perpetuam discriminacao), consentimento informado genuino (os utilizadores compreendem realmente o que estao a consentir?), utilizacao responsavel de profiling e decisoes automatizadas, transparencia sobre como os dados sao utilizados e impacto social da recolha massiva de dados. A etica deve complementar a regulamentacao, especialmente em areas onde a lei ainda nao acompanha a tecnologia.</p>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Conceitos-Chave</h3>
+            <div class="concept-grid">
+              <div class="concept-card">
+                <h4>RGPD Art. 5</h4>
+                <p>7 principios: licitude, limitacao de finalidade, minimizacao, exatidao, limitacao de conservacao, integridade/confidencialidade, responsabilidade.</p>
+              </div>
+              <div class="concept-card">
+                <h4>DPO</h4>
+                <p>Encarregado de Protecao de Dados. Obrigatorio para autoridades publicas e tratamento em larga escala. Atua de forma independente.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Direito ao Apagamento</h4>
+                <p>"Direito a ser esquecido": titular pode solicitar eliminacao dos dados quando ja nao necessarios ou consentimento retirado.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Data Governance Act</h4>
+                <p>Regulamento UE 2022/868: framework para partilha de dados, intermediarios de confianca e altruismo de dados na UE.</p>
+              </div>
+              <div class="concept-card">
+                <h4>AI Act — Risco</h4>
+                <p>4 niveis: inaceitavel (proibido), alto (requisitos rigorosos), limitado (transparencia), minimo (sem obrigacoes).</p>
+              </div>
+              <div class="concept-card">
+                <h4>Anonimizacao</h4>
+                <p>Processo irreversivel que elimina toda possibilidade de identificacao. Dados anonimizados nao sao dados pessoais pelo RGPD.</p>
+              </div>
+              <div class="concept-card">
+                <h4>Pseudonimizacao</h4>
+                <p>Substituicao reversivel de identificadores por pseudonimos. Dados continuam pessoais pelo RGPD pois re-identificacao e possivel.</p>
+              </div>
+              <div class="concept-card">
+                <h4>k-anonymity</h4>
+                <p>Tecnica de anonimizacao que garante que cada registo e indistinguivel de pelo menos k-1 outros registos nos quasi-identificadores.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block ggdsi-accent">
+            <h3>Flashcards</h3>
+            <div class="flashcard-grid">
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quais sao os 7 principios do RGPD (Art. 5)?</div>
+                  <div class="flashcard-back">Licitude/lealdade/transparencia, limitacao de finalidade, minimizacao, exatidao, limitacao de conservacao, integridade/confidencialidade e responsabilidade (accountability).</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quais sao os direitos dos titulares no RGPD?</div>
+                  <div class="flashcard-back">Acesso, retificacao, apagamento ("ser esquecido"), portabilidade, oposicao e limitacao do tratamento.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quando e obrigatorio ter um DPO?</div>
+                  <div class="flashcard-back">Em autoridades publicas, organizacoes com monitorizacao sistematica em larga escala, e organizacoes que tratam dados sensiveis em larga escala. Atua de forma independente e reporta a gestao de topo.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Diferenca entre anonimizacao e pseudonimizacao?</div>
+                  <div class="flashcard-back">Anonimizacao: irreversivel, dados deixam de ser pessoais pelo RGPD. Pseudonimizacao: reversivel (com chave), dados continuam pessoais e sujeitos ao RGPD.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">Quais sao os 4 niveis de risco do AI Act?</div>
+                  <div class="flashcard-back">Inaceitavel (proibido), Alto (requisitos rigorosos — IA em saude, justica, credito), Limitado (obrigacoes de transparencia — chatbots), Minimo (sem obrigacoes — filtros de spam).</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que e o Data Governance Act (UE 2022/868)?</div>
+                  <div class="flashcard-back">Regulamento que cria framework para partilha de dados na UE: reutilizacao de dados publicos, intermediarios de confianca, altruismo de dados e o European Data Innovation Board.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que sao quasi-identificadores?</div>
+                  <div class="flashcard-back">Combinacao de atributos (codigo postal + data nascimento + genero) que pode identificar unicamente uma pessoa. Estudo de Sweeney: 87% dos americanos sao unicos nesta combinacao.</div>
+                </div>
+              </div>
+              <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">O que significa o principio do minimo privilegio?</div>
+                  <div class="flashcard-back">Cada utilizador ou sistema so deve ter acesso ao minimo de dados e funcionalidades estritamente necessarios para desempenhar as suas funcoes. Reduz superficie de ataque e riscos de fuga de dados.</div>
+                </div>
+              </div>
+            </div>
+            <p class="flashcard-hint">Clique nos cartoes para revelar a resposta</p>
+          </div>
+
+          <div class="content-block">
+            <h3>Quiz</h3>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">1. O principio de "minimizacao de dados" no RGPD significa:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Reduzir o tamanho dos ficheiros de dados</button>
+                <button class="quiz-option" data-correct="true">Recolher apenas os dados estritamente necessarios para a finalidade definida</button>
+                <button class="quiz-option">Eliminar todos os dados apos utilizacao</button>
+                <button class="quiz-option">Minimizar o numero de utilizadores com acesso</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">2. Qual a principal diferenca entre anonimizacao e pseudonimizacao?</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Anonimizacao e mais rapida de implementar</button>
+                <button class="quiz-option">Pseudonimizacao elimina toda possibilidade de identificacao</button>
+                <button class="quiz-option" data-correct="true">Anonimizacao e irreversivel; pseudonimizacao e reversivel com a chave de correspondencia</button>
+                <button class="quiz-option">Nao ha diferenca significativa entre ambas</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">3. No AI Act, um sistema de IA usado para decisoes de credito bancario e classificado como:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Risco minimo</button>
+                <button class="quiz-option">Risco limitado</button>
+                <button class="quiz-option" data-correct="true">Alto risco</button>
+                <button class="quiz-option">Risco inaceitavel</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">4. O DPO (Data Protection Officer) deve:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Responder diretamente ao departamento de TI</button>
+                <button class="quiz-option">Implementar tecnicamente todas as medidas de seguranca</button>
+                <button class="quiz-option" data-correct="true">Atuar de forma independente e reportar diretamente a gestao de topo</button>
+                <button class="quiz-option">Ser responsavel por todas as violacoes de dados</button>
+              </div>
+            </div>
+
+            <div class="quiz-block">
+              <p class="quiz-question-text">5. O Regulamento de Governanca de Dados (UE 2022/868) tem como principal objetivo:</p>
+              <div class="quiz-options">
+                <button class="quiz-option">Substituir o RGPD</button>
+                <button class="quiz-option">Regular exclusivamente a inteligencia artificial</button>
+                <button class="quiz-option" data-correct="true">Criar um framework para a partilha segura e controlada de dados na UE</button>
+                <button class="quiz-option">Proibir a transferencia de dados para fora da Europa</button>
+              </div>
+            </div>
+
+            <div class="quiz-score-display hidden"></div>
+            <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+          </div>
+
+          <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ggdsi-t7')">Marcar como estudado</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /accordion -->
+
+  <!-- =========================================================
+       EVALUATION SECTION
+       ========================================================= -->
+  <section class="section mt-4">
+    <h2>Avaliacao</h2>
+    <div class="card">
+      <div class="eval-grid">
+        <div class="eval-card">
+          <div class="eval-weight">20%</div>
+          <div class="eval-label">TP1 — Teste Pratico 1</div>
+          <div class="eval-detail">22 abril 2026</div>
+        </div>
+        <div class="eval-card">
+          <div class="eval-weight">40%</div>
+          <div class="eval-label">TP2 — Teste Pratico 2</div>
+          <div class="eval-detail">13 maio 2026</div>
+        </div>
+        <div class="eval-card">
+          <div class="eval-weight">40%</div>
+          <div class="eval-label">Projeto Final</div>
+          <div class="eval-detail">15 junho 2026</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <p class="text-sm text-muted text-center">Nota minima de aprovacao: 10/20. Avaliacao continua obrigatoria (presenca em pelo menos 75% das aulas TP).</p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PROJETO SECTION
+       ========================================================= -->
+  <section class="section">
+    <h2>Projeto</h2>
+    <div class="card">
+      <h3>Analise de Governanca — Dados de Restaurantes</h3>
+      <div class="theory-text">
+        <p>O projeto pratico da disciplina consiste numa analise de governanca aplicada a dados reais de restaurantes, consumidores e criticas. Os alunos devem: identificar e documentar os ativos de dados disponiveis, avaliar a qualidade dos dados nas suas diversas dimensoes (completude, exatidao, consistencia, unicidade), propor um modelo de governanca com papeis definidos (Data Owner, Steward, Custodian), criar politicas de qualidade e acesso, e recomendar melhorias praticas de governanca para o cenario proposto.</p>
+        <p>O trabalho deve refletir os conceitos teoricos estudados ao longo da disciplina, aplicando frameworks como o DAMA-DMBOK e considerando requisitos regulatorios como o RGPD na gestao de dados de consumidores.</p>
+      </div>
+      <div class="links-grid mt-2">
+        <a href="https://restupubpriv.onrender.com/" target="_blank" rel="noopener" class="link-card">
+          <div class="link-icon">&#127869;</div>
+          <div class="link-info">
+            <div class="link-title">Plataforma de Restaurantes</div>
+            <div class="link-desc">Aplicacao web do projeto</div>
+          </div>
+        </a>
+        <a href="https://docs.google.com/document/d/1P046F_OcIB_hIO0X36hhz1vWdeSVrtE7WllfaIY_ycA/" target="_blank" rel="noopener" class="link-card">
+          <div class="link-icon">&#128196;</div>
+          <div class="link-info">
+            <div class="link-title">Google Doc do Projeto</div>
+            <div class="link-desc">Documento colaborativo da equipa</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       USEFUL LINKS
+       ========================================================= -->
+  <section class="section">
+    <h2>Links Uteis</h2>
+    <div class="links-grid">
+      <a href="https://moodle.maieutica.pt/course/view.php?id=22554" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#127891;</div>
+        <div class="link-info">
+          <div class="link-title">Moodle GGDSI</div>
+          <div class="link-desc">Pagina da disciplina no Moodle</div>
+        </div>
+      </a>
+      <a href="https://www.dama.org/cpages/body-of-knowledge" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128218;</div>
+        <div class="link-info">
+          <div class="link-title">DAMA-DMBOK</div>
+          <div class="link-desc">Framework de Data Management</div>
+        </div>
+      </a>
+      <a href="https://commission.europa.eu/law/law-topic/data-protection_pt" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128737;</div>
+        <div class="link-info">
+          <div class="link-title">RGPD — Comissao Europeia</div>
+          <div class="link-desc">Regulamento de Protecao de Dados</div>
+        </div>
+      </a>
+      <a href="mailto:ppimenta@umaia.pt" class="link-card">
+        <div class="link-icon">&#9993;</div>
+        <div class="link-info">
+          <div class="link-title">Prof. Pedro Pimenta</div>
+          <div class="link-desc">ppimenta@umaia.pt</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Mestrado em Transformacao Digital — UMAIA 2025/26</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

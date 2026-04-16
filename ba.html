@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Analytics, Metrics e Big Data — Mestrado TD 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body data-page="ba">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-logo">TD</span>
+      <span class="nav-title">Mestrado 2026</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+      <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+      <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+    </div>
+    <div class="nav-controls">
+      <button class="btn-icon" onclick="changeFontSize(-2)" title="Diminuir fonte">A-</button>
+      <button class="btn-icon" onclick="changeFontSize(2)" title="Aumentar fonte">A+</button>
+      <button class="btn-icon" onclick="toggleTheme()" title="Alternar tema">
+        <span class="theme-icon-light">&#9790;</span>
+        <span class="theme-icon-dark">&#9788;</span>
+      </button>
+      <button class="btn-icon mobile-menu-btn" onclick="toggleMobile()" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</nav>
+<div class="nav-links-mobile-overlay" id="mobileOverlay">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+  <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+  <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+</div>
+
+<main class="container main-content">
+
+  <!-- Hero -->
+  <section class="hero hero-ba">
+    <h1>Business Analytics, Metrics e Big Data</h1>
+    <p>Prof. Rui Humberto Pereira &bull; rhpereira@umaia.pt</p>
+    <div class="hero-meta">
+      <span>6 ECTS</span>
+      <span>24h TP + 24h OT</span>
+      <span>2.o Semestre</span>
+    </div>
+  </section>
+
+  <!-- Countdowns -->
+  <section class="section">
+    <h2>Proximos Eventos</h2>
+    <div class="countdown-grid" id="countdownGrid"></div>
+  </section>
+
+  <!-- Progress -->
+  <section class="section">
+    <div class="card">
+      <div class="progress-label">
+        <span>Progresso de Estudo</span>
+        <span id="progressLabel">0/4 (0%)</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill ba" id="progressBar" style="width:0%"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section class="section">
+    <div class="search-container">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar nos topicos...">
+    </div>
+  </section>
+
+  <!-- Evaluation -->
+  <section class="section">
+    <h2>Avaliacao</h2>
+    <div class="eval-grid">
+      <div class="eval-card">
+        <div class="eval-weight">60%</div>
+        <div class="eval-label">M1 — Teste</div>
+        <div class="eval-detail">25 maio 2026</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">25%</div>
+        <div class="eval-label">M2 — Projeto Grupo</div>
+        <div class="eval-detail">25 maio 2026</div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-weight">15%</div>
+        <div class="eval-label">M3 — Individual</div>
+        <div class="eval-detail">2 junho 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACCORDION TOPICS ========== -->
+  <section class="section">
+    <h2>Conteudos Programaticos</h2>
+    <div class="accordion">
+
+      <!-- ==================== TOPIC 1: Big Data ==================== -->
+      <div class="accordion-item" data-topic="ba-t1">
+        <button class="accordion-header">
+          <span class="topic-number">01</span>
+          <span class="topic-title">Big Data</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content ba-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>1.1. Definicao de Big Data</h4>
+                <p>Big Data refere-se a conjuntos de dados tao volumosos, velozes e variados que as ferramentas tradicionais de processamento de dados nao conseguem capturar, armazenar, gerir e analisar de forma eficaz. O conceito surgiu da necessidade de lidar com a explosao de dados gerados por fontes diversas: redes sociais, sensores IoT (Internet of Things), transacoes financeiras, registos medicos, logs de servidores e dispositivos moveis.</p>
+                <p><strong>Principais areas de aplicacao:</strong> IoT e data sensing (sensores inteligentes em cidades, fabricas e dispositivos wearable), analise de redes sociais, medicina personalizada, detecao de fraudes financeiras, logistica e supply chain, marketing digital e retalho inteligente.</p>
+
+                <div class="highlight-box">
+                  <p><strong>Ponto-chave:</strong> Big Data nao se define apenas pelo tamanho dos dados, mas pela combinacao das suas caracteristicas fundamentais, conhecidas como os 5 V's.</p>
+                </div>
+
+                <h4>1.2. Os 5 V's do Big Data</h4>
+                <p><strong>Volume:</strong> Refere-se a enorme quantidade de dados gerados continuamente. Estima-se que sejam criados mais de 2.5 quintilioes de bytes por dia. Exemplos incluem os registos de cliques em websites, dados de sensores IoT e transacoes bancarias globais. O volume exige infraestruturas distribuidas para armazenamento e processamento.</p>
+                <p><strong>Velocidade (Velocity):</strong> Diz respeito a rapidez com que os dados sao gerados, recolhidos e processados. Em muitos cenarios, como deteacao de fraudes ou sistemas de recomendacao em tempo real, os dados devem ser processados com latencia minima (streaming). A velocidade implica a necessidade de processamento em tempo real ou quase real.</p>
+                <p><strong>Variedade (Variety):</strong> Os dados provem de multiplas fontes e em diferentes formatos: dados estruturados (bases de dados relacionais, tabelas), semiestruturados (XML, JSON, logs) e nao estruturados (imagens, videos, texto livre, audio). A variedade exige ferramentas capazes de integrar e normalizar dados heterogeneos.</p>
+                <p><strong>Veracidade (Veracity):</strong> Refere-se a qualidade, fiabilidade e precisao dos dados. Dados inconsistentes, incompletos ou com ruido podem levar a conclusoes erradas. A veracidade e critica para garantir que as analises sao confiiaveis — implica processos de limpeza, validacao e governanca de dados.</p>
+                <p><strong>Valor (Value):</strong> O V mais importante. De nada serve ter enormes volumes de dados se nao se conseguir extrair informacao util e acionavel. O valor reside na capacidade de transformar dados brutos em insights que apoiem a tomada de decisao estrategica, operacional e tatica.</p>
+
+                <h4>1.3. Apache Hadoop</h4>
+                <p>O <strong>Apache Hadoop</strong> e um framework open-source para armazenamento distribuido e processamento de grandes volumes de dados em clusters de computadores comuns (commodity hardware). Foi inspirado nos papers da Google sobre o Google File System e MapReduce.</p>
+                <p><strong>Componentes principais:</strong></p>
+                <p><strong>HDFS (Hadoop Distributed File System):</strong> Sistema de ficheiros distribuido que divide os dados em blocos (tipicamente 128 MB) e os replica em multiplos nos (por defeito, 3 replicas) para garantir tolerancia a falhas. Segue a arquitetura master-slave com um NameNode (mestre, gere metadados) e varios DataNodes (escravos, armazenam os dados).</p>
+                <p><strong>YARN (Yet Another Resource Negotiator):</strong> Gestor de recursos do cluster. Separa a gestao de recursos do processamento de dados, permitindo que multiplas aplicacoes (MapReduce, Spark, etc.) partilhem o mesmo cluster. Composto por um ResourceManager global e varios NodeManagers em cada maquina.</p>
+                <p><strong>MapReduce:</strong> Modelo de programacao para processamento paralelo em larga escala. Funciona em duas fases: Map (divide o problema em sub-problemas e processa cada bloco de dados em paralelo, gerando pares chave-valor) e Reduce (agrega os resultados intermedios para produzir o resultado final). Apesar de eficaz, e lento por escrever resultados intermedios em disco.</p>
+                <p><strong>Ecossistema Hadoop:</strong> Inclui ferramentas complementares como Hive (SQL sobre Hadoop), Pig (linguagem de scripts para ETL), HBase (base de dados NoSQL colunar sobre HDFS), Sqoop (transferencia de dados entre RDBMS e HDFS), Flume (ingestao de logs em streaming) e ZooKeeper (coordenacao de servicos distribuidos).</p>
+
+                <h4>1.4. Apache Spark</h4>
+                <p><strong>Apache Spark</strong> e um motor de processamento unificado e distribuido, desenhado para ser ate 100 vezes mais rapido que o MapReduce do Hadoop, gracas ao processamento em memoria (in-memory). Enquanto o MapReduce escreve resultados intermedios em disco entre etapas, o Spark mantem os dados em memoria RAM (usando a estrutura RDD — Resilient Distributed Datasets).</p>
+                <p><strong>Arquitetura do Spark:</strong> Composta por um Driver Program (programa principal que cria o SparkContext), um Cluster Manager (pode ser YARN, Mesos ou standalone) e Executors (processos worker que executam tarefas em paralelo nos nos do cluster).</p>
+                <p><strong>Modulos do Spark:</strong></p>
+                <p><strong>Spark SQL:</strong> Permite consultas SQL sobre dados estruturados e semiestruturados. Utiliza DataFrames e Datasets como abstracoes de alto nivel. Suporta diversas fontes de dados (Parquet, JSON, CSV, JDBC).</p>
+                <p><strong>Spark Streaming:</strong> Processamento de dados em tempo real usando micro-batches.</p>
+                <p><strong>MLlib:</strong> Biblioteca de Machine Learning com algoritmos de classificacao, regressao, clustering e filtragem colaborativa.</p>
+                <p><strong>GraphX:</strong> Processamento e analise de grafos (redes sociais, grafos de conhecimento).</p>
+
+                <div class="highlight-box">
+                  <p><strong>Spark vs Hadoop MapReduce:</strong> O Spark e ideal para processamento iterativo (como ML) e interativo, enquanto o MapReduce e mais adequado para jobs batch de grande escala onde a memoria nao e suficiente. O Spark pode correr sobre YARN, utilizando o HDFS do Hadoop para armazenamento.</p>
+                </div>
+
+                <h4>1.5. Bases de Dados Relacionais (Recapitulacao)</h4>
+                <p>As bases de dados relacionais (RDBMS) organizam os dados em tabelas com linhas e colunas, seguindo o modelo relacional proposto por E.F. Codd em 1970. Utilizam <strong>SQL</strong> (Structured Query Language) para manipulacao e consulta de dados.</p>
+                <p><strong>Propriedades ACID:</strong></p>
+                <p><strong>Atomicidade (Atomicity):</strong> Cada transacao e executada por completo ou nao e executada de todo — nao ha estados intermedios.</p>
+                <p><strong>Consistencia (Consistency):</strong> Uma transacao leva a base de dados de um estado valido a outro estado valido, respeitando todas as regras e restricoes definidas.</p>
+                <p><strong>Isolamento (Isolation):</strong> Transacoes concorrentes nao interferem entre si — cada uma executa como se fosse a unica.</p>
+                <p><strong>Durabilidade (Durability):</strong> Uma vez confirmada (committed), uma transacao persiste mesmo em caso de falha do sistema.</p>
+                <p><strong>Normalizacao:</strong></p>
+                <p><strong>1NF (Primeira Forma Normal):</strong> Todos os atributos contem valores atomicos (indivisiveis) e nao ha grupos repetidos.</p>
+                <p><strong>2NF (Segunda Forma Normal):</strong> Satisfaz a 1NF e todos os atributos nao-chave dependem totalmente da chave primaria (elimina dependencias parciais).</p>
+                <p><strong>3NF (Terceira Forma Normal):</strong> Satisfaz a 2NF e nenhum atributo nao-chave depende transitivamente da chave primaria (elimina dependencias transitivas).</p>
+
+                <h4>1.6. Bases de Dados NoSQL</h4>
+                <p>NoSQL (Not Only SQL) designa bases de dados nao-relacionais, concebidas para cenarios onde as RDBMS tradicionais apresentam limitacoes de escalabilidade, flexibilidade de schema ou desempenho com grandes volumes de dados.</p>
+                <p><strong>4 tipos principais:</strong></p>
+                <p><strong>Key-Value (Chave-Valor):</strong> O modelo mais simples. Armazena dados como pares chave-valor, semelhante a um dicionario. Muito rapido para leituras e escritas simples. Exemplos: Redis, Amazon DynamoDB, Riak. Uso tipico: caching, sessoes de utilizador, preferencias.</p>
+                <p><strong>Column-oriented (Colunar / Wide Column):</strong> Organiza dados por colunas em vez de linhas, agrupando colunas em familias de colunas. Eficiente para consultas analiticas sobre grandes datasets. Exemplos: Apache Cassandra, HBase, Google Bigtable. Uso tipico: analise de series temporais, dados de IoT.</p>
+                <p><strong>Document (Documento):</strong> Armazena dados como documentos (geralmente JSON ou BSON), com schema flexivel — cada documento pode ter estrutura diferente. Exemplos: MongoDB, CouchDB, Amazon DocumentDB. Uso tipico: gestao de conteudo, catalogos de produtos, perfis de utilizador.</p>
+                <p><strong>Graph (Grafo):</strong> Concebido para dados altamente interligados. Armazena entidades como nos e as relacoes como arestas. Eficiente para consultas de travessia (traversal) em grafos. Exemplos: Neo4j, Amazon Neptune, ArangoDB. Uso tipico: redes sociais, detecao de fraude, motores de recomendacao.</p>
+
+                <h4>1.7. Teorema CAP vs ACID</h4>
+                <p>O <strong>Teorema CAP</strong> (Brewer, 2000) afirma que num sistema distribuido e impossivel garantir simultaneamente as tres propriedades:</p>
+                <p><strong>Consistency (Consistencia):</strong> Todos os nos veem os mesmos dados ao mesmo tempo.</p>
+                <p><strong>Availability (Disponibilidade):</strong> Cada pedido recebe uma resposta (sucesso ou falha), sem garantia de que e a versao mais recente.</p>
+                <p><strong>Partition Tolerance (Tolerancia a Particoes):</strong> O sistema continua a funcionar mesmo que a comunicacao entre nos falhe.</p>
+                <p>Um sistema distribuido deve escolher duas das tres. Na pratica, como as particoes de rede sao inevitaveis, a escolha real e entre <strong>CP</strong> (Consistencia + Particao, sacrificando disponibilidade — ex.: HBase, MongoDB) e <strong>AP</strong> (Disponibilidade + Particao, sacrificando consistencia forte — ex.: Cassandra, DynamoDB).</p>
+                <p>Enquanto o ACID garante consistencia forte em bases de dados centralizadas, muitos sistemas NoSQL adotam o modelo <strong>BASE</strong> (Basically Available, Soft state, Eventually consistent), aceitando consistencia eventual em troca de maior disponibilidade e escalabilidade horizontal.</p>
+
+                <h4>1.8. Formatos de Dados</h4>
+                <p><strong>CSV (Comma-Separated Values):</strong> Formato textual simples, legivel por humanos. Cada linha e um registo e os campos sao separados por virgulas. Nao suporta tipos de dados nem schema. Muito usado para importacao/exportacao simples.</p>
+                <p><strong>XML (eXtensible Markup Language):</strong> Formato textual hierarquico baseado em tags. Suporta schemas complexos (XSD) e validacao. Verboso (ocupa mais espaco). Muito usado em integracao de sistemas legados e servicos web SOAP.</p>
+                <p><strong>JSON (JavaScript Object Notation):</strong> Formato textual leve e legivel, baseado em pares chave-valor e arrays. Menos verboso que XML. Padrao de facto para APIs REST e aplicacoes web. Suporta tipos basicos (string, number, boolean, null, array, object).</p>
+                <p><strong>AVRO:</strong> Formato binario orientado a linhas, desenvolvido pelo Apache. Inclui o schema no proprio ficheiro (auto-descritivo). Excelente para serializacao de dados e evolucao de schemas. Muito usado em pipelines Kafka e ingestao de dados.</p>
+                <p><strong>ORC (Optimized Row Columnar):</strong> Formato binario colunar otimizado para Hive. Oferece compressao elevada e suporte a predicados de filtragem (predicate pushdown). Ideal para queries analiticas sobre Hadoop.</p>
+                <p><strong>Parquet:</strong> Formato binario colunar do ecossistema Apache. Suporta nested data, compressao por coluna e codificacao eficiente. Padrao de facto para Spark e data lakes. Ideal para consultas analiticas que acedem a poucas colunas de datasets com muitas colunas.</p>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>5 V's do Big Data</h4>
+                  <p>Volume, Velocidade, Variedade, Veracidade e Valor — as cinco dimensoes que caracterizam Big Data.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>HDFS</h4>
+                  <p>Sistema de ficheiros distribuido do Hadoop. Divide dados em blocos replicados em multiplos nos para tolerancia a falhas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>MapReduce</h4>
+                  <p>Modelo de processamento paralelo: Map (divide e processa) e Reduce (agrega resultados). Baseado em disco.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Spark In-Memory</h4>
+                  <p>Motor de processamento que mantem dados em RAM (RDD), sendo ate 100x mais rapido que MapReduce para tarefas iterativas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>ACID</h4>
+                  <p>Atomicidade, Consistencia, Isolamento e Durabilidade — garantias de transacoes em bases de dados relacionais.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Teorema CAP</h4>
+                  <p>Num sistema distribuido, so e possivel garantir 2 de 3: Consistencia, Disponibilidade, Tolerancia a Particoes.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>NoSQL</h4>
+                  <p>Bases de dados nao-relacionais em 4 tipos: Key-Value, Colunar, Documento e Grafo — escalabilidade horizontal.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Parquet vs ORC</h4>
+                  <p>Formatos binarios colunares otimizados para analytics. Parquet e padrao do Spark; ORC e otimizado para Hive.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique no cartao para ver a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o "Volume" nos 5 V's do Big Data?</div>
+                    <div class="flashcard-back">Refere-se a enorme quantidade de dados gerados continuamente (quintilioes de bytes/dia), exigindo infraestruturas distribuidas.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o "Valor" nos 5 V's do Big Data?</div>
+                    <div class="flashcard-back">A capacidade de transformar dados brutos em insights uteis e acionaveis que apoiem a tomada de decisao. E o V mais importante.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 3 componentes principais do Apache Hadoop?</div>
+                    <div class="flashcard-back">HDFS (armazenamento distribuido), YARN (gestao de recursos) e MapReduce (processamento paralelo).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a principal vantagem do Spark sobre o MapReduce?</div>
+                    <div class="flashcard-back">O Spark processa dados em memoria (in-memory) usando RDD, sendo ate 100x mais rapido. O MapReduce escreve resultados intermedios em disco.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 tipos de bases de dados NoSQL?</div>
+                    <div class="flashcard-back">Key-Value (Redis), Colunar (Cassandra), Documento (MongoDB) e Grafo (Neo4j).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que afirma o Teorema CAP?</div>
+                    <div class="flashcard-back">Num sistema distribuido, e impossivel garantir simultaneamente Consistencia, Disponibilidade e Tolerancia a Particoes — deve-se escolher 2 de 3.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que significa o modelo BASE em NoSQL?</div>
+                    <div class="flashcard-back">Basically Available, Soft state, Eventually consistent — aceita consistencia eventual em troca de maior disponibilidade e escalabilidade.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre Parquet e CSV?</div>
+                    <div class="flashcard-back">Parquet e binario, colunar, comprimido e tipado — ideal para analytics. CSV e textual, orientado a linhas, sem tipos — simples mas ineficiente para grandes volumes.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual dos seguintes NAO e um dos 5 V's do Big Data?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Volume</button>
+                  <button class="quiz-option" data-correct="true">Virtualidade</button>
+                  <button class="quiz-option">Veracidade</button>
+                  <button class="quiz-option">Valor</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. No Hadoop, qual componente e responsavel pela gestao de recursos do cluster?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">HDFS</button>
+                  <button class="quiz-option">MapReduce</button>
+                  <button class="quiz-option" data-correct="true">YARN</button>
+                  <button class="quiz-option">Hive</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Qual a principal diferenca do Apache Spark em relacao ao MapReduce?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">O Spark nao usa clusters</button>
+                  <button class="quiz-option" data-correct="true">O Spark processa dados em memoria (in-memory)</button>
+                  <button class="quiz-option">O Spark so funciona com dados estruturados</button>
+                  <button class="quiz-option">O Spark nao suporta SQL</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. O MongoDB e um exemplo de que tipo de base de dados NoSQL?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Key-Value</button>
+                  <button class="quiz-option">Column-oriented</button>
+                  <button class="quiz-option" data-correct="true">Document</button>
+                  <button class="quiz-option">Graph</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. Segundo o Teorema CAP, um sistema distribuido com Tolerancia a Particoes deve escolher entre:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Volume e Velocidade</button>
+                  <button class="quiz-option" data-correct="true">Consistencia e Disponibilidade</button>
+                  <button class="quiz-option">Atomicidade e Durabilidade</button>
+                  <button class="quiz-option">Escalabilidade e Desempenho</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">6. Qual formato de dados e binario, colunar e considerado o padrao de facto para Apache Spark?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">CSV</button>
+                  <button class="quiz-option">JSON</button>
+                  <button class="quiz-option">AVRO</button>
+                  <button class="quiz-option" data-correct="true">Parquet</button>
+                </div>
+              </div>
+
+              <div class="quiz-score hidden quiz-score-display"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ba-t1')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== TOPIC 2: Analytics no Negocio / Data Science ==================== -->
+      <div class="accordion-item" data-topic="ba-t2">
+        <button class="accordion-header">
+          <span class="topic-number">02</span>
+          <span class="topic-title">Analytics no Negocio / Data Science</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content ba-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>2.1. Data Science vs Data Analytics vs Machine Learning</h4>
+                <p><strong>Data Science</strong> e o campo interdisciplinar que combina matematica, estatistica, programacao e conhecimento de dominio para extrair conhecimento e insights a partir de dados estruturados e nao estruturados. E o conceito mais abrangente, englobando a recolha, limpeza, exploracao, modelacao e comunicacao de resultados.</p>
+                <p><strong>Data Analytics</strong> e uma subarea da Data Science focada na analise e interpretacao de dados para apoiar a tomada de decisao. Envolve a aplicacao de tecnicas estatisticas e ferramentas de visualizacao para identificar padroes, tendencias e anomalias nos dados.</p>
+                <p><strong>Machine Learning</strong> e uma subarea da Inteligencia Artificial (e da Data Science) que permite aos computadores aprender a partir de dados sem serem explicitamente programados. Os algoritmos de ML melhoram o seu desempenho com a experiencia (dados de treino).</p>
+                <p><strong>Hierarquia:</strong> Data Science (campo amplo) &gt; Data Analytics (analise para decisao) &gt; Machine Learning (aprendizagem automatica, tecnica especifica dentro da ciencia de dados).</p>
+
+                <h4>2.2. Os Tres Tipos de Analytics</h4>
+                <p><strong>Analytics Descritiva (Descriptive Analytics):</strong> Responde a pergunta "O que aconteceu?" e "O que esta a acontecer?". Utiliza dashboards, relatorios, KPIs, visualizacao de dados e estatistica descritiva (media, mediana, desvio padrao) para sumarizar dados historicos e presentes. Ferramentas tipicas: Power BI, Tableau, Excel. E o tipo mais basico e mais utilizado pelas organizacoes.</p>
+                <p><strong>Analytics Preditiva (Predictive Analytics):</strong> Responde a pergunta "O que vai acontecer?". Utiliza tecnicas de Machine Learning, data mining, modelacao estatistica e analise de series temporais para prever eventos futuros com base em padroes historicos. Exemplos: previsao de churn de clientes, estimativa de vendas, detecao de fraudes, scoring de credito.</p>
+                <p><strong>Analytics Prescritiva (Prescriptive Analytics):</strong> Responde a pergunta "O que devemos fazer?". O tipo mais avancado, combina resultados de analytics preditiva com tecnicas de otimizacao, simulacao, teoria de jogos e regras de negocio para recomendar acoes concretas. Exemplos: otimizacao de rotas logisticas, alocacao de recursos, pricing dinamico, recomendacao de tratamentos medicos.</p>
+
+                <div class="highlight-box">
+                  <p><strong>Progressao:</strong> Descritiva (passado) &rarr; Preditiva (futuro) &rarr; Prescritiva (acao). A maturidade analitica de uma organizacao aumenta ao longo desta progressao, assim como o valor e a complexidade.</p>
+                </div>
+
+                <h4>2.3. Algoritmos de Machine Learning</h4>
+                <p><strong>Decision Trees (Arvores de Decisao):</strong> Modelo que cria uma estrutura hierarquica em forma de arvore, onde cada no interno representa um teste sobre um atributo, cada ramo representa o resultado do teste, e cada folha representa uma classe ou valor. Facil de interpretar e visualizar. Propenso a overfitting.</p>
+                <p><strong>Naive Bayes:</strong> Classificador probabilistico baseado no Teorema de Bayes, assumindo independencia condicional entre os atributos (pressuposto naive). Apesar desta simplificacao, funciona bem em muitos cenarios reais, especialmente na classificacao de texto e filtragem de spam.</p>
+                <p><strong>Random Forest:</strong> Metodo de ensemble que combina multiplas arvores de decisao (tipicamente centenas), cada uma treinada numa amostra aleatoria dos dados (bagging) e usando um subconjunto aleatorio de atributos. O resultado final e obtido por votacao (classificacao) ou media (regressao). Reduz o overfitting em relacao a uma arvore individual.</p>
+                <p><strong>K-means:</strong> Algoritmo de clustering nao supervisionado que particiona os dados em K grupos (clusters), onde cada ponto pertence ao cluster cujo centroide esta mais proximo. Processo iterativo: (1) inicializa K centroides, (2) atribui cada ponto ao centroide mais proximo, (3) recalcula os centroides, (4) repete ate convergir.</p>
+                <p><strong>Neural Networks (Redes Neuronais):</strong> Modelos inspirados no cerebro humano, compostos por neuronios artificiais organizados em camadas (input, hidden, output). Cada conexao tem um peso que e ajustado durante o treino. Deep Learning refere-se a redes neuronais com muitas camadas ocultas. Aplicacoes: visao computacional, processamento de linguagem natural, reconhecimento de voz.</p>
+
+                <h4>2.4. Tipos de Aprendizagem</h4>
+                <p><strong>Supervised Learning (Aprendizagem Supervisionada):</strong> O modelo aprende a partir de dados rotulados (com a resposta correta). O objetivo e aprender uma funcao que mapeie inputs em outputs. Inclui tarefas de classificacao (prever uma categoria) e regressao (prever um valor numerico). Exemplos: detecao de spam, previsao de precos, diagnostico medico.</p>
+                <p><strong>Unsupervised Learning (Aprendizagem Nao Supervisionada):</strong> O modelo aprende a partir de dados nao rotulados, procurando padroes e estruturas ocultas. Inclui tarefas de clustering (agrupar dados semelhantes), reducao de dimensionalidade (PCA) e detecao de anomalias. Exemplos: segmentacao de clientes, analise de cestas de compras.</p>
+                <p><strong>Reinforcement Learning (Aprendizagem por Reforco):</strong> O agente aprende atraves de interacao com um ambiente, recebendo recompensas (positivas ou negativas) pelas suas acoes. O objetivo e maximizar a recompensa acumulada ao longo do tempo. Exemplos: jogos (AlphaGo), conducao autonoma, robotica, otimizacao de portfolios financeiros.</p>
+
+                <h4>2.5. Data Mining</h4>
+                <p>Data Mining e o processo de descobrir padroes interessantes, correlacoes e anomalias em grandes conjuntos de dados, usando metodos na intersecao de estatistica, Machine Learning e sistemas de bases de dados.</p>
+                <p><strong>Clustering:</strong> Agrupar dados semelhantes em clusters sem rotulos pre-definidos. Algoritmos: K-means, DBSCAN, Hierarchical Clustering.</p>
+                <p><strong>Classification (Classificacao):</strong> Atribuir uma categoria (classe) a novas observacoes com base num modelo treinado. Algoritmos: Decision Trees, SVM, Naive Bayes, KNN.</p>
+                <p><strong>Regression (Regressao):</strong> Prever um valor numerico continuo. Algoritmos: Regressao Linear, Regressao Logistica (apesar do nome, usada para classificacao binaria), Regressao Polinomial.</p>
+                <p><strong>Association Rules (Regras de Associacao):</strong> Descobrir relacoes interessantes entre variaveis em bases de dados transacionais. Algoritmo mais conhecido: Apriori. Metricas: Support, Confidence, Lift. Exemplo classico: "Clientes que compram pao e manteiga tambem compram leite" (market basket analysis).</p>
+
+                <h4>2.6. Metodologia CRISP-DM</h4>
+                <p><strong>CRISP-DM</strong> (Cross-Industry Standard Process for Data Mining) e a metodologia padrao mais utilizada para projetos de data mining e data science. Composta por 6 fases iterativas:</p>
+                <p><strong>1. Business Understanding (Compreensao do Negocio):</strong> Definir os objetivos do projeto do ponto de vista do negocio. Avaliar a situacao atual, definir criterios de sucesso e elaborar o plano do projeto.</p>
+                <p><strong>2. Data Understanding (Compreensao dos Dados):</strong> Recolher os dados iniciais, explorar e descrever os dados (estatisticas, visualizacoes), verificar a qualidade dos dados (valores em falta, outliers, inconsistencias).</p>
+                <p><strong>3. Data Preparation (Preparacao dos Dados):</strong> Selecionar, limpar, construir (feature engineering), integrar e formatar os dados para modelacao. Tipicamente a fase mais demorada (pode ocupar 60-80% do tempo do projeto).</p>
+                <p><strong>4. Modeling (Modelacao):</strong> Selecionar tecnicas de modelacao, desenhar os testes, construir e calibrar os modelos. Dividir os dados em conjuntos de treino e teste.</p>
+                <p><strong>5. Evaluation (Avaliacao):</strong> Avaliar os modelos em relacao aos objetivos de negocio, rever o processo, decidir os proximos passos. Garantir que o modelo resolve o problema real e nao apenas o tecnico.</p>
+                <p><strong>6. Deployment (Implementacao):</strong> Planear e executar a implementacao do modelo em producao. Criar plano de monitorizacao e manutencao. Produzir relatorio final e rever o projeto.</p>
+
+                <h4>2.7. Business Intelligence vs Business Analytics</h4>
+                <p><strong>Business Intelligence (BI):</strong> Foco no passado e presente. Utiliza dados historicos para gerar relatorios, dashboards e alertas. Responde a "o que aconteceu?" e "o que esta a acontecer?". Mais orientado a reporting e monitorizacao operacional. Ferramentas: Power BI, Tableau, Qlik, SSRS.</p>
+                <p><strong>Business Analytics (BA):</strong> Foco no futuro e na acao. Vai alem do BI, incorporando tecnicas preditivas e prescritivas. Responde a "o que vai acontecer?" e "o que devemos fazer?". Mais orientado a modelacao estatistica e otimizacao. Ferramentas: Python, R, SAS, SPSS, alem das ferramentas de BI.</p>
+                <p>Na pratica, os dois conceitos sao complementares: o BI fornece a base (dados fiveis, visualizacoes, KPIs) sobre a qual o BA constroi modelos avancados para previsao e prescricao.</p>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Analytics Descritiva</h4>
+                  <p>"O que aconteceu?" — Dashboards, KPIs, relatorios. O tipo mais basico e comum de analytics.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Analytics Preditiva</h4>
+                  <p>"O que vai acontecer?" — Machine Learning, modelacao estatistica para prever eventos futuros.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Analytics Prescritiva</h4>
+                  <p>"O que devemos fazer?" — Otimizacao e simulacao para recomendar acoes concretas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>CRISP-DM</h4>
+                  <p>Metodologia em 6 fases: Business Understanding, Data Understanding, Data Preparation, Modeling, Evaluation, Deployment.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Random Forest</h4>
+                  <p>Ensemble de multiplas arvores de decisao com bagging. Reduz overfitting e melhora a precisao.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Regras de Associacao</h4>
+                  <p>Algoritmo Apriori para descobrir relacoes em dados transacionais. Metricas: Support, Confidence, Lift.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique no cartao para ver a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 3 tipos de Analytics?</div>
+                    <div class="flashcard-back">Descritiva (o que aconteceu?), Preditiva (o que vai acontecer?) e Prescritiva (o que devemos fazer?).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre aprendizagem supervisionada e nao supervisionada?</div>
+                    <div class="flashcard-back">Supervisionada usa dados rotulados (com resposta conhecida). Nao supervisionada usa dados sem rotulos, procurando padroes ocultos (ex.: clustering).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o algoritmo K-means?</div>
+                    <div class="flashcard-back">Algoritmo de clustering nao supervisionado que particiona dados em K grupos, atribuindo cada ponto ao centroide mais proximo iterativamente.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 6 fases do CRISP-DM?</div>
+                    <div class="flashcard-back">1. Business Understanding, 2. Data Understanding, 3. Data Preparation, 4. Modeling, 5. Evaluation, 6. Deployment.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e Random Forest?</div>
+                    <div class="flashcard-back">Metodo ensemble que combina multiplas arvores de decisao treinadas com bagging e subconjuntos aleatorios de atributos, reduzindo overfitting.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que sao Regras de Associacao?</div>
+                    <div class="flashcard-back">Tecnica de data mining para descobrir relacoes em dados transacionais (ex.: market basket analysis). Algoritmo Apriori. Metricas: Support, Confidence, Lift.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre BI e BA?</div>
+                    <div class="flashcard-back">BI foca no passado/presente (relatorios, dashboards). BA foca no futuro/acao (modelos preditivos e prescritivos). Sao complementares.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e Reinforcement Learning?</div>
+                    <div class="flashcard-back">Aprendizagem por reforco: um agente interage com um ambiente, recebendo recompensas pelas suas acoes, e aprende a maximizar a recompensa acumulada.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual tipo de analytics responde a pergunta "O que devemos fazer?"</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Descritiva</button>
+                  <button class="quiz-option">Preditiva</button>
+                  <button class="quiz-option" data-correct="true">Prescritiva</button>
+                  <button class="quiz-option">Diagnostica</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. O K-means e um exemplo de que tipo de aprendizagem?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Supervisionada</button>
+                  <button class="quiz-option" data-correct="true">Nao supervisionada</button>
+                  <button class="quiz-option">Por reforco</button>
+                  <button class="quiz-option">Semi-supervisionada</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Qual fase do CRISP-DM tipicamente consome mais tempo (60-80%)?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Business Understanding</button>
+                  <button class="quiz-option">Data Understanding</button>
+                  <button class="quiz-option" data-correct="true">Data Preparation</button>
+                  <button class="quiz-option">Modeling</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Qual algoritmo e mais utilizado para market basket analysis?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">K-means</button>
+                  <button class="quiz-option">Decision Tree</button>
+                  <button class="quiz-option">Random Forest</button>
+                  <button class="quiz-option" data-correct="true">Apriori</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. Qual a principal caracteristica do Naive Bayes?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Usa ensemble de modelos</button>
+                  <button class="quiz-option" data-correct="true">Assume independencia condicional entre atributos</button>
+                  <button class="quiz-option">Requer dados nao rotulados</button>
+                  <button class="quiz-option">Funciona apenas com dados numericos</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">6. Qual a diferenca principal entre BI e BA?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">BI usa Python e BA usa Excel</button>
+                  <button class="quiz-option">BI e mais caro que BA</button>
+                  <button class="quiz-option" data-correct="true">BI foca no passado/presente; BA foca no futuro/acao</button>
+                  <button class="quiz-option">Nao ha diferenca, sao sinonimos</button>
+                </div>
+              </div>
+
+              <div class="quiz-score hidden quiz-score-display"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ba-t2')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== TOPIC 3: ETL e Data Warehouse ==================== -->
+      <div class="accordion-item" data-topic="ba-t3">
+        <button class="accordion-header">
+          <span class="topic-number">03</span>
+          <span class="topic-title">ETL e Data Warehouse</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content ba-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>3.1. Taxonomia de Dados (Stevens, 1946)</h4>
+                <p>Stanley Smith Stevens propôs em 1946 uma classificacao dos niveis de medicao em quatro escalas, que continua a ser fundamental para a escolha de tecnicas analiticas adequadas:</p>
+                <p><strong>Nominal:</strong> Dados categoricos sem ordem inerente. Apenas permitem operacoes de igualdade/diferenca. Exemplos: cor dos olhos, genero, codigo postal, grupo sanguineo. Medida de tendencia central: moda.</p>
+                <p><strong>Ordinal:</strong> Dados categoricos com uma ordem natural, mas os intervalos entre valores nao sao iguais ou mensuráveis. Exemplos: grau de satisfacao (mau, razoavel, bom, excelente), nivel de escolaridade, classificacao militar. Medida central: mediana.</p>
+                <p><strong>Intervalo (Interval):</strong> Dados numericos com intervalos iguais e significativos entre valores, mas sem um zero absoluto. Exemplos: temperatura em Celsius ou Fahrenheit (0°C nao significa ausencia de temperatura), datas no calendario. Permitem adicao e subtracao. Medida central: media.</p>
+                <p><strong>Racio (Ratio):</strong> Dados numericos com intervalos iguais e um zero absoluto significativo (zero indica ausencia da quantidade). Exemplos: peso, altura, idade, salario, distancia. Permitem todas as operacoes aritmeticas, incluindo rácios. Medida central: media geometrica, media aritmetica.</p>
+
+                <h4>3.2. Processo ETL</h4>
+                <p><strong>ETL</strong> (Extract, Transform, Load) e o processo fundamental para integrar dados de multiplas fontes num repositorio centralizado, tipicamente um Data Warehouse.</p>
+                <p><strong>Extract (Extracao):</strong> Recolha de dados de diversas fontes operacionais: bases de dados transacionais (OLTP), ficheiros CSV/XML/JSON, APIs, ERPs, CRMs, spreadsheets, fontes externas. Os dados sao copiados para uma <strong>Data Staging Area (DSA)</strong> — uma area temporaria de armazenamento intermediario.</p>
+                <p><strong>Transform (Transformacao):</strong> Aplicacao de regras de negocio e operacoes de limpeza sobre os dados na DSA. Inclui: limpeza de dados (correcao de erros, tratamento de valores nulos e duplicados), padronizacao de formatos (datas, moedas, unidades), deduplicacao, enriquecimento de dados, agregacao, calculo de metricas derivadas, mapeamento de codigos e conversao de tipos.</p>
+                <p><strong>Load (Carregamento):</strong> Transferencia dos dados transformados para o Data Warehouse. Pode ser: Full Load (carregamento completo, substituindo todos os dados — usado na carga inicial) ou Incremental Load (carrega apenas dados novos ou alterados desde a ultima carga — usado em cargas periodicas).</p>
+
+                <div class="highlight-box">
+                  <p><strong>Data Staging Area (DSA):</strong> Area intermediaria entre as fontes operacionais e o Data Warehouse. Funciona como um buffer onde os dados sao temporariamente armazenados durante o processo ETL, permitindo transformacoes sem impactar os sistemas fonte nem o DW.</p>
+                </div>
+
+                <h4>3.3. Data Warehouse: Definicoes</h4>
+                <p><strong>Definicao de Inmon (1992):</strong> "Um Data Warehouse e uma colecao de dados orientada por assunto, integrada, variante no tempo e nao volatil, que suporta o processo de tomada de decisao da gestao."</p>
+                <p><strong>Definicao de Han &amp; Kamber (2006):</strong> "Um Data Warehouse e um repositorio de informacao recolhida de multiplas fontes, armazenada sob um schema unificado e que reside num unico local."</p>
+
+                <h4>3.4. Quatro Caracteristicas do Data Warehouse</h4>
+                <p><strong>Orientado por Assunto (Subject-oriented):</strong> Os dados sao organizados em torno de assuntos-chave do negocio (vendas, clientes, produtos, financas) e nao em torno de aplicacoes ou processos operacionais. Esta organizacao facilita a analise por area de negocio.</p>
+                <p><strong>Integrado (Integrated):</strong> Dados provenientes de multiplas fontes heterogeneas sao integrados num formato consistente e uniforme. Conflitos de nomes, formatos, codificacoes e unidades de medida sao resolvidos durante o processo ETL.</p>
+                <p><strong>Variante no Tempo (Time-variant):</strong> Os dados sao armazenados com uma dimensao temporal, permitindo analises historicas e comparacoes ao longo do tempo. Tipicamente mantem dados de 5 a 10 anos. Cada registo tem um timestamp ou periodo de validade associado.</p>
+                <p><strong>Nao Volatil (Non-volatile):</strong> Uma vez carregados no DW, os dados nao sao alterados nem eliminados — apenas sao adicionados novos dados (append-only). Os dados operacionais podem ser atualizados e eliminados, mas os dados do DW sao um registo historico permanente.</p>
+
+                <h4>3.5. DW vs Bases de Dados Transacionais</h4>
+                <p>As <strong>bases de dados transacionais (OLTP)</strong> sao otimizadas para operacoes do dia-a-dia (inserir, atualizar, eliminar registos) com muitas transacoes curtas e concorrentes. Usam normalizacao (3NF) para minimizar redundancia e garantir integridade.</p>
+                <p>O <strong>Data Warehouse (OLAP)</strong> e otimizado para consultas analiticas complexas que envolvem grandes volumes de dados. Usa desnormalizacao (star/snowflake schema) para otimizar o desempenho de leitura. As operacoes sao predominantemente de leitura (SELECT).</p>
+
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr><th>Caracteristica</th><th>OLTP (Transacional)</th><th>OLAP (Data Warehouse)</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Objetivo</td><td>Operacoes diarias</td><td>Analise e decisao</td></tr>
+                      <tr><td>Operacoes</td><td>INSERT, UPDATE, DELETE</td><td>SELECT (consultas)</td></tr>
+                      <tr><td>Normalizacao</td><td>Normalizado (3NF)</td><td>Desnormalizado (star/snowflake)</td></tr>
+                      <tr><td>Volume por query</td><td>Poucos registos</td><td>Milhoes de registos</td></tr>
+                      <tr><td>Utilizadores</td><td>Operacionais (muitos)</td><td>Analistas e gestores (poucos)</td></tr>
+                      <tr><td>Dados</td><td>Atuais e detalhados</td><td>Historicos e agregados</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h4>3.6. Data Marts</h4>
+                <p>Um <strong>Data Mart</strong> e um subconjunto de um Data Warehouse, focado numa area especifica do negocio (departamento ou funcao). Exemplos: Data Mart de Vendas, Data Mart de RH, Data Mart Financeiro. Sao mais pequenos, rapidos de implementar e mais faceis de gerir do que um DW completo. Podem ser dependentes (alimentados pelo DW central) ou independentes (alimentados diretamente das fontes).</p>
+
+                <h4>3.7. Kimball vs Inmon</h4>
+                <p><strong>Abordagem Kimball (Bottom-Up):</strong> Proposta por Ralph Kimball. Construcao do DW a partir de Data Marts individuais que sao gradualmente integrados. Cada Data Mart usa modelacao dimensional (star schema). Mais rapido de implementar, com resultados visiveis mais cedo. Risco de inconsistencias se os Data Marts nao forem bem coordenados.</p>
+                <p><strong>Abordagem Inmon (Top-Down):</strong> Proposta por Bill Inmon ("pai do Data Warehouse"). Construcao de um DW corporativo centralizado e normalizado (3NF) primeiro, a partir do qual sao derivados Data Marts. Mais demorado e custoso inicialmente, mas garante maior consistencia e integridade dos dados a longo prazo.</p>
+
+                <h4>3.8. Modelacao Dimensional</h4>
+                <p><strong>Tabelas de Factos (Fact Tables):</strong> Armazenam as metricas quantitativas (numeros) do negocio — os factos mensuráveis. Exemplos: valor da venda, quantidade vendida, custo, receita. Cada linha representa um evento ou transacao. Contem chaves estrangeiras para as dimensoes e as colunas de medidas (metricas).</p>
+                <p><strong>Tabelas de Dimensoes (Dimension Tables):</strong> Contem os atributos descritivos que contextualizam os factos — o "quem, o que, onde, quando, como". Exemplos: Dimensao Tempo (data, mes, trimestre, ano), Dimensao Produto (nome, categoria, marca), Dimensao Cliente (nome, cidade, segmento), Dimensao Loja (localizacao, regiao).</p>
+
+                <h4>3.9. Star Schema vs Snowflake Schema</h4>
+                <p><strong>Star Schema (Esquema em Estrela):</strong> A tabela de factos esta no centro, ligada diretamente a tabelas de dimensoes desnormalizadas. Estrutura simples e intuitiva. Consultas mais rapidas (menos JOINs). Maior redundancia nas dimensoes. E o modelo mais utilizado em DW.</p>
+                <p><strong>Snowflake Schema (Esquema em Floco de Neve):</strong> Variacao do star schema onde as tabelas de dimensoes sao normalizadas (divididas em sub-dimensoes). Menos redundancia, mas consultas mais complexas (mais JOINs). Estrutura mais proxima da normalizacao relacional.</p>
+
+                <h4>3.10. Granularidade e Tipos de Factos</h4>
+                <p><strong>Granularidade (Grain):</strong> Define o nivel de detalhe de cada linha na tabela de factos. Exemplo: uma venda ao nivel de cada produto individual (granularidade fina) vs. total de vendas por dia por loja (granularidade grossa). A granularidade deve ser definida cuidadosamente — granularidade mais fina permite mais flexibilidade analitica mas aumenta o volume de dados.</p>
+                <p><strong>Factos Aditivos (Additive):</strong> Podem ser somados ao longo de todas as dimensoes. Exemplo: receita de vendas (pode somar-se por produto, por loja, por tempo). Sao os mais comuns e uteis.</p>
+                <p><strong>Factos Semi-Aditivos (Semi-additive):</strong> Podem ser somados ao longo de algumas dimensoes, mas nao de todas. Exemplo: saldo de conta bancaria (pode somar-se por clientes, mas nao faz sentido somar ao longo do tempo — usa-se a media ou o ultimo valor).</p>
+                <p><strong>Factos Nao-Aditivos (Non-additive):</strong> Nao podem ser somados ao longo de nenhuma dimensao. Exemplo: percentagens, racios, margens de lucro, temperaturas medias. Devem ser calculados a partir dos dados aditivos subjacentes.</p>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>ETL</h4>
+                  <p>Extract (extrair de fontes), Transform (limpar e padronizar), Load (carregar no DW). Processo fundamental de integracao.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Data Staging Area</h4>
+                  <p>Area intermediaria temporaria onde os dados sao armazenados durante o ETL, entre as fontes e o Data Warehouse.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>4 Caracteristicas do DW</h4>
+                  <p>Orientado por Assunto, Integrado, Variante no Tempo, Nao Volatil (definicao de Inmon).</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Star Schema</h4>
+                  <p>Tabela de factos central ligada a dimensoes desnormalizadas. Simples, rapido, com mais redundancia. O mais usado.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Snowflake Schema</h4>
+                  <p>Dimensoes normalizadas em sub-tabelas. Menos redundancia, mais JOINs, mais complexo.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Factos Aditivos</h4>
+                  <p>Metricas que podem ser somadas em todas as dimensoes (ex.: receita). Contraste com semi-aditivos e nao-aditivos.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique no cartao para ver a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que significa ETL?</div>
+                    <div class="flashcard-back">Extract (extrair de fontes), Transform (limpar, padronizar, enriquecer), Load (carregar no Data Warehouse).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 4 caracteristicas de um Data Warehouse segundo Inmon?</div>
+                    <div class="flashcard-back">Orientado por Assunto (Subject-oriented), Integrado, Variante no Tempo (Time-variant), Nao Volatil (Non-volatile).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre Star Schema e Snowflake Schema?</div>
+                    <div class="flashcard-back">Star: dimensoes desnormalizadas, menos JOINs, mais simples. Snowflake: dimensoes normalizadas em sub-tabelas, menos redundancia, mais JOINs.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre Kimball (Bottom-Up) e Inmon (Top-Down)?</div>
+                    <div class="flashcard-back">Kimball: constroi Data Marts primeiro, depois integra (mais rapido). Inmon: constroi DW centralizado primeiro, depois deriva Data Marts (mais consistente).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que sao factos aditivos, semi-aditivos e nao-aditivos?</div>
+                    <div class="flashcard-back">Aditivos: somam em todas as dimensoes (receita). Semi-aditivos: somam em algumas (saldo). Nao-aditivos: nao somam em nenhuma (percentagens, racios).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e a Granularidade num Data Warehouse?</div>
+                    <div class="flashcard-back">O nivel de detalhe de cada linha na tabela de factos. Granularidade fina = mais detalhe e flexibilidade. Granularidade grossa = menos detalhe, menos dados.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e um Data Mart?</div>
+                    <div class="flashcard-back">Subconjunto de um DW focado numa area especifica do negocio (ex.: vendas, RH). Mais pequeno e rapido de implementar que um DW completo.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 niveis de medicao de Stevens?</div>
+                    <div class="flashcard-back">Nominal (categorias sem ordem), Ordinal (categorias com ordem), Intervalo (intervalos iguais, sem zero absoluto), Racio (intervalos iguais, com zero absoluto).</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual fase do ETL e responsavel pela limpeza e padronizacao dos dados?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Extract</button>
+                  <button class="quiz-option" data-correct="true">Transform</button>
+                  <button class="quiz-option">Load</button>
+                  <button class="quiz-option">Staging</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Qual das seguintes NAO e uma caracteristica do Data Warehouse segundo Inmon?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Orientado por Assunto</button>
+                  <button class="quiz-option">Integrado</button>
+                  <button class="quiz-option" data-correct="true">Volatil</button>
+                  <button class="quiz-option">Variante no Tempo</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. No Star Schema, as tabelas de dimensoes sao:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Normalizadas em sub-tabelas</button>
+                  <button class="quiz-option" data-correct="true">Desnormalizadas (numa unica tabela)</button>
+                  <button class="quiz-option">Armazenadas apenas em memoria</button>
+                  <button class="quiz-option">Identicas as tabelas de factos</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. A abordagem Kimball e conhecida como:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option" data-correct="true">Bottom-Up (Data Marts primeiro)</button>
+                  <button class="quiz-option">Top-Down (DW centralizado primeiro)</button>
+                  <button class="quiz-option">Middle-Out (camadas intermedias)</button>
+                  <button class="quiz-option">Agile DW (sprints iterativos)</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. O saldo de uma conta bancaria e um exemplo de que tipo de facto?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Aditivo</button>
+                  <button class="quiz-option" data-correct="true">Semi-aditivo</button>
+                  <button class="quiz-option">Nao-aditivo</button>
+                  <button class="quiz-option">Transacional</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">6. Qual nivel de medicao de Stevens tem zero absoluto e permite todas as operacoes aritmeticas?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Nominal</button>
+                  <button class="quiz-option">Ordinal</button>
+                  <button class="quiz-option">Intervalo</button>
+                  <button class="quiz-option" data-correct="true">Racio</button>
+                </div>
+              </div>
+
+              <div class="quiz-score hidden quiz-score-display"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ba-t3')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== TOPIC 4: Business Intelligence e Ferramentas Analiticas ==================== -->
+      <div class="accordion-item" data-topic="ba-t4">
+        <button class="accordion-header">
+          <span class="topic-number">04</span>
+          <span class="topic-title">Business Intelligence e Ferramentas Analiticas</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content ba-accent">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+
+                <h4>4.1. Definicoes de Business Intelligence</h4>
+                <p><strong>Definicao de Dresner (1989):</strong> Howard Dresner, analista do Gartner, cunhou o termo Business Intelligence em 1989 como "um conjunto de conceitos e metodos para melhorar a tomada de decisao empresarial usando sistemas baseados em factos e dados." Foi o primeiro a popularizar o termo como guarda-chuva para as praticas de suporte a decisao baseadas em dados.</p>
+                <p><strong>Definicao de Chaudhuri et al. (2011):</strong> "Business Intelligence abrange as tecnologias, aplicacoes e praticas para a recolha, integracao, analise e apresentacao de informacao de negocio, com o objetivo de apoiar uma melhor tomada de decisao." Esta definicao mais moderna enfatiza a cadeia completa desde a recolha ate a apresentacao.</p>
+
+                <h4>4.2. Arquitetura e Objetivos do BI</h4>
+                <p>A arquitetura tipica de BI compreende varias camadas: <strong>Fontes de dados</strong> (sistemas operacionais, ERPs, CRMs, ficheiros) &rarr; <strong>ETL</strong> (extracao, transformacao, carregamento) &rarr; <strong>Data Warehouse / Data Marts</strong> (armazenamento analitico) &rarr; <strong>Servidor OLAP</strong> (processamento multidimensional) &rarr; <strong>Ferramentas de Front-end</strong> (dashboards, relatorios, visualizacoes, alertas).</p>
+                <p><strong>Objetivos do BI:</strong> Transformar dados em informacao acionavel; apoiar a tomada de decisao a todos os niveis da organizacao (estrategico, tatico, operacional); monitorizar KPIs e desempenho do negocio em tempo real; identificar tendencias, padroes e oportunidades; melhorar a eficiencia operacional e a competitividade.</p>
+
+                <h4>4.3. Principais Solucoes de BI</h4>
+                <p><strong>Microsoft Power BI:</strong> Plataforma de BI da Microsoft, integrada com o ecossistema Office 365/Azure. Inclui Power BI Desktop (desenvolvimento), Power BI Service (cloud, partilha e colaboracao) e Power BI Mobile. Utiliza a linguagem DAX (Data Analysis Expressions) para calculos e M/Power Query para transformacao de dados. Forte integracao com Excel e bases de dados Microsoft. Relacao custo-beneficio atrativa. Lider do Magic Quadrant do Gartner.</p>
+                <p><strong>Tableau:</strong> Ferramenta de visualizacao de dados e BI reconhecida pela sua capacidade de criar visualizacoes interativas e intuitivas com drag-and-drop. Forte em exploracao visual de dados (visual analytics). Adquirida pela Salesforce em 2019. Disponivel em versoes Desktop, Server, Cloud e Public (gratuita).</p>
+                <p><strong>Qlik (QlikSense / QlikView):</strong> Plataforma de BI com um motor associativo unico que permite aos utilizadores explorar dados livremente, sem estarem limitados a hierarquias pre-definidas. QlikView e a versao classica (guided analytics); QlikSense e a versao mais recente (self-service analytics com IA integrada).</p>
+
+                <h4>4.4. KPIs (Key Performance Indicators)</h4>
+                <p><strong>Definicao:</strong> Um KPI e uma metrica quantificavel que reflete o desempenho de uma organizacao, departamento, processo ou individuo em relacao a um objetivo estrategico ou operacional. Os KPIs ajudam a medir o progresso em direcao a metas definidas.</p>
+                <p><strong>Objetivos SMART (Doran, 1981):</strong> George T. Doran propôs em 1981 que os objetivos (e por extensao, os KPIs) devem ser:</p>
+                <p><strong>S — Specific (Especifico):</strong> Claro e bem definido, sem ambiguidade. O que exatamente queremos alcançar?</p>
+                <p><strong>M — Measurable (Mensuravel):</strong> Quantificavel, com metricas concretas. Como saberemos que foi alcancado?</p>
+                <p><strong>A — Achievable (Alcancavel):</strong> Realista e atingivel com os recursos disponiveis. E possivel?</p>
+                <p><strong>R — Relevant (Relevante):</strong> Alinhado com os objetivos estrategicos da organizacao. Porque importa?</p>
+                <p><strong>T — Time-bound (Temporal):</strong> Com prazo definido. Quando deve ser alcancado?</p>
+
+                <div class="highlight-box">
+                  <p><strong>Caracteristicas de um bom KPI:</strong> Alinhado com a estrategia, quantificavel, acionavel (permite tomar decisoes), acessivel (facil de obter e calcular), temporal (medido regularmente) e com responsavel definido (accountability).</p>
+                </div>
+
+                <h4>4.5. Tipos de Indicadores</h4>
+                <p><strong>Indicadores Estrategicos:</strong> Medem o desempenho global da organizacao em relacao a visao e objetivos de longo prazo. Monitorizados pela gestao de topo. Exemplos: quota de mercado, ROI (Return on Investment), crescimento da receita anual, EBITDA, satisfacao global do cliente.</p>
+                <p><strong>Indicadores Taticos:</strong> Medem o desempenho de departamentos ou funcoes especificas na execucao da estrategia. Monitorizados pela gestao intermédia. Exemplos: taxa de conversao de leads (Marketing), taxa de retencao de colaboradores (RH), indice de produtividade por equipa.</p>
+                <p><strong>Indicadores Operacionais:</strong> Medem o desempenho de processos e atividades do dia-a-dia. Monitorizados por supervisores e equipas operacionais. Exemplos: tempo medio de atendimento (call center), taxa de defeitos na producao, tempo de entrega de encomendas, uptime de sistemas.</p>
+
+                <h4>4.6. Metricas por Dominio</h4>
+                <p><strong>Vendas:</strong> Receita total, ticket medio, taxa de conversao, ciclo de venda, valor do pipeline, taxa de fecho, receita por vendedor, crescimento YoY (Year over Year).</p>
+                <p><strong>Marketing:</strong> CAC (Customer Acquisition Cost — custo de aquisicao de cliente), CPL (Cost per Lead), CTR (Click-Through Rate), taxa de conversao de campanhas, ROI de marketing, brand awareness, engagement rate em redes sociais.</p>
+                <p><strong>Financas:</strong> EBITDA, margem de lucro bruta e liquida, cash flow operacional, ROI, ROE (Return on Equity), racio de endividamento, working capital ratio, DSO (Days Sales Outstanding).</p>
+                <p><strong>Recursos Humanos:</strong> Taxa de rotatividade (turnover), tempo medio de contratacao, custo por contratacao, indice de satisfacao dos colaboradores (eNPS), absentismo, taxa de formacao, produtividade por FTE (Full-Time Equivalent).</p>
+                <p><strong>Apoio ao Cliente:</strong> Tempo medio de resolucao, taxa de resolucao no primeiro contacto (FCR), CSAT (Customer Satisfaction Score), NPS, volume de tickets, taxa de escalonamento, tempo medio de espera.</p>
+
+                <h4>4.7. Net Promoter Score (NPS)</h4>
+                <p>O <strong>NPS</strong>, criado por Fred Reichheld em 2003, mede a lealdade dos clientes com uma unica pergunta: "Numa escala de 0 a 10, qual a probabilidade de recomendar a nossa empresa/produto a um amigo ou colega?"</p>
+                <p><strong>Classificacao das respostas:</strong></p>
+                <p><strong>Promotores (9-10):</strong> Clientes leais e entusiastas que continuarao a comprar e a recomendar.</p>
+                <p><strong>Passivos (7-8):</strong> Clientes satisfeitos mas nao entusiastas, vulneraveis a ofertas da concorrencia.</p>
+                <p><strong>Detratores (0-6):</strong> Clientes insatisfeitos que podem prejudicar a marca com feedback negativo.</p>
+                <p><strong>Calculo:</strong> NPS = % Promotores - % Detratores. O resultado varia de -100 a +100. Um NPS acima de 0 e considerado bom, acima de 50 e excelente, e acima de 70 e de classe mundial.</p>
+
+                <h4>4.8. OLAP (Online Analytical Processing)</h4>
+                <p><strong>OLAP</strong> e uma abordagem para responder rapidamente a consultas analiticas multidimensionais. Organiza os dados num <strong>cubo OLAP</strong> (ou hipercubo) com multiplas dimensoes, permitindo analises interativas e rapidas sobre grandes volumes de dados.</p>
+                <p><strong>Modelacao Multidimensional:</strong> Os dados sao organizados em dimensoes (eixos de analise como Tempo, Produto, Regiao) e medidas (valores numericos como Vendas, Lucro, Quantidade). O cubo OLAP pre-calcula agregacoes para otimizar o desempenho das consultas.</p>
+                <p><strong>Tipos de OLAP:</strong></p>
+                <p><strong>MOLAP (Multidimensional OLAP):</strong> Dados armazenados em estruturas multidimensionais proprietarias. Melhor desempenho, mas limitado em escala.</p>
+                <p><strong>ROLAP (Relational OLAP):</strong> Dados armazenados em bases de dados relacionais. Mais escalavel, mas com desempenho inferior ao MOLAP.</p>
+                <p><strong>HOLAP (Hybrid OLAP):</strong> Combinacao de MOLAP e ROLAP — dados agregados em MOLAP, detalhados em ROLAP.</p>
+
+                <h4>4.9. Operacoes OLAP</h4>
+                <p><strong>Slice (Fatiar):</strong> Selecionar uma unica fatia do cubo fixando o valor de uma dimensao. Exemplo: ver todas as vendas apenas do mes de janeiro (fixa a dimensao Tempo em "Janeiro"). O resultado e um sub-cubo com uma dimensao a menos.</p>
+                <p><strong>Dice (Cortar em dados):</strong> Selecionar um sub-cubo definindo valores especificos em duas ou mais dimensoes. Exemplo: vendas dos produtos A e B, nas lojas de Lisboa e Porto, nos meses de janeiro e fevereiro.</p>
+                <p><strong>Pivot (Rodar):</strong> Rotacao do cubo para visualizar os dados de uma perspetiva diferente. Troca os eixos de analise. Exemplo: rodar uma tabela para ter os meses nas colunas e os produtos nas linhas, em vez do contrario.</p>
+                <p><strong>Roll-up (Agregar):</strong> Subir na hierarquia de uma dimensao, agregando os dados num nivel superior. Exemplo: passar de vendas diarias para vendas mensais, ou de vendas por cidade para vendas por pais. Reduz o detalhe, aumenta a agregacao.</p>
+                <p><strong>Drill-down (Detalhar):</strong> Descer na hierarquia de uma dimensao, mostrando dados mais detalhados. E a operacao inversa do Roll-up. Exemplo: a partir de vendas anuais, detalhar por trimestre, depois por mes, depois por dia. Aumenta o detalhe.</p>
+
+                <h4>4.10. OLAP vs OLTP</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr><th>Caracteristica</th><th>OLTP</th><th>OLAP</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Objetivo</td><td>Processar transacoes</td><td>Analisar dados</td></tr>
+                      <tr><td>Utilizadores</td><td>Operacionais, muitos</td><td>Analistas, gestores, poucos</td></tr>
+                      <tr><td>Operacoes</td><td>INSERT, UPDATE, DELETE</td><td>SELECT complexos</td></tr>
+                      <tr><td>Dados</td><td>Atuais, detalhados</td><td>Historicos, agregados</td></tr>
+                      <tr><td>Design BD</td><td>Normalizado (3NF)</td><td>Dimensional (star/snowflake)</td></tr>
+                      <tr><td>Tempo de resposta</td><td>Milissegundos</td><td>Segundos a minutos</td></tr>
+                      <tr><td>Volume por query</td><td>Dezenas de registos</td><td>Milhoes de registos</td></tr>
+                      <tr><td>Prioridade</td><td>Disponibilidade e integridade</td><td>Flexibilidade e desempenho</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>KPI</h4>
+                  <p>Key Performance Indicator — metrica quantificavel que mede o desempenho em relacao a um objetivo estrategico ou operacional.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>SMART</h4>
+                  <p>Specific, Measurable, Achievable, Relevant, Time-bound — criterios para definir bons objetivos e KPIs (Doran, 1981).</p>
+                </div>
+                <div class="concept-card">
+                  <h4>NPS</h4>
+                  <p>Net Promoter Score = % Promotores (9-10) - % Detratores (0-6). Mede lealdade de clientes numa escala de -100 a +100.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Cubo OLAP</h4>
+                  <p>Estrutura multidimensional que organiza dados em dimensoes e medidas para consultas analiticas rapidas e interativas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Drill-down vs Roll-up</h4>
+                  <p>Drill-down: desce na hierarquia (mais detalhe). Roll-up: sobe na hierarquia (mais agregacao). Operacoes inversas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Power BI</h4>
+                  <p>Plataforma BI da Microsoft. Usa DAX para calculos e Power Query para ETL. Lider no Magic Quadrant do Gartner.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique no cartao para ver a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e um KPI?</div>
+                    <div class="flashcard-back">Key Performance Indicator — metrica quantificavel que reflete o desempenho em relacao a um objetivo estrategico ou operacional definido.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que significa SMART na definicao de objetivos?</div>
+                    <div class="flashcard-back">Specific (Especifico), Measurable (Mensuravel), Achievable (Alcancavel), Relevant (Relevante), Time-bound (Temporal). Proposto por Doran em 1981.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Como se calcula o NPS?</div>
+                    <div class="flashcard-back">NPS = % Promotores (9-10) - % Detratores (0-6). Varia de -100 a +100. Acima de 50 e excelente.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 5 operacoes OLAP?</div>
+                    <div class="flashcard-back">Slice (fatiar 1 dimensao), Dice (cortar 2+ dimensoes), Pivot (rodar eixos), Roll-up (agregar, subir hierarquia), Drill-down (detalhar, descer hierarquia).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 3 principais ferramentas de BI do mercado?</div>
+                    <div class="flashcard-back">Microsoft Power BI (lider Gartner, DAX, integracao Microsoft), Tableau (visualizacao, Salesforce) e Qlik (motor associativo, self-service).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e a operacao Slice no OLAP?</div>
+                    <div class="flashcard-back">Selecionar uma fatia do cubo fixando o valor de uma dimensao. Exemplo: todas as vendas apenas de janeiro (fixa Tempo = Janeiro).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 3 tipos de indicadores por nivel organizacional?</div>
+                    <div class="flashcard-back">Estrategicos (gestao de topo, visao global), Taticos (gestao intermédia, departamental) e Operacionais (supervisores, processos diarios).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre MOLAP, ROLAP e HOLAP?</div>
+                    <div class="flashcard-back">MOLAP: dados em estruturas multidimensionais (mais rapido). ROLAP: dados em BD relacional (mais escalavel). HOLAP: hibrido (agregados em MOLAP, detalhes em ROLAP).</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Quem cunhou o termo Business Intelligence em 1989?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Ralph Kimball</button>
+                  <button class="quiz-option" data-correct="true">Howard Dresner</button>
+                  <button class="quiz-option">Bill Inmon</button>
+                  <button class="quiz-option">Suresh Chaudhuri</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. O que significa o "A" no acronimo SMART?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Analytical</button>
+                  <button class="quiz-option">Applicable</button>
+                  <button class="quiz-option" data-correct="true">Achievable</button>
+                  <button class="quiz-option">Automated</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. No NPS, como se classificam os clientes que dao nota 7 ou 8?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Promotores</button>
+                  <button class="quiz-option" data-correct="true">Passivos</button>
+                  <button class="quiz-option">Detratores</button>
+                  <button class="quiz-option">Neutros</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Qual operacao OLAP consiste em subir na hierarquia de uma dimensao, agregando dados?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Drill-down</button>
+                  <button class="quiz-option" data-correct="true">Roll-up</button>
+                  <button class="quiz-option">Slice</button>
+                  <button class="quiz-option">Pivot</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. Qual ferramenta de BI utiliza a linguagem DAX para calculos?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Tableau</button>
+                  <button class="quiz-option">Qlik</button>
+                  <button class="quiz-option" data-correct="true">Power BI</button>
+                  <button class="quiz-option">SAP BusinessObjects</button>
+                </div>
+              </div>
+
+              <div class="quiz-block">
+                <p class="quiz-question-text">6. Qual a diferenca principal entre OLTP e OLAP?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">OLTP usa SQL e OLAP nao</button>
+                  <button class="quiz-option">OLAP so funciona em cloud</button>
+                  <button class="quiz-option" data-correct="true">OLTP processa transacoes operacionais; OLAP faz analise multidimensional de dados historicos</button>
+                  <button class="quiz-option">Nao ha diferenca, sao sinonimos</button>
+                </div>
+              </div>
+
+              <div class="quiz-score hidden quiz-score-display"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <!-- Mark studied -->
+            <div class="content-block text-center">
+              <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ba-t4')">Marcar como estudado</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Mestrado em Transformacao Digital — UMAIA 2025/26</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

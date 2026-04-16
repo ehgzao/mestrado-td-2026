@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IHMR — Interface Homem-Maquina e Robotica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body data-page="ihmr">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-logo">TD</span>
+      <span class="nav-title">Mestrado 2026</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+      <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+      <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+    </div>
+    <div class="nav-controls">
+      <button class="btn-icon" onclick="changeFontSize(-2)" title="Diminuir fonte">A-</button>
+      <button class="btn-icon" onclick="changeFontSize(2)" title="Aumentar fonte">A+</button>
+      <button class="btn-icon" onclick="toggleTheme()" title="Alternar tema">
+        <span class="theme-icon-light">&#9790;</span>
+        <span class="theme-icon-dark">&#9788;</span>
+      </button>
+      <button class="btn-icon mobile-menu-btn" onclick="toggleMobile()" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</nav>
+<div class="nav-links-mobile-overlay" id="mobileOverlay">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="ba.html" class="nav-link discipline-ba">Analytics</a>
+  <a href="ggdsi.html" class="nav-link discipline-ggdsi">GGDSI</a>
+  <a href="ihmr.html" class="nav-link discipline-ihmr">IHMR</a>
+</div>
+
+<main class="container main-content">
+
+  <!-- Hero -->
+  <section class="hero hero-ihmr">
+    <h1>Interface Homem-Maquina e Robotica</h1>
+    <p>Explorar a relacao entre humanos, interfaces e maquinas inteligentes</p>
+    <div class="hero-meta">
+      <span>Prof.a Ana Melro (amelro@umaia.pt)</span>
+      <span>Sexta 19h15-23h15</span>
+      <span>Lab.14</span>
+      <span>6 ECTS</span>
+    </div>
+  </section>
+
+  <!-- Countdowns -->
+  <section class="section">
+    <h2>Proximos Prazos</h2>
+    <div class="countdown-grid" id="countdownGrid"></div>
+  </section>
+
+  <!-- Progress -->
+  <section class="section">
+    <div class="card">
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Progresso de Estudo</span>
+          <span id="progressLabel">0/6 (0%)</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill ihmr" id="progressBar" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section class="section">
+    <div class="search-container">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar nos topicos...">
+    </div>
+  </section>
+
+  <!-- Accordion Topics -->
+  <section class="section">
+    <h2>Conteudos Programaticos</h2>
+    <div class="accordion">
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 1: Pensamento sobre a relacao Homem-Maquina             -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="ihmr-t1">
+        <button class="accordion-header">
+          <span class="topic-number">01</span>
+          <span class="topic-title">Pensamento sobre a relacao Homem-Maquina</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>A reflexao filosofica sobre a tecnologia</strong> acompanha a humanidade desde a Antiguidade, mas ganha contornos criticos especificos no seculo XX com a emergencia das tecnologias de massa, da automatizacao e, mais tarde, da digitalizacao. Nesta unidade, exploramos tres pensadores fundamentais que moldaram o modo como entendemos a relacao entre o humano e a maquina.</p>
+
+                <p><strong>Martin Heidegger (1889-1976)</strong> introduziu o conceito de <em>Gestell</em> (enquadramento) na sua obra "A Questao da Tecnica" (1954). Para Heidegger, a tecnologia moderna nao e meramente um instrumento neutro; ela constitui um modo de "desvelamento" (<em>Entbergen</em>) que reduz a natureza e os proprios seres humanos a "reservas permanentes" (<em>Bestand</em>) — recursos disponiveis para serem explorados. O perigo da tecnica moderna reside neste enquadramento totalizante: ao vermos tudo como recurso, perdemos a capacidade de nos relacionarmos autenticamente com o mundo. Contudo, Heidegger tambem sugere que "onde cresce o perigo, cresce tambem o que salva" — a arte e a reflexao podem oferecer formas alternativas de desvelamento.</p>
+
+                <p><strong>Walter Benjamin (1892-1940)</strong>, na sua celebre obra "A Obra de Arte na Era da Sua Reprodutibilidade Tecnica" (1936), analisou como a reproducao mecanica (fotografia, cinema) transformou a experiencia estetica. Benjamin introduziu o conceito de <em>aura</em> — a qualidade unica, autentica e irrepetivel de uma obra de arte, ligada ao seu "aqui e agora." A reprodutibilidade tecnica destroi a aura, democratizando o acesso a arte mas tambem abrindo caminho para a manipulacao politica das massas (como a estetizacao da politica pelo fascismo). Benjamin defendia a "politizacao da arte" como resposta.</p>
+
+                <p><strong>Jean Baudrillard (1929-2007)</strong> levou esta reflexao mais longe com os conceitos de <em>simulacro</em> e <em>hiper-realidade</em>. Na sua obra "Simulacros e Simulacao" (1981), Baudrillard argumentou que nas sociedades contemporaneas, os signos e as simulacoes substituiram a realidade — vivemos numa hiper-realidade onde a distincao entre o real e a sua representacao colapsou. Os media, a publicidade e a tecnologia digital produzem uma realidade mais "real" que a propria realidade. A Disneyland, por exemplo, existe para fazer crer que o resto da America e "real."</p>
+
+                <div class="highlight-box">
+                  <p><strong>Dicotomias fundamentais:</strong> Arte vs. Tecnica (a tensao entre criacao expressiva e producao funcional); Realidade vs. Simulacro/Virtual (a fronteira cada vez mais difusa entre o vivido e o mediado); Corpo vs. Maquina (a questao de onde termina o organico e comeca o mecanico/digital).</p>
+                </div>
+
+                <p><strong>"The Machine Stops" (1909)</strong> de E.M. Forster e uma das obras pioneiras da ficcao especulativa sobre tecnologia. Escrita mais de um seculo antes da era digital, a novela descreve uma civilizacao subterranea totalmente dependente de "A Maquina" — um sistema omnipresente que gere todas as necessidades humanas: comunicacao, alimentacao, entretenimento, saude. Os temas sao surpreendentemente atuais:</p>
+                <ul>
+                  <li><strong>Maquina como autoridade:</strong> A Maquina substitui as instituicoes humanas e torna-se a entidade suprema, quase religiosa</li>
+                  <li><strong>Vigilancia:</strong> toda a atividade humana e mediada e monitorizada pela Maquina</li>
+                  <li><strong>Alienacao:</strong> os humanos perdem a capacidade de experiencia direta, de contacto fisico e de pensamento independente</li>
+                  <li><strong>Fragilidade sistémica:</strong> quando a Maquina comeca a falhar, ninguem sabe repara-la — a dependencia total revelou-se fatal</li>
+                </ul>
+
+                <p><strong>Determinismo tecnologico vs. Construcao social da tecnologia (SCOT):</strong> O determinismo tecnologico sustenta que a tecnologia molda a sociedade de forma autonoma e inevitavel — a invencao da imprensa "causou" a Reforma, a internet "causou" a globalizacao. Por outro lado, a perspetiva da Construcao Social da Tecnologia (Pinch & Bijker, 1984) defende que sao os grupos sociais, os interesses economicos e as relacoes de poder que determinam quais tecnologias sao desenvolvidas, como sao usadas e que significados lhes sao atribuidos. A realidade e provavelmente co-constitutiva: tecnologia e sociedade moldam-se mutuamente.</p>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block ihmr-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Gestell</h4>
+                  <p>Conceito heideggeriano de enquadramento: a tecnica moderna como modo de desvelamento que reduz tudo a recurso disponivel.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Aura (Benjamin)</h4>
+                  <p>Qualidade unica e irrepetivel da obra de arte original, destruida pela reproducao mecanica.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Simulacro</h4>
+                  <p>Copia sem original; signo que substitui e precede a realidade, segundo Baudrillard.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Hiper-realidade</h4>
+                  <p>Condicao em que a distincao entre real e simulacao colapsa — o simulacro torna-se mais "real" que o real.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Determinismo Tecnologico</h4>
+                  <p>Teoria que sustenta que a tecnologia e o motor autonomo da mudanca social.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>SCOT</h4>
+                  <p>Construcao Social da Tecnologia — os grupos sociais e interesses determinam o desenvolvimento tecnologico.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block ihmr-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o conceito de Gestell em Heidegger?</div>
+                    <div class="flashcard-back">Enquadramento — o modo como a tecnica moderna desvela o mundo, reduzindo tudo (incluindo os humanos) a "reserva permanente" (Bestand), recurso disponivel para exploracao.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e a "aura" segundo Walter Benjamin?</div>
+                    <div class="flashcard-back">A qualidade unica, autentica e irrepetivel de uma obra de arte, ligada ao seu "aqui e agora" — destruida pela reprodutibilidade tecnica (fotografia, cinema).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que distingue simulacro de hiper-realidade em Baudrillard?</div>
+                    <div class="flashcard-back">Simulacro e a copia sem original; hiper-realidade e a condicao cultural resultante, onde os simulacros substituem a realidade e a distincao real/ficcao colapsa.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os temas centrais de "The Machine Stops" de Forster?</div>
+                    <div class="flashcard-back">A maquina como autoridade suprema, vigilancia total, alienacao dos humanos do mundo fisico, e a fragilidade catastrofica da dependencia tecnologica absoluta.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que defende o determinismo tecnologico?</div>
+                    <div class="flashcard-back">Que a tecnologia e uma forca autonoma que molda e transforma a sociedade de forma inevitavel, independentemente das intencoes humanas.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que propoe a abordagem SCOT?</div>
+                    <div class="flashcard-back">A Construcao Social da Tecnologia (Pinch & Bijker, 1984) defende que os grupos sociais, interesses e relacoes de poder determinam o desenvolvimento e significado das tecnologias.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual conceito heideggeriano descreve a tecnica moderna como um modo de desvelamento totalizante?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Dasein</button>
+                  <button class="quiz-option" data-correct="true">Gestell (enquadramento)</button>
+                  <button class="quiz-option">Entbergen</button>
+                  <button class="quiz-option">Bestand</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Segundo Benjamin, a reprodutibilidade tecnica da obra de arte destroi:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">O valor comercial da obra</button>
+                  <button class="quiz-option">A intencao do artista</button>
+                  <button class="quiz-option" data-correct="true">A aura — a unicidade e autenticidade ligada ao "aqui e agora"</button>
+                  <button class="quiz-option">O contexto historico da criacao</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Na novela "The Machine Stops" (1909), qual e a consequencia principal da dependencia total da Maquina?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Os humanos tornam-se imortais</button>
+                  <button class="quiz-option">A democracia e fortalecida</button>
+                  <button class="quiz-option" data-correct="true">Quando a Maquina falha, a civilizacao colapsa porque ninguem sabe funcionar sem ela</button>
+                  <button class="quiz-option">A maquina evolui para uma forma de vida autonoma</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. A teoria SCOT (Construcao Social da Tecnologia) opoe-se ao determinismo tecnologico porque defende que:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">A tecnologia nao tem impacto social</button>
+                  <button class="quiz-option" data-correct="true">Sao os grupos sociais e interesses que determinam o desenvolvimento e significado das tecnologias</button>
+                  <button class="quiz-option">O progresso tecnologico e linear e inevitavel</button>
+                  <button class="quiz-option">A ciencia e a tecnologia sao sinonimos</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ihmr-t1')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 2: O Corpo, os Sentidos e as Interfaces                 -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="ihmr-t2">
+        <button class="accordion-header">
+          <span class="topic-number">02</span>
+          <span class="topic-title">O Corpo, os Sentidos e as Interfaces</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>Definicao de Interface:</strong> Uma interface e o ponto de encontro, a superficie de contacto, entre duas entidades distintas — neste contexto, entre o ser humano e a maquina. E o meio atraves do qual o utilizador comunica intencoes ao sistema e o sistema comunica estados ao utilizador. A interface nao e neutra: ela molda, constrange e possibilita tipos especificos de interacao.</p>
+
+                <p><strong>HMI e areas relacionadas:</strong> O campo da interacao humano-maquina abrange diversas subdisciplinas com siglas especificas:</p>
+                <ul>
+                  <li><strong>HMI</strong> (Human-Machine Interface) — termo amplo que engloba toda a interacao entre humanos e maquinas</li>
+                  <li><strong>HCI</strong> (Human-Computer Interaction) — focada na interacao com computadores, com raizes na ciencia cognitiva e ergonomia</li>
+                  <li><strong>HTI</strong> (Human-Technology Interaction) — perspetiva mais alargada que inclui tecnologias alem do computador</li>
+                  <li><strong>GUI</strong> (Graphical User Interface) — interface grafica com janelas, icones, menus e apontador</li>
+                  <li><strong>UI</strong> (User Interface) — termo geral para qualquer interface com o utilizador</li>
+                </ul>
+
+                <p><strong>Direcoes da interacao:</strong> A comunicacao entre humano e maquina opera em duas direcoes complementares:</p>
+                <ul>
+                  <li><strong>H2M (Human to Machine):</strong> o humano envia informacao a maquina — atraves de teclado, rato, toque, voz, gesto, movimento ocular, sinais cerebrais</li>
+                  <li><strong>M2H (Machine to Human):</strong> a maquina comunica ao humano — atraves de ecra, som, vibracoes hapticas, luzes, projecoes</li>
+                </ul>
+
+                <p><strong>Marshall McLuhan (1911-1980)</strong>, na sua obra "Understanding Media: The Extensions of Man" (1964), propoe que toda a tecnologia e uma extensao dos sentidos e capacidades humanas. O martelo e uma extensao do punho, a roda uma extensao do pe, a roupa uma extensao da pele, o circuito eletrico uma extensao do sistema nervoso central. A sua frase mais celebre — <em>"the medium is the message"</em> — significa que o meio de comunicacao, independentemente do conteudo que transporta, transforma a percepcao, os habitos e as estruturas sociais. A televisao mudou a politica nao pelo que mostrava, mas pelo facto de ser televisao.</p>
+
+                <p><strong>Donna Haraway (1944-)</strong>, no seu "Manifesto Cyborg" (1985) e em obras posteriores como "When Species Meet" (2008), propoe a tecnologia nao como mera extensao mas como <em>incorporacao</em>. O cyborg — organismo cibernetico — e uma figura que dissolve as fronteiras entre humano e maquina, natural e artificial, masculino e feminino. Para Haraway, ja somos todos cyborgs: dependemos de vacinas, oculos, proteses, smartphones. Esta condicao nao e alienante mas libertadora — permite reimaginar a identidade para alem das categorias tradicionais.</p>
+
+                <div class="highlight-box">
+                  <p><strong>Evolucao das interfaces:</strong> CLI (anos 1960, linha de comandos textual) → GUI/WYSIWYG (anos 1980, Xerox PARC, Apple Macintosh — icones, janelas, rato) → NUI (anos 2000, Natural User Interface — toque, gestos, voz) → BCI (Brain-Computer Interface — interfaces cerebrais diretas).</p>
+                </div>
+
+                <p><strong>Tipos de interfaces:</strong></p>
+                <ul>
+                  <li><strong>CLI (Command-Line Interface):</strong> interacao textual pura, eficiente para utilizadores experientes, elevada curva de aprendizagem</li>
+                  <li><strong>GUI (Graphical User Interface):</strong> metafora visual do "ambiente de trabalho", janelas, menus, apontador</li>
+                  <li><strong>MDI (Multiple Document Interface):</strong> varias janelas de documentos dentro de uma janela-mae</li>
+                  <li><strong>FBI (Finger-Based Interface):</strong> ecras tateis, gestos de toque (pinch, swipe, tap)</li>
+                  <li><strong>NLI (Natural Language Interface):</strong> interacao por linguagem natural, escrita ou falada</li>
+                  <li><strong>Biometrica:</strong> reconhecimento de impressao digital, facial, da iris, voz</li>
+                  <li><strong>Gesture-Driven:</strong> Kinect, Leap Motion — captura de movimentos corporais</li>
+                  <li><strong>OUI (Organic User Interface):</strong> ecras flexiveis, superficies deformaveis, objetos computacionais tangiveis</li>
+                  <li><strong>BCI/BMI (Brain-Computer/Machine Interface):</strong> traducao direta de sinais cerebrais em comandos</li>
+                </ul>
+
+                <p><strong>Neuralink e interfaces cerebro-computador:</strong> O projeto Neuralink (Elon Musk, fundado em 2016) desenvolve implantes cerebrais de alta resolucao que permitem a comunicacao direta entre o cerebro e dispositivos digitais. Em 2024, o primeiro implante humano (Noland Arbaugh, tetraplegico) demonstrou a capacidade de controlar um cursor de computador apenas com o pensamento. As BCI levantam questoes profundas sobre privacidade mental, identidade, equidade de acesso e a fronteira entre terapia e aprimoramento (enhancement).</p>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block ihmr-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Interface</h4>
+                  <p>Ponto de contacto entre humano e maquina que medeia a comunicacao bidirecional entre ambos.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>H2M / M2H</h4>
+                  <p>Direcoes da interacao: Human-to-Machine (input) e Machine-to-Human (output/feedback).</p>
+                </div>
+                <div class="concept-card">
+                  <h4>The medium is the message</h4>
+                  <p>McLuhan: o proprio meio de comunicacao transforma a percepcao e a sociedade, independentemente do conteudo.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Manifesto Cyborg</h4>
+                  <p>Haraway (1985): tecnologia como incorporacao que dissolve fronteiras tradicionais de identidade.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>NUI</h4>
+                  <p>Natural User Interface — interacao por gestos, toque e voz, tornando a interface "invisivel."</p>
+                </div>
+                <div class="concept-card">
+                  <h4>BCI</h4>
+                  <p>Brain-Computer Interface — traducao direta de sinais cerebrais em comandos computacionais.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block ihmr-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e uma interface no contexto HMI?</div>
+                    <div class="flashcard-back">O ponto de contacto entre o humano e a maquina, que medeia a comunicacao bidirecional — o humano envia intencoes (H2M) e a maquina fornece feedback (M2H).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre HCI e HMI?</div>
+                    <div class="flashcard-back">HCI (Human-Computer Interaction) foca-se na interacao com computadores. HMI (Human-Machine Interface) e mais amplo, abrangendo qualquer tipo de maquina.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que significa "the medium is the message" de McLuhan?</div>
+                    <div class="flashcard-back">Que o meio de comunicacao (imprensa, televisao, internet) transforma a percepcao e a sociedade independentemente do conteudo que transporta. O proprio meio molda a experiencia humana.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que propoe Donna Haraway com a figura do cyborg?</div>
+                    <div class="flashcard-back">Que ja somos todos cyborgs — a tecnologia nao e extensao externa mas incorporacao que dissolve fronteiras entre humano/maquina, natural/artificial, permitindo reimaginar a identidade.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual e a sequencia evolutiva das interfaces?</div>
+                    <div class="flashcard-back">CLI (anos 60, linha de comandos) → GUI/WYSIWYG (anos 80, interface grafica) → NUI (anos 2000, toque e gestos) → BCI (interface cerebral direta).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e uma OUI (Organic User Interface)?</div>
+                    <div class="flashcard-back">Interface organica que utiliza ecras flexiveis, superficies deformaveis e objetos computacionais tangiveis — a forma fisica do dispositivo e parte da interacao.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que diferencia FBI de NUI?</div>
+                    <div class="flashcard-back">FBI (Finger-Based Interface) refere-se especificamente a ecras tateis com gestos de dedos (pinch, swipe). NUI (Natural User Interface) e mais amplo, incluindo voz, gestos corporais e movimentos.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais questoes eticas levanta a Neuralink/BCI?</div>
+                    <div class="flashcard-back">Privacidade mental (quem acede aos dados cerebrais?), identidade pessoal, equidade de acesso, fronteira entre terapia e aprimoramento (enhancement), e seguranca dos implantes.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Segundo McLuhan, a tecnologia funciona como:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Um instrumento neutro sem impacto cultural</button>
+                  <button class="quiz-option" data-correct="true">Uma extensao dos sentidos e capacidades humanas</button>
+                  <button class="quiz-option">Uma ameaca existencial a humanidade</button>
+                  <button class="quiz-option">Um produto exclusivo da revolucao industrial</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Qual a sequencia correta da evolucao das interfaces?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">GUI → CLI → NUI → BCI</button>
+                  <button class="quiz-option">NUI → GUI → CLI → BCI</button>
+                  <button class="quiz-option" data-correct="true">CLI → GUI → NUI → BCI</button>
+                  <button class="quiz-option">BCI → NUI → GUI → CLI</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. O "Manifesto Cyborg" de Donna Haraway (1985) propoe que:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Os humanos devem rejeitar toda a tecnologia</button>
+                  <button class="quiz-option">Os robots substituirao os humanos</button>
+                  <button class="quiz-option" data-correct="true">A tecnologia como incorporacao dissolve fronteiras tradicionais de identidade</button>
+                  <button class="quiz-option">A inteligencia artificial sera consciente ate 2050</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. O que distingue uma BCI das outras interfaces?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Usa ecras tateis de alta resolucao</button>
+                  <button class="quiz-option">Opera exclusivamente por comandos de voz</button>
+                  <button class="quiz-option">Funciona apenas com realidade virtual</button>
+                  <button class="quiz-option" data-correct="true">Traduz sinais cerebrais diretamente em comandos computacionais</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. A interacao M2H (Machine to Human) refere-se a:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">O utilizador digitar comandos no teclado</button>
+                  <button class="quiz-option" data-correct="true">A maquina comunicar estados ao humano (ecra, som, vibracoes)</button>
+                  <button class="quiz-option">A comunicacao entre duas maquinas</button>
+                  <button class="quiz-option">A programacao de software</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ihmr-t2')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 3: Cyborgs, Robots e Robotica                          -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="ihmr-t3">
+        <button class="accordion-header">
+          <span class="topic-number">03</span>
+          <span class="topic-title">Cyborgs, Robots e Robotica</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>Distincoes terminologicas fundamentais:</strong> Embora frequentemente confundidos na cultura popular, os termos que descrevem entidades na fronteira humano-maquina possuem significados distintos e precisos:</p>
+                <ul>
+                  <li><strong>Cyborg:</strong> organismo cibernetico — ser biologico aumentado por componentes mecanicos/eletronicos. O termo foi cunhado por Clynes & Kline (1960). Exemplo: Neil Harbisson, artista com uma antena implantada no cranio que lhe permite "ouvir" cores</li>
+                  <li><strong>Humanoide:</strong> robot com forma geral semelhante ao corpo humano (cabeca, tronco, bracos, pernas) mas sem pretensao de parecer humano. Exemplo: Atlas (Boston Dynamics), ASIMO (Honda)</li>
+                  <li><strong>Androide:</strong> robot com aparencia exterior indistinguivel de um ser humano. Exemplo: Sophia (Hanson Robotics)</li>
+                  <li><strong>Avatar:</strong> representacao digital de uma pessoa num ambiente virtual, controlada em tempo real. Exemplo: avatares em VR, projeto Avatar XPRIZE</li>
+                  <li><strong>Replicante:</strong> ser sintetico biologicamente identico ao humano (termo da ficcao — Blade Runner)</li>
+                  <li><strong>Robot:</strong> maquina programavel capaz de realizar tarefas autonomamente ou semi-autonomamente</li>
+                </ul>
+
+                <p><strong>O conceito de cyborg (Haraway, 1985):</strong> No "Manifesto Cyborg", Donna Haraway utiliza a figura do cyborg como metafora politica para contestar categorias binarias: humano/animal, organismo/maquina, fisico/nao-fisico. O cyborg e um ser de fronteira que habita simultaneamente varios mundos. Esta perspetiva abriu caminho para conceitos como o <strong>pos-organico</strong> (superacao dos limites biologicos) e o <strong>trans-humano</strong> (uso de tecnologia para ampliar as capacidades humanas para alem dos seus limites naturais).</p>
+
+                <p><strong>Cyborgs e pos-humanismo na ficcao:</strong></p>
+                <ul>
+                  <li><strong>Metropolis (1927):</strong> Fritz Lang — Maria e a primeira androide do cinema, levantando questoes sobre autenticidade e manipulacao</li>
+                  <li><strong>Blade Runner (1982):</strong> Ridley Scott — replicantes que sao biologicamente humanos mas fabricados, questionando: o que nos torna humanos?</li>
+                  <li><strong>Ex Machina (2015):</strong> Alex Garland — o teste de Turing como drama psicologico, a manipulacao emocional da IA</li>
+                  <li><strong>Ghost in the Shell (1995):</strong> Mamoru Oshii — o "ghost" (consciencia) numa "shell" (corpo ciborguizado), identidade na era da digitalizacao total</li>
+                  <li><strong>Westworld (2016-2022):</strong> anfitrioes (hosts) que desenvolvem consciencia, as implicacoes eticas de criar seres sencientes para entretenimento</li>
+                </ul>
+
+                <div class="highlight-box">
+                  <p><strong>Origem da palavra "robot":</strong> O termo deriva do checo <em>robota</em> (trabalho forcado/servidao) e foi introduzido por Karel Capek na peca de teatro <em>R.U.R. — Rossum's Universal Robots</em> (1920). Na peca, os robots sao seres organicos fabricados para trabalhar — e acabam por se revoltar contra os seus criadores.</p>
+                </div>
+
+                <p><strong>Tres Leis da Robotica de Isaac Asimov</strong> (1942, publicadas no conto "Runaround"):</p>
+                <ol>
+                  <li><strong>1.a Lei:</strong> Um robot nao pode fazer mal a um ser humano ou, por inacao, permitir que um ser humano sofra algum mal</li>
+                  <li><strong>2.a Lei:</strong> Um robot deve obedecer as ordens dos seres humanos, exceto quando tais ordens entrem em conflito com a Primeira Lei</li>
+                  <li><strong>3.a Lei:</strong> Um robot deve proteger a sua propria existencia, desde que tal protecao nao entre em conflito com a Primeira ou Segunda Lei</li>
+                </ol>
+                <p>Asimov adicionou posteriormente a <strong>Lei Zero:</strong> Um robot nao pode causar dano a humanidade ou, por inacao, permitir que a humanidade sofra algum dano — uma lei que prevalece sobre todas as outras.</p>
+
+                <p><strong>Constituicao de um robot:</strong></p>
+                <ul>
+                  <li><strong>Sensores:</strong> dispositivos de entrada que recolhem informacao do ambiente (analogos aos sentidos humanos)</li>
+                  <li><strong>Atuadores:</strong> dispositivos de saida que executam acoes fisicas (analogos aos musculos)</li>
+                  <li><strong>Controladores:</strong> unidade de processamento que interpreta dados dos sensores e envia comandos aos atuadores</li>
+                  <li><strong>CPU:</strong> processador central que executa os algoritmos de controlo</li>
+                  <li><strong>Fonte de energia:</strong> baterias, fuel cells, energia solar, ligacao a rede</li>
+                </ul>
+
+                <p><strong>Sensores roboticos:</strong></p>
+                <ul>
+                  <li><strong>MEMS (Micro-Electro-Mechanical Systems):</strong> acelerometros, giroscopios miniaturizados</li>
+                  <li><strong>Visao:</strong> camaras RGB, camaras de profundidade (stereo, ToF), LIDAR</li>
+                  <li><strong>Tato:</strong> sensores de pressao, forca, temperatura</li>
+                  <li><strong>Audicao:</strong> microfones, arrays de microfones para localizacao sonora</li>
+                  <li><strong>Distancia:</strong> ultrassons, infravermelhos, laser/LIDAR</li>
+                </ul>
+
+                <p><strong>Atuadores roboticos:</strong></p>
+                <ul>
+                  <li><strong>Motores DC:</strong> rotacao continua, controlo de velocidade simples</li>
+                  <li><strong>Servo motores:</strong> controlo preciso de posicao angular</li>
+                  <li><strong>Stepper (passo-a-passo):</strong> movimentos discretos com alta precisao posicional</li>
+                  <li><strong>Pneumaticos/hidraulicos:</strong> para forca elevada e movimentos lineares</li>
+                </ul>
+
+                <p><strong>Human-Robot Interaction (HRI):</strong> Campo interdisciplinar que estuda como os humanos interagem com robots. Abrange aspetos de design de interface, ergonomia, psicologia (confianca, aceitacao), comunicacao (verbal e nao-verbal), e seguranca. A HRI e crucial no desenvolvimento de robots colaborativos (cobots) e robots sociais.</p>
+
+                <p><strong>Robots de servico:</strong> Robots nao-industriais que prestam servicos uteis aos humanos:</p>
+                <ul>
+                  <li><strong>Educacao:</strong> NAO, Pepper — tutores interativos para criancas</li>
+                  <li><strong>Medicina:</strong> Da Vinci (cirurgia robotica), robots de reabilitacao, robots de companhia para idosos</li>
+                  <li><strong>Industria:</strong> robots de armazem (Amazon Robotics/Kiva), AGVs (Automated Guided Vehicles)</li>
+                  <li><strong>Hotelaria:</strong> robots de recepcao, entrega de quartos (Henn-na Hotel, Japao)</li>
+                  <li><strong>Aeroportos:</strong> robots de informacao, assistencia a passageiros com mobilidade reduzida</li>
+                </ul>
+
+                <p><strong>Tipos de robots industriais:</strong></p>
+                <ul>
+                  <li><strong>Articulado:</strong> 4-6 eixos rotativos, o mais comum, grande flexibilidade (soldadura, pintura)</li>
+                  <li><strong>SCARA:</strong> (Selective Compliance Assembly Robot Arm) — rapido em movimentos horizontais, ideal para montagem</li>
+                  <li><strong>Cartesiano/Portico:</strong> 3 eixos lineares (X, Y, Z), alta precisao, grande area de trabalho</li>
+                  <li><strong>Delta:</strong> estrutura paralela, extremamente rapido, ideal para pick-and-place</li>
+                  <li><strong>Colaborativo (Cobot):</strong> trabalha ao lado de humanos sem barreiras fisicas, sensores de forca, velocidade limitada</li>
+                  <li><strong>Cilindrico:</strong> eixo rotativo com extensao linear, area de trabalho cilindrica</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block ihmr-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Cyborg</h4>
+                  <p>Organismo cibernetico — ser biologico aumentado por componentes mecanicos ou eletronicos (Clynes & Kline, 1960).</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Androide vs. Humanoide</h4>
+                  <p>Androide parece indistinguivel de humano; humanoide tem forma humana mas sem pretensao de aparencia realista.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Leis de Asimov</h4>
+                  <p>Tres leis hierarquicas que regulam o comportamento dos robots: nao causar dano, obedecer, autopreservar-se.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Cobot</h4>
+                  <p>Robot colaborativo que trabalha lado a lado com humanos, sem barreiras fisicas, equipado com sensores de seguranca.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>MEMS</h4>
+                  <p>Micro-Electro-Mechanical Systems — sensores miniaturizados (acelerometros, giroscopios) essenciais na robotica moderna.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>HRI</h4>
+                  <p>Human-Robot Interaction — campo interdisciplinar que estuda design, confianca, comunicacao e seguranca na interacao humano-robot.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block ihmr-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a origem da palavra "robot"?</div>
+                    <div class="flashcard-back">Do checo "robota" (trabalho forcado), introduzida por Karel Capek na peca R.U.R. — Rossum's Universal Robots (1920).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as Tres Leis da Robotica de Asimov?</div>
+                    <div class="flashcard-back">1. Nao causar dano a humanos; 2. Obedecer a humanos (exceto se violar a 1.a); 3. Autopreservar-se (exceto se violar a 1.a ou 2.a). Lei Zero: nao causar dano a humanidade.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que distingue um cyborg de um androide?</div>
+                    <div class="flashcard-back">Cyborg e um ser biologico com componentes mecanicos/eletronicos. Androide e um robot inteiramente artificial com aparencia humana indistinguivel.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 5 componentes basicos de um robot?</div>
+                    <div class="flashcard-back">Sensores (recolhem dados do ambiente), atuadores (executam acoes), controladores (processam informacao), CPU (executa algoritmos), e fonte de energia.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e um cobot?</div>
+                    <div class="flashcard-back">Robot colaborativo que trabalha ao lado de humanos sem barreiras de seguranca fisicas, equipado com sensores de forca e velocidade limitada para garantir seguranca.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 tipos principais de atuadores roboticos?</div>
+                    <div class="flashcard-back">Motores DC (rotacao continua), servo motores (posicao angular precisa), stepper/passo-a-passo (movimentos discretos), e pneumaticos/hidraulicos (forca elevada).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e um robot SCARA?</div>
+                    <div class="flashcard-back">Selective Compliance Assembly Robot Arm — robot rapido em movimentos horizontais, com conformidade seletiva, ideal para tarefas de montagem e pick-and-place.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais obras de ficcao exploram o pos-humanismo?</div>
+                    <div class="flashcard-back">Metropolis (1927), Blade Runner (1982), Ghost in the Shell (1995), Ex Machina (2015), Westworld (2016-2022) — todas questionam a fronteira humano/maquina.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Quem introduziu o termo "robot" e em que obra?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Isaac Asimov em "I, Robot" (1950)</button>
+                  <button class="quiz-option" data-correct="true">Karel Capek em R.U.R. — Rossum's Universal Robots (1920)</button>
+                  <button class="quiz-option">Alan Turing em "Computing Machinery and Intelligence" (1950)</button>
+                  <button class="quiz-option">Philip K. Dick em "Do Androids Dream of Electric Sheep?" (1968)</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Qual a principal diferenca entre um humanoide e um androide?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">O humanoide tem consciencia, o androide nao</button>
+                  <button class="quiz-option">O humanoide e biologico, o androide e mecanico</button>
+                  <button class="quiz-option" data-correct="true">O humanoide tem forma humana sem pretender parecer humano; o androide e visualmente indistinguivel de um humano</button>
+                  <button class="quiz-option">Nao ha diferenca — sao sinonimos</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Segundo as Leis de Asimov, qual delas tem prioridade maxima?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">A 3.a Lei (autopreservacao)</button>
+                  <button class="quiz-option">A 2.a Lei (obediencia)</button>
+                  <button class="quiz-option" data-correct="true">A 1.a Lei (nao causar dano a humanos) — ou a Lei Zero (nao causar dano a humanidade)</button>
+                  <button class="quiz-option">Todas tem igual prioridade</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Qual tipo de robot industrial e ideal para operacoes pick-and-place de alta velocidade?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Articulado</button>
+                  <button class="quiz-option">Cartesiano</button>
+                  <button class="quiz-option">SCARA</button>
+                  <button class="quiz-option" data-correct="true">Delta (estrutura paralela, extremamente rapido)</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. O que caracteriza um cobot (robot colaborativo)?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option" data-correct="true">Trabalha ao lado de humanos sem barreiras fisicas, com sensores de forca e velocidade limitada</button>
+                  <button class="quiz-option">Opera apenas em ambientes sem humanos</button>
+                  <button class="quiz-option">E controlado exclusivamente por inteligencia artificial</button>
+                  <button class="quiz-option">Replica a aparencia humana para interacao social</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ihmr-t3')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 4: Ergonomia, UX e UI Design (ORIGINAL CONTENT)        -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="ihmr-t4">
+        <button class="accordion-header">
+          <span class="topic-number">04</span>
+          <span class="topic-title">Ergonomia, UX e UI Design</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>Ergonomia</strong> (do grego <em>ergon</em> = trabalho + <em>nomos</em> = lei) e a disciplina cientifica que estuda a interacao entre seres humanos e outros elementos de um sistema, aplicando principios teoricos, dados e metodos para otimizar o bem-estar humano e o desempenho global do sistema (definicao da IEA — International Ergonomics Association). A ergonomia divide-se em tres dominios:</p>
+                <ul>
+                  <li><strong>Ergonomia Fisica:</strong> anatomia, antropometria, fisiologia e biomecânica em relacao a atividade fisica. Abrange posturas de trabalho, manuseio de materiais, movimentos repetitivos, doencas musculo-esqueléticas, layout do posto de trabalho, seguranca e saude</li>
+                  <li><strong>Ergonomia Cognitiva:</strong> processos mentais como percepcao, memoria, raciocinio e resposta motora. Abrange carga mental, tomada de decisao, interacao humano-computador, fiabilidade humana, stress laboral e formacao</li>
+                  <li><strong>Ergonomia Organizacional:</strong> otimizacao de sistemas sociotecnicos, incluindo estruturas organizacionais, politicas e processos. Abrange comunicacao, gestao de recursos, organizacao temporal do trabalho, trabalho em equipa, trabalho cooperativo e cultura organizacional</li>
+                </ul>
+
+                <div class="highlight-box">
+                  <p><strong>As 10 Heuristicas de Usabilidade de Jakob Nielsen (1994)</strong> constituem o framework mais influente para avaliar a qualidade de interfaces de utilizador. Nao sao regras rigidas mas principios orientadores de design.</p>
+                </div>
+
+                <p><strong>1. Visibilidade do estado do sistema:</strong> O sistema deve manter o utilizador sempre informado sobre o que esta a acontecer, atraves de feedback adequado e atempado. Exemplos: barra de progresso durante o upload de ficheiros, indicador de "a digitar..." no chat, breadcrumbs de navegacao.</p>
+
+                <p><strong>2. Correspondencia com o mundo real:</strong> O sistema deve falar a linguagem do utilizador, com palavras, frases e conceitos familiares, em vez de termos tecnicos internos. A informacao deve aparecer numa ordem natural e logica. Exemplos: icone de caixote do lixo para apagar, metafora de "pastas" para organizar ficheiros.</p>
+
+                <p><strong>3. Controlo e liberdade do utilizador:</strong> Os utilizadores cometem erros frequentemente e precisam de uma "saida de emergencia" clara para abandonar o estado indesejado sem passar por dialogos extensos. Suportar undo e redo. Exemplos: botao "voltar," confirmacao antes de acoes irreversiveis, desfazer (Ctrl+Z).</p>
+
+                <p><strong>4. Consistencia e padroes:</strong> Os utilizadores nao devem ter de adivinhar se palavras, situacoes ou acoes diferentes significam a mesma coisa. Seguir convencoes da plataforma. Exemplos: o botao de fechar esta sempre no canto superior direito (Windows), links sao azuis e sublinhados.</p>
+
+                <p><strong>5. Prevencao de erros:</strong> Melhor do que boas mensagens de erro e um design cuidadoso que previna os problemas em primeiro lugar. Eliminar condicoes propicias a erro ou pedir confirmacao antes de acoes criticas. Exemplos: desativar botao de submissao ate o formulario estar completo, sugestoes de autocomplete.</p>
+
+                <p><strong>6. Reconhecimento em vez de recordacao:</strong> Minimizar a carga de memoria do utilizador tornando objetos, acoes e opcoes visiveis. O utilizador nao deve ter de memorizar informacao entre dialogos. Exemplos: menus dropdown em vez de campos de texto livre, historico de pesquisa recente.</p>
+
+                <p><strong>7. Flexibilidade e eficiencia de uso:</strong> Aceleradores — invisiveis para o utilizador principiante — podem acelerar a interacao para o utilizador experiente. Permitir personalizacao de acoes frequentes. Exemplos: atalhos de teclado, macros, interfaces personalizaveis.</p>
+
+                <p><strong>8. Design estetico e minimalista:</strong> Os dialogos nao devem conter informacao irrelevante ou raramente necessaria. Cada unidade extra de informacao compete com as unidades relevantes e diminui a sua visibilidade relativa. Exemplos: whitespace generoso, hierarquia visual clara, progressive disclosure.</p>
+
+                <p><strong>9. Ajudar os utilizadores a reconhecer, diagnosticar e recuperar de erros:</strong> As mensagens de erro devem ser expressas em linguagem simples (sem codigos), indicar precisamente o problema e sugerir uma solucao construtiva. Exemplos: "Email invalido — verifique se inclui @" em vez de "Erro 422."</p>
+
+                <p><strong>10. Ajuda e documentacao:</strong> Embora seja melhor que o sistema seja utilizavel sem documentacao, pode ser necessario fornecer ajuda. Essa informacao deve ser facil de pesquisar, focada na tarefa do utilizador, listar passos concretos e nao ser demasiado extensa. Exemplos: tooltips contextuais, FAQs, tutoriais interativos (onboarding).</p>
+
+                <p><strong>UX (User Experience) vs. UI (User Interface):</strong></p>
+                <ul>
+                  <li><strong>UX</strong> abrange a totalidade da experiencia do utilizador com o produto ou servico: pesquisa, estrategia, arquitetura de informacao, fluxos de interacao, testes de usabilidade, acessibilidade. E o "como funciona" e "como se sente." O UX Designer pergunta: o utilizador consegue completar a tarefa de forma eficaz, eficiente e satisfatoria?</li>
+                  <li><strong>UI</strong> foca-se nos elementos visuais e interativos da interface: tipografia, paleta de cores, icones, botoes, espacamento, animacoes, responsividade. E o "como parece." O UI Designer cria a camada visual e interativa que materializa as decisoes de UX.</li>
+                  <li><strong>Complementaridade:</strong> UX sem boa UI resulta num produto funcional mas visualmente desagradavel. UI sem boa UX resulta num produto bonito mas dificil de usar. Ambas sao essenciais para o sucesso do produto.</li>
+                </ul>
+
+                <p><strong>User-Centered Design (UCD) — ISO 9241-210:</strong> O UCD e uma abordagem de design que coloca o utilizador no centro de todo o processo de desenvolvimento. A norma ISO 9241-210 (2019) estabelece 6 principios: (1) o design baseia-se na compreensao explicita dos utilizadores, tarefas e ambientes; (2) os utilizadores sao envolvidos ao longo do processo; (3) o design e conduzido e refinado pela avaliacao centrada no utilizador; (4) o processo e iterativo; (5) o design aborda a experiencia do utilizador como um todo; (6) a equipa de design inclui competencias e perspetivas multidisciplinares.</p>
+
+                <p><strong>Design Thinking</strong> e uma metodologia de resolucao de problemas centrada no humano, popularizada pela IDEO e pelo d.school de Stanford. O processo envolve 5 fases (nao necessariamente lineares):</p>
+                <ol>
+                  <li><strong>Empatizar:</strong> observar e entrevistar utilizadores para compreender as suas necessidades, motivacoes, frustracacoes e contexto de uso</li>
+                  <li><strong>Definir:</strong> sintetizar os insights recolhidos num "ponto de vista" (POV) claro — qual e o problema real a resolver?</li>
+                  <li><strong>Idear:</strong> gerar o maior numero possivel de ideias e solucoes criativas (brainstorming, brainwriting, crazy 8s)</li>
+                  <li><strong>Prototipar:</strong> construir representacoes rapidas e baratas das solucoes para tornar ideias tangiveis e testaveis</li>
+                  <li><strong>Testar:</strong> colocar os prototipos diante dos utilizadores reais, recolher feedback, iterar</li>
+                </ol>
+
+                <p><strong>Acessibilidade — WCAG 2.1:</strong> As Web Content Accessibility Guidelines (WCAG) sao as diretrizes internacionais para a acessibilidade de conteudos web, publicadas pelo W3C. Baseiam-se em 4 principios POUR:</p>
+                <ul>
+                  <li><strong>Percetivel (Perceivable):</strong> a informacao deve poder ser apresentada de formas que os utilizadores possam percecionar (alt-text, legendas, contraste)</li>
+                  <li><strong>Operavel (Operable):</strong> os componentes da interface devem ser operaveis por todos (navegacao por teclado, tempo suficiente, sem convulsoes)</li>
+                  <li><strong>Compreensivel (Understandable):</strong> a informacao e a operacao da interface devem ser compreensiveis (linguagem clara, comportamento previsivel, prevencao de erros)</li>
+                  <li><strong>Robusto (Robust):</strong> o conteudo deve poder ser interpretado por uma ampla variedade de agentes de utilizador, incluindo tecnologias assistivas</li>
+                </ul>
+                <p>Tres niveis de conformidade: <strong>A</strong> (minimo), <strong>AA</strong> (recomendado para a maioria dos contextos, exigido por lei na UE), <strong>AAA</strong> (maximo). O design inclusivo visa criar produtos que funcionem para o maior numero possivel de pessoas, independentemente de capacidade, idade, genero, contexto cultural ou tecnologico.</p>
+
+                <p><strong>Wireframes, mockups e prototipos:</strong></p>
+                <ul>
+                  <li><strong>Wireframe (low-fidelity):</strong> esquema estrutural em preto/cinza sem detalhe visual — define layout, hierarquia, fluxos de navegacao. Rapido de criar, ideal para discussao de conceito</li>
+                  <li><strong>Mockup (high-fidelity):</strong> representacao visual estatica com cores, tipografia, icones e imagens reais — mostra o aspeto final da interface sem interatividade</li>
+                  <li><strong>Prototipo:</strong> simulacao interativa que permite ao utilizador navegar entre ecras e interagir com elementos. Pode ser low-fi (papel, Balsamiq) ou high-fi (Figma, Adobe XD com interacoes e animacoes)</li>
+                </ul>
+
+                <p><strong>Ferramentas de design:</strong> <strong>Figma</strong> (colaborativo, baseado em browser, o mais popular atualmente), <strong>Sketch</strong> (macOS, pioneiro do design de interfaces moderno), <strong>Adobe XD</strong> (integrado no ecossistema Adobe). Figma destaca-se pela colaboracao em tempo real, componentes reutilizaveis, design systems, prototipagem integrada e versao gratuita robusta.</p>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block ihmr-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Ergonomia Cognitiva</h4>
+                  <p>Dominio da ergonomia focado nos processos mentais: percepcao, memoria, raciocinio e carga mental na interacao.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Heuristicas de Nielsen</h4>
+                  <p>10 principios orientadores de usabilidade para avaliar a qualidade de interfaces de utilizador.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>UX vs. UI</h4>
+                  <p>UX = experiencia total (como funciona). UI = camada visual e interativa (como parece). Complementares.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>UCD (ISO 9241-210)</h4>
+                  <p>User-Centered Design — abordagem iterativa que coloca o utilizador no centro do processo de desenvolvimento.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>WCAG 2.1</h4>
+                  <p>Diretrizes de acessibilidade web (W3C). Principios POUR: Percetivel, Operavel, Compreensivel, Robusto. Niveis A/AA/AAA.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Design Thinking</h4>
+                  <p>Metodologia em 5 fases: Empatizar, Definir, Idear, Prototipar, Testar — centrada no humano, iterativa e criativa.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block ihmr-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os tres dominios da ergonomia (IEA)?</div>
+                    <div class="flashcard-back">Ergonomia Fisica (anatomia, posturas, seguranca), Cognitiva (percepcao, memoria, carga mental) e Organizacional (estruturas, processos, cultura de trabalho).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e a heuristica "Visibilidade do estado do sistema"?</div>
+                    <div class="flashcard-back">O sistema deve manter o utilizador informado sobre o que esta a acontecer, com feedback adequado e atempado. Ex.: barra de progresso, indicador "a carregar."</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre UX e UI?</div>
+                    <div class="flashcard-back">UX abrange toda a experiencia (pesquisa, fluxos, usabilidade — "como funciona"). UI foca-se nos elementos visuais e interativos (cores, tipografia — "como parece"). Sao complementares.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 5 fases do Design Thinking?</div>
+                    <div class="flashcard-back">1. Empatizar (compreender utilizadores), 2. Definir (sintetizar o problema), 3. Idear (gerar solucoes), 4. Prototipar (construir representacoes), 5. Testar (avaliar com utilizadores).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que significam os principios POUR no WCAG?</div>
+                    <div class="flashcard-back">Perceivable (percetivel), Operable (operavel), Understandable (compreensivel), Robust (robusto) — os 4 pilares da acessibilidade web.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e a norma ISO 9241-210?</div>
+                    <div class="flashcard-back">Norma internacional para User-Centered Design: design baseado na compreensao de utilizadores, envolvimento ao longo do processo, avaliacao centrada no utilizador, iteracao, abordagem holistica, equipa multidisciplinar.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que distingue wireframe, mockup e prototipo?</div>
+                    <div class="flashcard-back">Wireframe = esquema estrutural sem visual. Mockup = representacao visual estatica (cores, tipografia). Prototipo = simulacao interativa navegavel (low-fi ou high-fi).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual heuristica de Nielsen diz "reconhecimento em vez de recordacao"?</div>
+                    <div class="flashcard-back">A 6.a heuristica: minimizar a carga de memoria tornando opcoes e acoes visiveis. O utilizador nao deve ter de memorizar informacao entre ecras. Ex.: menus dropdown, historico recente.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual das seguintes NAO e uma das 10 heuristicas de Nielsen?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Visibilidade do estado do sistema</button>
+                  <button class="quiz-option">Prevencao de erros</button>
+                  <button class="quiz-option" data-correct="true">Maximizacao de funcionalidades visiveis</button>
+                  <button class="quiz-option">Consistencia e padroes</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Qual a principal diferenca entre UX e UI?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">UX foca-se na aparencia, UI na funcionalidade</button>
+                  <button class="quiz-option" data-correct="true">UX abrange toda a experiencia (como funciona), UI foca-se nos elementos visuais (como parece)</button>
+                  <button class="quiz-option">UX e para aplicacoes moveis, UI e para web</button>
+                  <button class="quiz-option">UX e subjetivo, UI e objetivo</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Qual o acronimo POUR no contexto WCAG?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Practical, Organized, Useful, Resilient</button>
+                  <button class="quiz-option">Planned, Optimized, Universal, Responsive</button>
+                  <button class="quiz-option" data-correct="true">Perceivable, Operable, Understandable, Robust</button>
+                  <button class="quiz-option">Precise, Observable, Usable, Reliable</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. No Design Thinking, qual fase envolve gerar o maior numero possivel de ideias?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Empatizar</button>
+                  <button class="quiz-option">Definir</button>
+                  <button class="quiz-option" data-correct="true">Idear</button>
+                  <button class="quiz-option">Prototipar</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. Qual nivel de conformidade WCAG e geralmente exigido por lei na UE?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Nivel A</button>
+                  <button class="quiz-option" data-correct="true">Nivel AA</button>
+                  <button class="quiz-option">Nivel AAA</button>
+                  <button class="quiz-option">Nao ha nivel exigido</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ihmr-t4')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 5: Metodologias e Tecnologias para IHM (ORIGINAL)      -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="ihmr-t5">
+        <button class="accordion-header">
+          <span class="topic-number">05</span>
+          <span class="topic-title">Metodologias e Tecnologias para IHM</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>Metodologias de desenvolvimento de interfaces:</strong> A escolha da metodologia de desenvolvimento tem impacto direto na qualidade da interface resultante e na capacidade de responder as necessidades reais dos utilizadores.</p>
+                <ul>
+                  <li><strong>Waterfall (cascata):</strong> processo sequencial e linear (requisitos → design → implementacao → testes → manutencao). Cada fase completa-se antes de iniciar a seguinte. Vantagens: documentacao completa, previsibilidade. Desvantagens: pouca flexibilidade, feedback tardio dos utilizadores, risco elevado de entregar produto desadequado</li>
+                  <li><strong>Agile:</strong> processo iterativo e incremental com ciclos curtos (sprints de 2-4 semanas). Prioriza a entrega continua de valor, colaboracao com o cliente e resposta a mudanca. Frameworks: Scrum (papeis definidos: Product Owner, Scrum Master, equipa), Kanban (fluxo continuo, visualizacao do trabalho)</li>
+                  <li><strong>Lean UX:</strong> aplica principios do Lean Startup ao design de UX. Baseado em hipoteses (assumptions) que sao testadas rapidamente com MVPs (Minimum Viable Products). Ciclo: Build → Measure → Learn. Minimiza desperdicio, maximiza aprendizagem. Ideal para contextos de alta incerteza</li>
+                </ul>
+
+                <p><strong>Pesquisa com utilizadores:</strong> A pesquisa e o alicerce de qualquer processo de design centrado no utilizador. Os metodos dividem-se em qualitativos (compreensao profunda) e quantitativos (medicao e generalizacao):</p>
+                <ul>
+                  <li><strong>Entrevistas:</strong> conversas estruturadas, semiestruturadas ou abertas com utilizadores-alvo. Permitem explorar motivacoes, necessidades, frustracacoes e contextos de uso em profundidade. Amostra tipica: 5-15 participantes</li>
+                  <li><strong>Questionarios:</strong> recolha de dados quantitativos a grande escala. Ferramentas: Google Forms, Typeform, SurveyMonkey. Escalas comuns: Likert (1-5 ou 1-7), SUS (System Usability Scale — 10 itens, pontuacao 0-100)</li>
+                  <li><strong>Observacao contextual (contextual inquiry):</strong> o investigador observa e entrevista utilizadores no seu ambiente natural de trabalho/uso. Captura comportamentos reais (nao declarados), workarounds, frustracacoes silenciosas. Metodo etnografico aplicado ao design</li>
+                </ul>
+
+                <p><strong>Personas e cenarios de uso:</strong></p>
+                <ul>
+                  <li><strong>Personas:</strong> representacoes ficticias mas baseadas em dados reais de arquétipos de utilizadores. Incluem: nome, foto, demografia, objetivos, frustracacoes, comportamentos, citacao representativa, nivel tecnologico. Servem para alinhar a equipa em torno de quem esta a projetar. Tipicamente, 3-5 personas por projeto</li>
+                  <li><strong>Cenarios de uso:</strong> narrativas que descrevem como uma persona especifica interage com o produto para atingir um objetivo concreto. Incluem contexto (onde, quando, com quem), motivacao, passos da interacao e resultado esperado</li>
+                </ul>
+
+                <p><strong>Card sorting e Arquitetura de Informacao (AI):</strong></p>
+                <ul>
+                  <li><strong>Card sorting:</strong> tecnica em que os participantes organizam cartoes com itens de conteudo em categorias que fazem sentido para eles. Pode ser <em>aberto</em> (participantes criam as categorias) ou <em>fechado</em> (categorias pre-definidas). Ferramentas: OptimalSort, cartoes fisicos. Resulta em estruturas de navegacao intuitivas</li>
+                  <li><strong>Arquitetura de Informacao:</strong> a disciplina de organizar, estruturar e rotular conteudo de forma que os utilizadores consigam encontrar o que procuram. Artefactos: sitemaps, taxonomias, sistemas de navegacao. Principios: agrupamento logico, rotulagem clara, hierarquia evidente</li>
+                </ul>
+
+                <p><strong>Testes de usabilidade:</strong></p>
+                <ul>
+                  <li><strong>Think-aloud (pensar em voz alta):</strong> o participante verbaliza o seu raciocinio enquanto realiza tarefas. Revela modelos mentais, expectativas, confusoes e estrategias. 5-8 participantes identificam 80% dos problemas de usabilidade (Nielsen, 2000)</li>
+                  <li><strong>A/B testing:</strong> duas versoes de um elemento (A e B) sao apresentadas a grupos diferentes de utilizadores para medir qual produz melhores resultados (taxas de conversao, tempo na tarefa, etc.). Requer amostra grande para significancia estatistica</li>
+                  <li><strong>Eye tracking:</strong> tecnologia que regista os movimentos oculares do utilizador para revelar padroes de atencao visual. Produz heat maps (mapas de calor), gaze plots (trajectoiras oculares) e areas de interesse (AOI). Revela o que o utilizador ve (e ignora) na interface</li>
+                </ul>
+
+                <div class="highlight-box">
+                  <p><strong>Hardware para IHM:</strong> A interacao humano-maquina fisica depende de uma variedade de sensores e protocolos de comunicacao que constituem a base da computacao fisica e da IoT.</p>
+                </div>
+
+                <p><strong>Sensores para IHM:</strong></p>
+                <ul>
+                  <li><strong>Proximidade:</strong> ultrassons (HC-SR04), infravermelhos (SHARP GP2Y0A) — detetam a presenca ou distancia de objetos</li>
+                  <li><strong>Temperatura:</strong> termistores (NTC/PTC), sensores digitais (DHT11, DHT22, DS18B20) — monitorizam temperatura ambiente ou corporal</li>
+                  <li><strong>Luz:</strong> LDR (Light Dependent Resistor), fotodiodos, BH1750 — medem intensidade luminosa para ajuste automatico</li>
+                  <li><strong>Movimento:</strong> PIR (Passive Infrared), acelerometros (ADXL345), giroscopios (MPU6050) — detetam movimento e orientacao</li>
+                </ul>
+
+                <p><strong>Protocolos de comunicacao:</strong></p>
+                <ul>
+                  <li><strong>Bluetooth/BLE:</strong> curto alcance (10-100m), baixo consumo, ideal para wearables e perifericos</li>
+                  <li><strong>Wi-Fi:</strong> medio alcance, alta largura de banda, ligacao a internet, ideal para dispositivos IoT domesticos</li>
+                  <li><strong>NFC (Near Field Communication):</strong> alcance curtissimo (< 10cm), pagamentos sem contacto, emparelhamento rapido</li>
+                  <li><strong>RFID (Radio-Frequency Identification):</strong> identificacao por radiofrequencia, tags passivas ou ativas, logistica, controlo de acesso</li>
+                </ul>
+
+                <p><strong>Plataformas de prototipagem:</strong></p>
+                <ul>
+                  <li><strong>Arduino:</strong> microcontrolador open-source, programacao em C/C++, vasta biblioteca de sensores/atuadores, ideal para prototipagem rapida de hardware interativo. Modelos: Uno (basico), Mega (mais pinos), Nano (compacto)</li>
+                  <li><strong>Raspberry Pi:</strong> computador single-board com sistema operativo Linux, GPIO para ligacao a sensores, processamento mais potente que Arduino, ideal para projetos que requerem processamento de imagem, rede, ou interfaces graficas</li>
+                  <li><strong>Tinkercad:</strong> plataforma online gratuita (Autodesk) para simulacao de circuitos Arduino, modelacao 3D e prototipagem virtual. Permite testar circuitos sem hardware fisico — ferramenta utilizada nesta UC para o projeto</li>
+                </ul>
+
+                <p><strong>Integracao robotica-interface — arquitetura de sistema:</strong> Um sistema IHM robotico tipico integra tres camadas: (1) <strong>camada de percepcao</strong> — sensores que recolhem dados do ambiente e do utilizador; (2) <strong>camada de decisao</strong> — software que processa dados, aplica logica/IA, e toma decisoes; (3) <strong>camada de atuacao</strong> — motores, ecras, altifalantes que executam acoes e fornecem feedback. A interface do utilizador conecta as tres camadas, oferecendo controlo (input) e monitorizacao (output).</p>
+
+                <p><strong>Industry 4.0 e IHM:</strong> A quarta revolucao industrial e caracterizada pela convergencia de sistemas fisicos, digitais e biologicos:</p>
+                <ul>
+                  <li><strong>Cobots:</strong> robots colaborativos que trabalham com humanos em linhas de producao flexiveis, com interfaces intuitivas de programacao (ensino por demonstracao, tablets)</li>
+                  <li><strong>Digital Twins (gemeos digitais):</strong> replicas virtuais de sistemas fisicos que permitem simulacao, monitorizacao e otimizacao em tempo real. Interface entre o mundo fisico e o digital</li>
+                  <li><strong>IoT (Internet of Things):</strong> rede de objetos fisicos equipados com sensores, software e conectividade que trocam dados. Dashboards e interfaces de monitorizacao sao essenciais para tornar os dados acessiveis e acionaveis por humanos</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block ihmr-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Lean UX</h4>
+                  <p>Metodologia baseada em hipoteses testadas com MVPs. Ciclo Build → Measure → Learn. Minimiza desperdicio, maximiza aprendizagem.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Personas</h4>
+                  <p>Representacoes ficticias de arquetipos de utilizadores, baseadas em dados reais, que alinham a equipa de design.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Card Sorting</h4>
+                  <p>Tecnica de AI em que participantes organizam itens em categorias, revelando estruturas de navegacao intuitivas.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Think-Aloud</h4>
+                  <p>Teste de usabilidade onde o participante verbaliza o seu raciocinio durante tarefas, revelando modelos mentais.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Digital Twin</h4>
+                  <p>Replica virtual de um sistema fisico que permite simulacao, monitorizacao e otimizacao em tempo real.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Arduino / Tinkercad</h4>
+                  <p>Arduino: microcontrolador open-source para prototipagem. Tinkercad: simulador online gratuito para testar circuitos virtuais.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block ihmr-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais as diferencas entre Waterfall, Agile e Lean UX?</div>
+                    <div class="flashcard-back">Waterfall: sequencial, rigido, feedback tardio. Agile: iterativo, sprints curtos, colaboracao continua. Lean UX: hipoteses + MVPs, ciclo Build-Measure-Learn, minimiza desperdicio.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e uma persona e quantas se recomendam por projeto?</div>
+                    <div class="flashcard-back">Representacao ficticia de um arquetipo de utilizador, baseada em dados reais (nome, objetivos, frustracacoes). Tipicamente 3-5 personas por projeto.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre card sorting aberto e fechado?</div>
+                    <div class="flashcard-back">Aberto: participantes criam as proprias categorias. Fechado: categorias sao pre-definidas pelo investigador. Ambos revelam como utilizadores agrupam mentalmente o conteudo.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quantos participantes num teste think-aloud identificam 80% dos problemas?</div>
+                    <div class="flashcard-back">5 a 8 participantes sao suficientes para identificar 80% dos problemas de usabilidade (Nielsen, 2000). E um metodo qualitativo economico e eficaz.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que distingue Arduino de Raspberry Pi?</div>
+                    <div class="flashcard-back">Arduino: microcontrolador simples, C/C++, ideal para controlo de sensores/atuadores. Raspberry Pi: computador single-board com Linux, mais potente, ideal para processamento de imagem, rede e interfaces graficas.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que sao Digital Twins no contexto Industry 4.0?</div>
+                    <div class="flashcard-back">Replicas virtuais de sistemas fisicos que permitem simulacao, monitorizacao e otimizacao em tempo real — a interface entre o mundo fisico e o digital na industria.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual metodologia utiliza o ciclo Build → Measure → Learn?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Waterfall</button>
+                  <button class="quiz-option">Scrum</button>
+                  <button class="quiz-option" data-correct="true">Lean UX</button>
+                  <button class="quiz-option">Kanban</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. O que e um card sorting aberto?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Os utilizadores orderam cartoes por prioridade</button>
+                  <button class="quiz-option" data-correct="true">Os participantes organizam itens em categorias que eles proprios criam</button>
+                  <button class="quiz-option">O investigador define as categorias e os participantes colocam cartoes nelas</button>
+                  <button class="quiz-option">Uma tecnica de brainstorming visual com post-its</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. Que tecnologia de teste de usabilidade produz heat maps e gaze plots?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">A/B testing</button>
+                  <button class="quiz-option">Think-aloud</button>
+                  <button class="quiz-option" data-correct="true">Eye tracking</button>
+                  <button class="quiz-option">Questionario SUS</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. Qual protocolo de comunicacao tem alcance inferior a 10cm e e usado em pagamentos sem contacto?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Bluetooth</button>
+                  <button class="quiz-option">Wi-Fi</button>
+                  <button class="quiz-option" data-correct="true">NFC (Near Field Communication)</button>
+                  <button class="quiz-option">RFID</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. O que e Tinkercad no contexto desta UC?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Uma linguagem de programacao para robots</button>
+                  <button class="quiz-option" data-correct="true">Plataforma online gratuita da Autodesk para simulacao de circuitos Arduino e modelacao 3D</button>
+                  <button class="quiz-option">Um framework JavaScript para interfaces web</button>
+                  <button class="quiz-option">Um sensor de temperatura industrial</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ihmr-t5')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- TOPIC 6: IA, Assistentes Virtuais e Etica                     -->
+      <!-- ============================================================ -->
+      <div class="accordion-item" data-topic="ihmr-t6">
+        <button class="accordion-header">
+          <span class="topic-number">06</span>
+          <span class="topic-title">IA, Assistentes Virtuais e Etica</span>
+          <span class="topic-status">Pendente</span>
+          <span class="accordion-icon">&#9654;</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-content">
+
+            <!-- Theory -->
+            <div class="content-block">
+              <h3>Teoria</h3>
+              <div class="theory-text">
+                <p><strong>Tipos de assistentes inteligentes — distincoes:</strong></p>
+                <ul>
+                  <li><strong>Virtual Assistants (VA):</strong> sistemas baseados em IA que interpretam linguagem natural (voz ou texto) e executam tarefas para o utilizador. Sao proativos, aprendem preferencias, integram-se com servicos e dispositivos. Exemplos: Siri (Apple, 2011), Cortana (Microsoft, 2014), Alexa (Amazon, 2014), Google Assistant (2016), Bixby (Samsung, 2017)</li>
+                  <li><strong>Chatbots:</strong> programas desenhados para simular conversacao humana, tipicamente num ambito mais restrito que os VA. Podem ser <em>transacionais</em> (completam tarefas especificas: reservar mesa, rastrear encomenda) ou <em>conversacionais</em> (dialogam de forma mais aberta e contextual). Baseiam-se em regras (decision trees) ou em NLP (Natural Language Processing)/IA generativa</li>
+                  <li><strong>AI Agents:</strong> sistemas autonomos que percebem o ambiente, tomam decisoes e executam acoes sequenciais para atingir objetivos complexos, com minima intervencao humana. Vao alem do chatbot porque mantem memoria de longo prazo, planeiam, usam ferramentas e delegam subtarefas</li>
+                </ul>
+
+                <div class="highlight-box">
+                  <p><strong>Cronologia dos VA:</strong> Siri (2011, pioneiro em VA movel) → Cortana (2014, integrado no Windows) → Alexa (2014, revolucionou a smart home via Echo) → Google Assistant (2016, integrado com Knowledge Graph) → Bixby (2017, controlo de dispositivos Samsung).</p>
+                </div>
+
+                <p><strong>Porque falham os chatbots (Janssen et al., 2021):</strong> Um estudo sistematico identificou <strong>6 razoes principais de falha</strong> e <strong>12 fatores criticos de sucesso</strong> para chatbots:</p>
+                <p><strong>Razoes de falha:</strong></p>
+                <ol>
+                  <li>Incapacidade de compreender o contexto e a intencao do utilizador</li>
+                  <li>Falta de personalizacao — respostas genericas que nao se adaptam ao utilizador</li>
+                  <li>Expectativas desalinhadas — o utilizador espera uma capacidade que o chatbot nao possui</li>
+                  <li>Escalacao deficiente — ausencia de transicao suave para um agente humano quando necessario</li>
+                  <li>Experiencia conversacional pobre — fluxos rigidos, repeticoes, linguagem robotica</li>
+                  <li>Falta de transparencia — o utilizador nao sabe que esta a falar com um bot, ou o bot nao comunica as suas limitacoes</li>
+                </ol>
+                <p><strong>Fatores criticos de sucesso:</strong> definicao clara do ambito, design conversacional natural, escalacao fluida para humanos, transparencia, personalizacao, monitorizacao e melhoria continua, integracao com sistemas existentes, tempo de resposta rapido, onboarding claro, gestao de expectativas, tom de voz consistente, protecao de dados.</p>
+
+                <p><strong>Estereotipos de genero no design de VA (Woods, 2018):</strong> A investigacao de Natasha Woods revelou como o design de assistentes virtuais perpetua estereotipos de genero: a maioria dos VA comerciais foi lancada com vozes femininas por defeito (Siri, Alexa, Cortana, Google Assistant). Estudos mostram que esta escolha reforca a associacao mulher-servico/submissao. A UNESCO publicou o relatorio "I'd blush if I could" (2019) criticando especificamente a passividade de Siri face a linguagem abusiva. Mais recentemente, diversas empresas comecaram a oferecer vozes neutras ou masculinas por defeito.</p>
+
+                <p><strong>IA e privacidade:</strong></p>
+                <ul>
+                  <li><strong>Frank Pasquale (2015), "The Black Box Society":</strong> argumenta que algoritmos opacos de empresas e governos tomam decisoes que afetam profundamente a vida das pessoas (credito, emprego, saude, justica) sem qualquer transparencia ou responsabilizacao. A "caixa negra" algorítmica e um problema democratico fundamental</li>
+                  <li><strong>Shoshana Zuboff (2018), "The Age of Surveillance Capitalism":</strong> cunhou o termo "capitalismo de vigilancia" para descrever o modelo economico em que a experiencia humana e extraida como materia-prima gratuita para producao de dados comportamentais preditivos. Empresas como Google e Facebook nao vendem publicidade — vendem previsoes sobre o comportamento humano</li>
+                </ul>
+
+                <p><strong>Desafios eticos da IA:</strong></p>
+                <ul>
+                  <li><strong>Justica algoritmica:</strong> os algoritmos de IA podem amplificar discriminacoes existentes nos dados de treino (raciais, de genero, socioeconomicas). Exemplo: sistemas de recrutamento que discriminam mulheres, ou algoritmos de reincidencia criminal que prejudicam minorias</li>
+                  <li><strong>Vies (bias):</strong> desvios sistematicos nos resultados da IA, originados nos dados, no design ou na interpretacao. Tipos: vies historico, vies de representacao, vies de medicao, vies de agregacao</li>
+                  <li><strong>Privacidade:</strong> recolha massiva de dados pessoais, reconhecimento facial sem consentimento, vigilancia em espaco publico, perfis comportamentais detalhados</li>
+                </ul>
+
+                <p><strong>AI Now Report (Whittaker et al., 2018) — 10 recomendacoes:</strong> O AI Now Institute (NYU) publicou um relatorio influente com recomendacoes para governos e sociedade civil, incluindo: (1) auditorias de impacto de IA; (2) proibicao de reconhecimento facial por autoridades; (3) fim do uso de IA em "caixas negras" na justica; (4) novos regimes de responsabilizacao; (5) transparencia no uso de dados de treino; (6) envolvimento da sociedade civil; (7) protecao de trabalhadores contra vigilancia; (8) avaliacao de impacto em direitos fundamentais; (9) investigacao sobre concentracao de poder em IA; (10) diversidade obrigatoria nas equipas de desenvolvimento.</p>
+
+                <p><strong>Regulamento UE de IA (2024/1689):</strong> O AI Act europeu, aprovado em 2024, e o primeiro framework legislativo abrangente sobre IA no mundo. Baseia-se numa abordagem de <strong>risco</strong> com 4 niveis:</p>
+                <ul>
+                  <li><strong>Risco inaceitavel (proibido):</strong> scoring social, manipulacao subliminar, vigilancia biometrica em massa, categorizacao biometrica por raca/orientacao</li>
+                  <li><strong>Risco alto (regulado):</strong> IA em saude, educacao, recrutamento, justica, infraestruturas criticas — exige avaliacao de conformidade, documentacao tecnica, supervisao humana, transparencia</li>
+                  <li><strong>Risco limitado:</strong> chatbots, deepfakes — obrigacoes de transparencia (o utilizador deve saber que interage com IA ou que o conteudo e gerado artificialmente)</li>
+                  <li><strong>Risco minimo:</strong> filtros de spam, jogos com IA — sem obrigacoes especificas</li>
+                </ul>
+
+                <p><strong>De caixa negra a caixa branca:</strong> A transicao para uma IA mais responsavel exige quatro pilares: (1) <strong>Explicabilidade (XAI):</strong> a capacidade de compreender e explicar como a IA chegou a uma decisao; (2) <strong>Robustez:</strong> resistencia a ataques adversariais, dados corrompidos e falhas; (3) <strong>Justica (fairness):</strong> ausencia de discriminacao sistematica nos resultados; (4) <strong>Privacidade:</strong> protecao de dados pessoais, minimizacao de recolha, anonimizacao.</p>
+
+                <p><strong>Moral Machine Experiment (MIT, 2018):</strong> Experiencia global online que recolheu mais de 40 milhoes de decisoes de 233 paises para compreender como as pessoas tomam decisoes morais em cenarios de veiculos autonomos (dilemas tipo "trolley problem" adaptados). Os resultados revelaram variacoes culturais significativas nas preferencias morais: culturas ocidentais tendem a priorizar os jovens sobre os idosos; culturas orientais mostram maior respeito pelos idosos; existe um consenso quase universal em poupar criancas e o maior numero de vidas. O estudo levanta questoes fundamentais: quem deve programar a etica nos algoritmos? Devemos seguir preferencias culturais locais ou principios universais?</p>
+              </div>
+            </div>
+
+            <!-- Concept Cards -->
+            <div class="content-block ihmr-accent">
+              <h3>Conceitos-Chave</h3>
+              <div class="concept-grid">
+                <div class="concept-card">
+                  <h4>Capitalismo de Vigilancia</h4>
+                  <p>Zuboff (2018): modelo economico em que a experiencia humana e extraida como materia-prima para dados comportamentais preditivos.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Black Box Society</h4>
+                  <p>Pasquale (2015): algoritmos opacos tomam decisoes vitais (credito, emprego, justica) sem transparencia ou responsabilizacao.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>AI Act (UE 2024/1689)</h4>
+                  <p>Framework baseado em risco: inaceitavel (proibido), alto (regulado), limitado (transparencia), minimo (sem restricoes).</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Explicabilidade (XAI)</h4>
+                  <p>Capacidade de compreender e explicar como um sistema de IA chegou a uma determinada decisao ou resultado.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Vies Algoritmico</h4>
+                  <p>Desvio sistematico nos resultados da IA causado por dados de treino enviesados, design ou interpretacao tendenciosa.</p>
+                </div>
+                <div class="concept-card">
+                  <h4>Moral Machine</h4>
+                  <p>Experiencia MIT (2018): 40M decisoes morais de 233 paises sobre dilemas eticos de veiculos autonomos.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="content-block ihmr-accent">
+              <h3>Flashcards</h3>
+              <p class="flashcard-hint">Clique num cartao para revelar a resposta</p>
+              <div class="flashcard-grid">
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Qual a diferenca entre VA, Chatbot e AI Agent?</div>
+                    <div class="flashcard-back">VA: sistema IA proativo que executa tarefas variadas (Siri, Alexa). Chatbot: simula conversacao num ambito restrito (transacional/conversacional). AI Agent: sistema autonomo que planeia, usa ferramentas e executa acoes complexas com minima intervencao.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao as 6 razoes de falha dos chatbots (Janssen et al., 2021)?</div>
+                    <div class="flashcard-back">1. Nao compreender contexto/intencao; 2. Falta de personalizacao; 3. Expectativas desalinhadas; 4. Escalacao deficiente para humano; 5. Experiencia conversacional pobre; 6. Falta de transparencia.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o "capitalismo de vigilancia" segundo Zuboff?</div>
+                    <div class="flashcard-back">Modelo economico em que a experiencia humana e extraida como materia-prima gratuita para producao de dados comportamentais preditivos. Empresas vendem previsoes sobre comportamento humano, nao publicidade.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 niveis de risco do AI Act europeu?</div>
+                    <div class="flashcard-back">Inaceitavel (proibido: scoring social, vigilancia biometrica de massa), Alto (regulado: saude, educacao, justica), Limitado (transparencia: chatbots, deepfakes), Minimo (sem restricoes: spam, jogos).</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que revelou o Moral Machine Experiment?</div>
+                    <div class="flashcard-back">Variacoes culturais significativas nas decisoes morais: ocidente prioriza jovens, oriente respeita idosos. Consenso quase universal em poupar criancas e o maior numero de vidas. 40M decisoes de 233 paises.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que critica o relatorio "I'd blush if I could" (UNESCO, 2019)?</div>
+                    <div class="flashcard-back">Critica os estereotipos de genero no design de VA: vozes femininas por defeito, passividade face a linguagem abusiva (ex.: Siri), reforco da associacao mulher-servico/submissao.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">Quais sao os 4 pilares da IA responsavel (caixa branca)?</div>
+                    <div class="flashcard-back">1. Explicabilidade (XAI) — compreender decisoes; 2. Robustez — resistir a ataques e falhas; 3. Justica (fairness) — sem discriminacao sistematica; 4. Privacidade — protecao de dados, minimizacao de recolha.</div>
+                  </div>
+                </div>
+                <div class="flashcard">
+                  <div class="flashcard-inner">
+                    <div class="flashcard-front">O que e o vies algoritmico e quais os seus tipos?</div>
+                    <div class="flashcard-back">Desvio sistematico nos resultados da IA. Tipos: vies historico (dados refletem discriminacao passada), vies de representacao (sub-representacao de grupos), vies de medicao (metricas inadequadas), vies de agregacao (generalizacao de subgrupos).</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz -->
+            <div class="content-block">
+              <h3>Quiz</h3>
+              <div class="quiz-block">
+                <p class="quiz-question-text">1. Qual foi o primeiro assistente virtual movel lancado comercialmente?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Alexa (2014)</button>
+                  <button class="quiz-option" data-correct="true">Siri (2011)</button>
+                  <button class="quiz-option">Google Assistant (2016)</button>
+                  <button class="quiz-option">Cortana (2014)</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">2. Segundo Zuboff, o que vendem empresas como Google e Facebook?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Publicidade direcionada</button>
+                  <button class="quiz-option">Dados pessoais em bruto</button>
+                  <button class="quiz-option" data-correct="true">Previsoes sobre o comportamento humano</button>
+                  <button class="quiz-option">Servicos de computacao em nuvem</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">3. No AI Act europeu, em que nivel de risco se enquadram os chatbots?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">Risco inaceitavel</button>
+                  <button class="quiz-option">Risco alto</button>
+                  <button class="quiz-option" data-correct="true">Risco limitado (obrigacoes de transparencia)</button>
+                  <button class="quiz-option">Risco minimo</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">4. O que e XAI (Explainable AI)?</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">IA que funciona sem dados de treino</button>
+                  <button class="quiz-option">IA que gera conteudo criativo</button>
+                  <button class="quiz-option" data-correct="true">IA cuja logica de decisao pode ser compreendida e explicada por humanos</button>
+                  <button class="quiz-option">IA que opera exclusivamente em hardware especializado</button>
+                </div>
+              </div>
+              <div class="quiz-block">
+                <p class="quiz-question-text">5. O Moral Machine Experiment (MIT) investigou principalmente:</p>
+                <div class="quiz-options">
+                  <button class="quiz-option">A precisao de algoritmos de conducao autonoma</button>
+                  <button class="quiz-option">A eficiencia energetica de veiculos eletricos</button>
+                  <button class="quiz-option" data-correct="true">Variacoes culturais nas decisoes morais em dilemas de veiculos autonomos</button>
+                  <button class="quiz-option">A fiabilidade de sensores LIDAR em condicoes adversas</button>
+                </div>
+              </div>
+              <div class="quiz-score quiz-score-display hidden"></div>
+              <button class="quiz-reset" onclick="resetQuiz(this)">Repetir Quiz</button>
+            </div>
+
+            <button class="btn btn-success btn-sm mark-studied" onclick="toggleStudied('ihmr-t6')">Marcar como estudado</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Evaluation Section                                            -->
+  <!-- ============================================================ -->
+  <section class="section">
+    <h2>Avaliacao</h2>
+    <div class="card">
+      <div class="eval-grid">
+        <div class="eval-card">
+          <div class="eval-weight" style="background:linear-gradient(135deg,var(--ihmr),var(--ihmr-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">60%</div>
+          <div class="eval-label">M1 — Projeto em Grupo</div>
+          <div class="eval-detail">29 de maio (Pitch + Relatorio)</div>
+        </div>
+        <div class="eval-card">
+          <div class="eval-weight" style="background:linear-gradient(135deg,var(--ihmr),var(--ihmr-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">40%</div>
+          <div class="eval-label">M2 — Participacao</div>
+          <div class="eval-detail">Avaliacao continua</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Project Info Section                                          -->
+  <!-- ============================================================ -->
+  <section class="section">
+    <h2>Projeto Final</h2>
+    <div class="card">
+      <div class="theory-text">
+        <p><strong>Entregaveis:</strong> Relatorio escrito (contextualização teórica, justificacao de design, documentacao tecnica) + Pitch de apresentacao (15-20 minutos por grupo, com demonstracao funcional).</p>
+
+        <p><strong>Ferramentas obrigatorias:</strong></p>
+        <ul>
+          <li><strong>Tinkercad (Autodesk):</strong> para a componente de robotica — desenho e simulacao de circuitos com Arduino (sensores, atuadores, logica de controlo)</li>
+          <li><strong>Figma:</strong> para a componente de interface — design de UI/UX do sistema, wireframes, prototipos interativos de alta fidelidade</li>
+        </ul>
+
+        <p><strong>Grelha de avaliacao resumida:</strong></p>
+      </div>
+      <div class="table-wrap mt-2">
+        <table>
+          <thead>
+            <tr>
+              <th>Criterio</th>
+              <th>Peso</th>
+              <th>Descricao</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fundamentacao Teorica</td>
+              <td>20%</td>
+              <td>Enquadramento conceptual, revisao de literatura, pertinencia das referencias</td>
+            </tr>
+            <tr>
+              <td>Design de Interface (Figma)</td>
+              <td>25%</td>
+              <td>Qualidade do UI/UX, aplicacao de heuristicas, prototipagem, acessibilidade</td>
+            </tr>
+            <tr>
+              <td>Componente Robotica (Tinkercad)</td>
+              <td>25%</td>
+              <td>Complexidade e funcionalidade do circuito, integracao sensores/atuadores, logica</td>
+            </tr>
+            <tr>
+              <td>Integracao e Inovacao</td>
+              <td>15%</td>
+              <td>Coerencia entre interface e robotica, criatividade, resolucao de problema real</td>
+            </tr>
+            <tr>
+              <td>Pitch e Comunicacao</td>
+              <td>15%</td>
+              <td>Clareza da apresentacao, demonstracao, resposta a questoes, gestao do tempo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Useful Links                                                  -->
+  <!-- ============================================================ -->
+  <section class="section">
+    <h2>Recursos Uteis</h2>
+    <div class="links-grid">
+      <a href="https://www.tinkercad.com/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#9881;</div>
+        <div class="link-info">
+          <div class="link-title">Tinkercad</div>
+          <div class="link-desc">Simulacao de circuitos Arduino</div>
+        </div>
+      </a>
+      <a href="https://www.figma.com/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#127912;</div>
+        <div class="link-info">
+          <div class="link-title">Figma</div>
+          <div class="link-desc">Design de interfaces e prototipos</div>
+        </div>
+      </a>
+      <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#128214;</div>
+        <div class="link-info">
+          <div class="link-title">10 Heuristicas de Nielsen</div>
+          <div class="link-desc">Nielsen Norman Group</div>
+        </div>
+      </a>
+      <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#9855;</div>
+        <div class="link-info">
+          <div class="link-title">WCAG 2.1 Quick Ref</div>
+          <div class="link-desc">Referencia rapida de acessibilidade</div>
+        </div>
+      </a>
+      <a href="https://www.moralmachine.net/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#9878;</div>
+        <div class="link-info">
+          <div class="link-title">Moral Machine (MIT)</div>
+          <div class="link-desc">Experiencia de dilemas eticos</div>
+        </div>
+      </a>
+      <a href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-icon">&#127988;</div>
+        <div class="link-info">
+          <div class="link-title">EU AI Act</div>
+          <div class="link-desc">Regulamento europeu de IA</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Mestrado em Transformacao Digital — UMAIA 2025/26</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
